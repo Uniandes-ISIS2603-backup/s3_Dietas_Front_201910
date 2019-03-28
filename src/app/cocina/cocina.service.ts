@@ -19,7 +19,7 @@ export class CocinaService {
     */
   constructor(private http: HttpClient) { }
 
-      /**
+    /**
     * Returns the Observable object containing the list of cocinas retrieved from the API
     * @returns The list of cocinas in real time
     */
