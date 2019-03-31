@@ -1,0 +1,28 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+
+    <div class="container-fluid">
+    <div class="col-md-2">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Comida id</th>    
+                </tr>
+            </thead>
+            <tbody>
+                
+                   <tr *ngFor = "let c of comidas">
+                    <td>{{c.id}}</td>
+                  
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
