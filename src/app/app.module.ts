@@ -13,11 +13,8 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
-
-
-
-
-
+import {PersonaModule} from './persona/persona.module';
+import {QuejaYReclamoModule} from './quejaYReclamo/quejaYReclamo.module';
 
 @NgModule({
     declarations: [
@@ -38,7 +35,9 @@ import {AuthModule} from './auth/auth.module';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule
+        NgbModule,
+        PersonaModule,
+        QuejaYReclamoModule
     ],
     bootstrap: [AppComponent],
     providers: [
