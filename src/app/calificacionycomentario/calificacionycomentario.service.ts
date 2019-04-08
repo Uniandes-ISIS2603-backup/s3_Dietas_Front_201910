@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Calificacionycomentario} from './calificacionycomentario';
 import { Observable } from 'rxjs';
 
-const API_URL="../../assets";
+const API_URL="../../assets/";
 const calificacionesycomentarios = "calificacionesycomentarios.json";
 
 /**
