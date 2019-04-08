@@ -31,7 +31,7 @@ this.cocinaService.getCocinas().subscribe(c => this.cocinas = c);
  * The method which initializes the component
  */
   ngOnInit() {
-    this.getCocinas;
+    this.getCocinas();
   }
 
 

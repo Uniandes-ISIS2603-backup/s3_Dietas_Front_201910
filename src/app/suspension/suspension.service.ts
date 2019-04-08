@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 
 
 
-const API_URL= "../../assets";
+const API_URL= "../../assets/";
 const suspensiones = "suspensiones.json";
 
 /**
