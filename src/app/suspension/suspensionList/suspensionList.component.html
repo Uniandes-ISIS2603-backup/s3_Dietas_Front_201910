@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="col-md-2">
+    <table class="table table striped">
+    <thead class="thead dark">
+      <tr>
+      <th> Suspension  </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of suspensiones">
+      <td> {{s.vigente}} - 
+          {{s.comentarios}} -
+          {{s.numeroDias}} </td>
+      
+      </tr>
+      
+      </tbody>
+      </table>
+      </div>
+        
