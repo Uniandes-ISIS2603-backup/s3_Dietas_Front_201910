@@ -13,6 +13,7 @@ import {DiaModule} from './dia/dia.module';
 import {SemanaModule}from './semana/semana.module';
 import {TipoDietaModule} from './tipo-dieta/tipo-dieta.module';
 
+
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
