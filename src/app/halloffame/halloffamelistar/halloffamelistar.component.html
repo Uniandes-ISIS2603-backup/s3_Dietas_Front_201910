@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="col-md-2">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Hall id</th>    
+                </tr>
+            </thead>
+            <tbody>
+                
+                   <tr *ngFor = "let h of halls">
+                    <td style="cursor: pointer;">
+						        	<a class="figure-caption" (click)="onSelected(h.id)">{{h.id}}</a>
+					        	</td>
+
+                    
+						        	<td>{{h.mensaje}}</td>
+					        	
+                    
+                    
+                  
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+	<div class="border row">
+		<div class="col">
+			<div *ngIf="selectedHall">
+				<app-halloffame-detail [halloffameDetail]="selectedHall"> </app-halloffame-detail>
+			</div>
+		</div>
+	</div>
+</div>

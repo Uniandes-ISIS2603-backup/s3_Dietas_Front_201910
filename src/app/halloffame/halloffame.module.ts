@@ -5,6 +5,7 @@ import { HalloffamelistarComponent } from './halloffamelistar/halloffamelistar.c
 
 import { FormsModule } from '@angular/forms';
 import { HalloffameService } from './halloffame.service';
+import { HalloffameDetailComponent } from './halloffame-detail/halloffame-detail.component';
 
 
 @NgModule({
@@ -12,7 +13,7 @@ import { HalloffameService } from './halloffame.service';
     CommonModule,
     FormsModule
   ],
-  declarations: [HalloffamelistarComponent],
+  declarations: [HalloffamelistarComponent, HalloffameDetailComponent],
   exports: [HalloffamelistarComponent],
   providers: [HalloffameService]
 })
