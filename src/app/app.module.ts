@@ -21,7 +21,6 @@ import {AuthModule} from './auth/auth.module';
 import { HalloffameModule } from './halloffame/halloffame.module';
 
 import {PersonaModule} from './persona/persona.module';
-import {QuejaYReclamoModule} from './quejaYReclamo/quejaYReclamo.module';
 
 
 @NgModule({
@@ -49,9 +48,6 @@ import {QuejaYReclamoModule} from './quejaYReclamo/quejaYReclamo.module';
         NgbModule,
 
         HalloffameModule
-
-        PersonaModule,
-        QuejaYReclamoModule
 
     ],
     bootstrap: [AppComponent],
