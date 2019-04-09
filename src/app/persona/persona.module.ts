@@ -1,26 +1,19 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {BrowserModule} from '@angular/platform-browser';
-import {AppRoutingModule} from '../app-routing/app-routing.module';
-import {HttpClientModule} from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {NgxPermissionsModule} from 'ngx-permissions';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { AppRoutingModule } from '../app-routing/app-routing.module';
+
+
+import { PersonaService } from './persona.service';
+import { PersonaListComponent } from './persona-list/persona-list.component';
+import { PersonaDetailComponent } from './persona-detail/persona-detail.component';
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        CommonModule,
-        FormsModule,
-        NgbModule,
-        ReactiveFormsModule,
-        NgxPermissionsModule
-    ],
-    declarations: [  
-    ],
-    providers: [],
-    exports: []
+  imports: [
+    CommonModule,AppRoutingModule
+  ],
+  declarations: [PersonaListComponent, PersonaDetailComponent],
+  providers: [PersonaService],
+  exports:[PersonaListComponent]
 })
-export class PersonaModule{}
+export class PersonaModule { }

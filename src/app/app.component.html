@@ -1,8 +1,8 @@
-<div class="container-fluid">
+<!--><div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <div class="form-inline">
-                <h2 class="mainTitle">sXXX_ZZZ-Front</h2>
+                <h2 class="mainTitle">s3_Dietas-Front</h2>
             </div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -39,8 +39,53 @@
         <div class="container">
             <p class="navbar-text text-center">
                 <img src="../assets/uniandes.png" alt="logo" width="8%" /><span id="footer-text"></span>
-                <a routerLink="/home"> sXXX_ZZZ-Front</a>
+                <a routerLink="/home"> s3_Dietas-Front</a>
             </p>
         </div>
     </footer>
 </div>
+<-->
+
+
+<ul class="nav">
+	<li class="nav-item">
+   
+		<a class="nav-link active" routerLink="halls/list" routerLinkActive="active"> Halls id </a>
+	</li>
+  <li class="nav-item">
+   
+		<a class="nav-link active" routerLink="fotos/list" routerLinkActive="active"> Foto id </a>
+	</li>
+  <li class="nav-item">
+   
+		<a class="nav-link active" routerLink="comidas/list" routerLinkActive="active"> Comida id </a>
+    </li>
+    <li class="nav-item">
+   
+		<a class="nav-link active" routerLink="comidas/list" routerLinkActive="active"> Dia </a>
+    </li>
+
+    <li class="nav-item">
+   
+		<a class="nav-link active" routerLink="comidas/list" routerLinkActive="active"> Semana </a>
+    </li>
+
+    <li class="nav-item">
+   
+		<a class="nav-link active" routerLink="comidas/list" routerLinkActive="active"> Tipos Dieta </a>
+    </li>
+    
+</ul>
+
+<div class="container-fluid ">
+	<div class="border m-5 row">
+		<div class="col">
+			<router-outlet></router-outlet>
+
+		</div>
+    <div class="col">
+		<router-outlet name="detail"></router-outlet>
+		</div>
+  </div>  
+</div>
+
