@@ -18,9 +18,10 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 
+import { HalloffameModule } from './halloffame/halloffame.module';
 
-
-
+import {PersonaModule} from './persona/persona.module';
+import {QuejaYReclamoModule} from './quejaYReclamo/quejaYReclamo.module';
 
 
 @NgModule({
@@ -45,7 +46,13 @@ import {AuthModule} from './auth/auth.module';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule
+        NgbModule,
+
+        HalloffameModule
+
+        PersonaModule,
+        QuejaYReclamoModule
+
     ],
     bootstrap: [AppComponent],
     providers: [
