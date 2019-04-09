@@ -19,6 +19,8 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 
 import { HalloffameModule } from './halloffame/halloffame.module';
+import { FotoModule } from './foto/foto.module';
+import { ComidaModule } from './Comida/Comida.module';
 
 import {PersonaModule} from './persona/persona.module';
 
@@ -46,9 +48,9 @@ import {PersonaModule} from './persona/persona.module';
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
         NgbModule,
-
-        HalloffameModule
-
+        FotoModule,
+        HalloffameModule,
+        ComidaModule
     ],
     bootstrap: [AppComponent],
     providers: [
