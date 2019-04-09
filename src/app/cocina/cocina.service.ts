@@ -4,7 +4,7 @@ import { Cocina } from './cocina';
 import { Observable } from 'rxjs';
 
 
-const API_URL="../../assets";
+const API_URL="../../assets/";
 const cocinas = "cocinas.json";
 
 /**

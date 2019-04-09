@@ -31,7 +31,7 @@ this.calificacionycomentarioService.getCalificacionesycomentarios().subscribe(c 
  * The method which initializes the component
  */
 ngOnInit() {
-this.getCalificacionesycomentarios;
+this.getCalificacionesycomentarios();
 }
 
 

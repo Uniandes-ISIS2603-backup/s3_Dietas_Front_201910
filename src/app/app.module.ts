@@ -9,6 +9,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpErrorInterceptor} from './interceptors/httperrorinterceptor.service';
 import {NgxPermissionsModule} from 'ngx-permissions';
 import { ModalDialogModule } from 'ngx-modal-dialog';
+import {DiaModule} from './dia/dia.module';
+import {SemanaModule}from './semana/semana.module';
+import {TipoDietaModule} from './tipo-dieta/tipo-dieta.module';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
@@ -21,6 +24,9 @@ import { HalloffameModule } from './halloffame/halloffame.module';
     ],
     imports: [
         BrowserModule,
+        DiaModule,
+        TipoDietaModule,
+        SemanaModule,
         AppRoutingModule,
         HttpClientModule,
         BrowserAnimationsModule,
