@@ -20,7 +20,7 @@ import {AuthModule} from './auth/auth.module';
 
 import { HalloffameModule } from './halloffame/halloffame.module';
 import { FotoModule } from './foto/foto.module';
-import { ComidaModule } from './Comida/Comida.module';
+import { ComidaModule } from './comida/comida.module';
 
 import {PersonaModule} from './persona/persona.module';
 

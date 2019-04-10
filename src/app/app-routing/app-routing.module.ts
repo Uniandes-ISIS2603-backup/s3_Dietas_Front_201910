@@ -65,6 +65,16 @@ const routes: Routes = [
     
       },
       {
+        path: 'comidas',
+        children: [{
+          path: 'list',
+          component: ComidalistarComponent
+         
+        }   
+        ]
+    
+      },
+      {
         path: 'fotos',
         children: [{
           path: 'list',
@@ -73,7 +83,7 @@ const routes: Routes = [
         }   
         ]
     
-      },
+      }
       /**{
         path: 'comidas',
         children: [{
