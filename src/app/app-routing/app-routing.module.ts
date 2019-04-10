@@ -5,6 +5,7 @@ import {NgxPermissionsGuard} from 'ngx-permissions';
 
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
+import {SemanaListarComponent} from '../semana/semana-listar/semana-listar.component';
 
 import { HalloffamelistarComponent } from '../halloffame/halloffamelistar/halloffamelistar.component';
 import { FotolistarComponent } from '../foto/fotolistar/fotolistar.component';
