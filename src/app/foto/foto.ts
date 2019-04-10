@@ -3,6 +3,12 @@
 * It contains all the information relevant to the Foto.
 */
 export class Foto {
+
+
+    /**
+    * The foto's id
+    */
+   id: number;
     /**
     * The foto's name
     */
