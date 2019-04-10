@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import{HttpClient} from '@angular/common/http';
 import{Persona} from './persona';
-import{PersonaDetail} from'./persona-detail';i
+import{PersonaDetail} from'./persona-detail';
 import{Observable} from'rxjs';
 
 const API_URL="../../assets/";
