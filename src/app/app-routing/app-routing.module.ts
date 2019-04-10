@@ -5,6 +5,7 @@ import {NgxPermissionsGuard} from 'ngx-permissions';
 
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
+import {SemanaListarComponent} from '../semana/semana-listar/semana-listar.component';
 
 import { AppComponent } from '../app.component';
 
@@ -43,6 +44,10 @@ const routes: Routes = [
         path: '**',
         redirectTo: 'home',
     },
+    {
+        path: 'home/semana/listar',
+        component: SemanaListarComponent
+    }
    
 ];
 
