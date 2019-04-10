@@ -7,6 +7,11 @@ import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
 import {SemanaListarComponent} from '../semana/semana-listar/semana-listar.component';
 
+import { HalloffamelistarComponent } from '../halloffame/halloffamelistar/halloffamelistar.component';
+import { FotolistarComponent } from '../foto/fotolistar/fotolistar.component';
+import { HalloffameDetailComponent } from '../halloffame/halloffame-detail/halloffame-detail.component';
+import { ComidalistarComponent } from '../comida/comidalistar/comidalistar.component';
+
 import { AppComponent } from '../app.component';
 
 const routes: Routes = [
@@ -39,15 +44,57 @@ const routes: Routes = [
     {
         path: 'home',
         component: AppComponent
-    },
+    }
+    /**,
     {
         path: '**',
         redirectTo: 'home',
-    },
+    } */,
     {
-        path: 'home/semana/listar',
-        component: SemanaListarComponent
-    }
+        path: 'halls',
+        children: [{
+          path: 'list',
+          component: HalloffamelistarComponent
+        
+        } ,
+          {
+          path: ':id',
+          component: HalloffameDetailComponent,
+          outlet: 'detail'
+        }   
+        ]
+    
+      },
+      {
+        path: 'comidas',
+        children: [{
+          path: 'list',
+          component: ComidalistarComponent
+         
+        }   
+        ]
+    
+      },
+      {
+        path: 'fotos',
+        children: [{
+          path: 'list',
+          component: FotolistarComponent
+         
+        }   
+        ]
+    
+      }
+      /**{
+        path: 'comidas',
+        children: [{
+          path: 'list',
+          component: ComidalistarComponent
+      
+        }   
+        ]
+    
+      } */
    
 ];
 
