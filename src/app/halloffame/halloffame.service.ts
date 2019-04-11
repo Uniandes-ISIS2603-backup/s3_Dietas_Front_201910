@@ -33,6 +33,16 @@ export class HalloffameService {
     */
     getHalloffameDetail(halloffameId): Observable<HalloffameDetail> {
       console.log(halloffameId+" "+API_URL + "hall-" + halloffameId+".json");
-        return this.http.get<HalloffameDetail>(API_URL + "/halls/" + halloffameId);
+        return this.http.get<HalloffameDetail>(API_URL + halls +'/'+ halloffameId + "/personas" );
     }
+
+      /**
+    * Creates an halloffame
+    * @param halloffame The halloffame which will be created
+    * @returns The confirmation of the halloffame's creation
+    */
+   createHalloffame(halloffame): Observable<Halloffame> {
+    return this.http.post<Halloffame>(API_URL + halls, halloffame);
+}
+
 }
