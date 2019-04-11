@@ -99,6 +99,7 @@ const routes: Routes = [
     
       },
       
+      
       {
         path: 'fotos',
         children: [{
@@ -108,6 +109,7 @@ const routes: Routes = [
         }   
         ]
     
+        
       }
       
    
