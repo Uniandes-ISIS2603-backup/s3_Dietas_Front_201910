@@ -1,11 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Cocina} from "../cocina";
 import {CocinaService} from "../cocina.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cocina-list',
-  templateUrl: './cocina-list.component.html',
-  styleUrls: ['./cocina-list.component.css']
+  templateUrl: './cocinaList.component.html',
+  styleUrls: ['./cocinaList.component.css']
 })
 export class CocinaListComponent implements OnInit {
 
@@ -14,10 +15,11 @@ export class CocinaListComponent implements OnInit {
   */
 @Input() cocinas: Cocina[];
 
- /**
-* The component's constructor
- */
-constructor(private cocinaService:CocinaService) { }
+/**
+     * Constructor for the component
+     * @param cocinaService The author's services provider
+     */
+constructor(private cocinaService:CocinaService, private router: Router) { }
 
 /**
 * This method retrieves all the cocinas to show them in the list

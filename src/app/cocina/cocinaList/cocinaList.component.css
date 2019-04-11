@@ -1,0 +1,19 @@
+#main-container{
+}
+
+table{
+	background-color: white;
+	text-align: center;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+thead{
+	background-color: #0d071b;
+	border-bottom: solid 5px rgb(30, 9, 124);
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: rgb(197, 160, 38);
+}

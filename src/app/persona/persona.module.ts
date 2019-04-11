@@ -14,6 +14,7 @@ import { PersonaDetailComponent } from './persona-detail/persona-detail.componen
   ],
   declarations: [PersonaListComponent, PersonaDetailComponent],
   providers: [PersonaService],
-  exports:[PersonaListComponent]
+  exports:[PersonaListComponent],
+  bootstrap:[PersonaListComponent]
 })
 export class PersonaModule { }

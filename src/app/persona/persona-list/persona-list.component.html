@@ -1,33 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<link rel="stylesheet" href="tabla.css">
-</head>
-<body>
-	<div id="main-container">
 
-		<table>
-			<thead>
-       
-      	<tr>
-					<th>Personas</th>
-        
-				</tr>
-			</thead>
-      <tr>
-					<th>Id</th>
-          <th>Name</th>
-        
-				</tr>  
-			<tr *ngFor= "let c of personas">
-				<td>{{c.id}}</td>
-        	<td style="cursor: pointer;">
-				<a class="figure-caption" [routerLink]="['/personas', { outlets: { 'detail': [c.id] } }]">{{c.name}}</a>
-				</td>
-     
-			</tr>
-		
-		</table>
-	</div>
-</body>
-</html>
+<div class="container-fluid">
+    <div class="col">
+        <table class="table table-striped responsive">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Persona id</th>    
+                </tr>
+            </thead>
+            <tbody>
+                
+                   <tr *ngFor = "let p of personas">
+                    <td style="cursor: pointer;">
+						        	<a class="figure-caption" (click)="onSelected(h.id)">{{h.id}}</a>
+                                </td>
+                                <td>{{p.nombre}}}</td>
+
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
