@@ -19,7 +19,6 @@ import { CocinaListComponent } from '../cocina/cocinalist/cocinalist.component';
 
 
 import { AppComponent } from '../app.component';
-import { QuejaYReclamoListComponent} from '../quejaYReclamo/quejaYReclamoList/quejaYReclamoList.component';
 
 const routes: Routes = [
 
@@ -83,17 +82,7 @@ const routes: Routes = [
         ]
     
       },
-      {
-        path: 'quejasYReclamos',
-        children: [{
-          path: 'list',
-          component: QuejaYReclamoListComponent,
-        
-        } ,
-          
-        ]
-    
-      },
+      
       {
         path: 'comidas',
         children: [{
