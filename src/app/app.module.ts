@@ -21,13 +21,18 @@ import {AuthModule} from './auth/auth.module';
 import { HalloffameModule } from './halloffame/halloffame.module';
 import { FotoModule } from './foto/foto.module';
 import { ComidaModule } from './comida/comida.module';
+import { QuejaYReclamoModule } from './quejaYReclamo/quejaYReclamo.module';
 
 import {PersonaModule} from './persona/persona.module';
+import { QuejaYReclamoEditarComponent } from './quejaYReclamo/queja-yreclamo-editar/queja-yreclamo-editar.component';
+
 
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        QuejaYReclamoEditarComponent,
+    
     ],
     imports: [
         BrowserModule,
@@ -50,7 +55,8 @@ import {PersonaModule} from './persona/persona.module';
         NgbModule,
         FotoModule,
         HalloffameModule,
-        ComidaModule
+        ComidaModule,
+        QuejaYReclamoModule,
     ],
     bootstrap: [AppComponent],
     providers: [

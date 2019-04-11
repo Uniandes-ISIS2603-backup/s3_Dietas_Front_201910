@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="col">
+        <table class="table table-striped responsive">
+            <thead class="thead-dark">
+                <tr>
+                    <th>QuejaYReclamo</th>    
+                </tr>
+            </thead>
+            <tbody>
+                
+                   <tr *ngFor = "let q of quejas">
+                    <td style="cursor: pointer;">
+						        	<a class="figure-caption" (click)="onSelected(h.id)">{{q.id}}</a>
+                                </td>
+                                <td>{{q.especificacion}}</td>
+
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<app-queja-yreclamo-create></app-queja-yreclamo-create>
