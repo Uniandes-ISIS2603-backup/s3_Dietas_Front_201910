@@ -11,6 +11,9 @@ import { HalloffamelistarComponent } from '../halloffame/halloffamelistar/hallof
 import { FotolistarComponent } from '../foto/fotolistar/fotolistar.component';
 import { HalloffameDetailComponent } from '../halloffame/halloffame-detail/halloffame-detail.component';
 import { ComidalistarComponent } from '../comida/comidalistar/comidalistar.component';
+import { SuspensionListComponent } from '../suspension/suspensionlist/suspensionlist.component';
+import { CocinaListComponent } from '../cocina/cocinalist/cocinalist.component';
+import { CalificacionycomentarioListComponent } from '../calificacionycomentario/calificacionycomentariolist/calificacionycomentariolist.component';
 
 import { AppComponent } from '../app.component';
 
@@ -75,6 +78,27 @@ const routes: Routes = [
         ]
     
       },
+      {
+        path: 'suspensiones',
+        children: [{
+          path: 'list',
+          component: SuspensionListComponent
+         
+        }   
+        ]
+    
+      },
+      {
+        path: 'cocinas',
+        children: [{
+          path: 'list',
+          component: CocinaListComponent
+         
+        }   
+        ]
+    
+      },
+      
       {
         path: 'fotos',
         children: [{
