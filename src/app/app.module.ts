@@ -9,6 +9,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpErrorInterceptor} from './interceptors/httperrorinterceptor.service';
 import {NgxPermissionsModule} from 'ngx-permissions';
 import { ModalDialogModule } from 'ngx-modal-dialog';
+
 import {DiaModule} from './dia/dia.module';
 import {SemanaModule}from './semana/semana.module';
 import {TipoDietaModule} from './tipo-dieta/tipo-dieta.module';
@@ -23,6 +24,10 @@ import { FotoModule } from './foto/foto.module';
 import { ComidaModule } from './comida/comida.module';
 
 import {PersonaModule} from './persona/persona.module';
+import {SuspensionModule} from './suspension/suspension.module';
+import {CocinaModule} from './cocina/cocina.module';
+//import {CalificacionycomentarioModule} from './calificacionycomentario/calificacionycomentario.module';
+
 
 
 @NgModule({
@@ -50,7 +55,9 @@ import {PersonaModule} from './persona/persona.module';
         NgbModule,
         FotoModule,
         HalloffameModule,
-        ComidaModule
+        ComidaModule,
+        SuspensionModule,
+        CocinaModule
     ],
     bootstrap: [AppComponent],
     providers: [
@@ -62,3 +69,5 @@ import {PersonaModule} from './persona/persona.module';
     ]
 })
 export class AppModule {}
+
+

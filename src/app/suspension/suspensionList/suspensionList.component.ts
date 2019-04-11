@@ -1,11 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Suspension} from "../suspension";
 import {SuspensionService} from "../suspension.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-suspension-list',
-  templateUrl: './suspension-list.component.html',
-  styleUrls: ['./suspension-list.component.css']
+  templateUrl: './suspensionList.component.html',
+  styleUrls: ['./suspensionList.component.css']
 })
 export class SuspensionListComponent implements OnInit {
 
@@ -15,11 +16,13 @@ export class SuspensionListComponent implements OnInit {
 @Input() suspensiones: Suspension[];
 
 
- /**
-  * The component's constructor
-  */
-constructor(private suspensionService:SuspensionService) { }
+/**
+     * Constructor for the component
+     * @param suspensionService The author's services provider
+     */
+constructor(private suspensionService:SuspensionService, private router: Router) { }
 
+ 
 
 /**
 * This method retrieves all the suspensions in the dieta to show them in the list
