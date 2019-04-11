@@ -14,13 +14,6 @@ export class Cocina {
     */
     direccion: string;
     
-    /**
-    * constructor de la clase
-    */
-    constructor(id:number,  direc:string){
-    this.id=id;
-    this.direccion= direc;
-    }
-    
+   
     
     }

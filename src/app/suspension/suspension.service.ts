@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Suspension } from './suspension';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 
 
 
-const API_URL= "../../assets/";
-const suspensiones = "suspensiones.json";
+const API_URL= environment.apiURL;
+const suspensiones = "/suspensiones";
 
 /**
 * The service provider for everything related to suspension
@@ -28,6 +29,16 @@ export class SuspensionService {
     */
 getSuspensiones(): Observable<Suspension[]>{
   return this.http.get<Suspension[]>(API_URL + suspensiones);
+}
+
+
+   /**
+    * Creates an suspension
+    * @param suspension The suspension which will be created
+    * @returns The confirmation of the suspensio creation
+    */
+   createSuspension(suspension): Observable<Suspension> {
+    return this.http.post<Suspension>(API_URL + suspensiones, suspension);
 }
 
 

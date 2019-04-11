@@ -5,12 +5,13 @@ import { FormsModule } from '@angular/forms';
 
 import { FotoService } from './foto.service';
 import { FotoCrearComponent } from './foto-crear/foto-crear.component';
+import { FotoEditarComponent } from './foto-editar/foto-editar.component';
 
 @NgModule({
   imports: [
     CommonModule, FormsModule
   ],
-  declarations: [FotolistarComponent, FotoCrearComponent],
+  declarations: [FotolistarComponent, FotoCrearComponent, FotoEditarComponent],
   exports:[FotolistarComponent],
   providers: [FotoService]
 })

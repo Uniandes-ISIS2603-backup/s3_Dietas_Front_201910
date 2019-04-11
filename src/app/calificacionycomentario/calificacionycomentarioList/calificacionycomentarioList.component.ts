@@ -1,11 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Calificacionycomentario} from "../calificacionycomentario";
 import {CalificacionycomentarioService } from "../calificacionycomentario.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-calificacionycomentario-list',
-  templateUrl: './calificacionycomentario-list.component.html',
-  styleUrls: ['./calificacionycomentario-list.component.css']
+  templateUrl: './calificacionycomentarioList.component.html',
+  styleUrls: ['./calificacionycomentarioList.component.css']
 })
 export class CalificacionycomentarioListComponent implements OnInit {
 
@@ -17,7 +18,7 @@ export class CalificacionycomentarioListComponent implements OnInit {
 /**
   * The component's constructor
   */
- constructor(private calificacionycomentarioService:CalificacionycomentarioService) { }
+ constructor(private calificacionycomentarioService:CalificacionycomentarioService, private router: Router) { }
 
 
 /**
@@ -33,6 +34,5 @@ this.calificacionycomentarioService.getCalificacionesycomentarios().subscribe(c 
 ngOnInit() {
 this.getCalificacionesycomentarios();
 }
-
 
 }

@@ -2,9 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Calificacionycomentario} from './calificacionycomentario';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
-const API_URL="../../assets/";
-const calificacionesycomentarios = "calificacionesycomentarios.json";
+const API_URL=environment.apiURL;
+const calificacionesycomentarios = "/calificacionesycomentarios"; 
 
 /**
 * The service provider for everything related to Calificacionycomentario
@@ -26,6 +27,17 @@ export class CalificacionycomentarioService {
     */
 getCalificacionesycomentarios(): Observable<Calificacionycomentario[]>{
   return this.http.get<Calificacionycomentario[]>(API_URL + calificacionesycomentarios);
+}
+
+
+
+ /**
+    * Creates a cocina
+    * @param calificacionycomentario The suspension which will be created
+    * @returns The confirmation of the cocina creation
+    */
+   createCalificacionycomentario(calificacionycomentario): Observable<Calificacionycomentario> {
+    return this.http.post<Calificacionycomentario>(API_URL + calificacionesycomentarios, calificacionycomentario);
 }
 
 }
