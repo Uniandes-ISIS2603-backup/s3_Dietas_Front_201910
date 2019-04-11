@@ -7,14 +7,27 @@
       </tr>
       </thead>
       <tbody>
+            <tr>
+			    <th>Id</th>
+          <th>Vigente</th>
+          <th>Comentarios</th>
+          <th>Duracion</th>
+          
+				</tr>
       <tr *ngFor="let s of suspensiones">
-      <td> {{s.vigente}} - 
-          {{s.comentarios}} -
-          {{s.numeroDias}} </td>
-      
+      <td> {{s.id}} </td>
+      <td> {{s.vigente}} </td>
+      <td>  {{s.comentarios}} </td>
+       <td>  {{s.numDias}} </td>
       </tr>
-      
       </tbody>
       </table>
       </div>
+</div>
+<app-suspension-create></app-suspension-create>
+    
+
+     
+     
+   
         
