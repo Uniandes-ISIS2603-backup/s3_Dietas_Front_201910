@@ -5,21 +5,25 @@
         <br>
         <h2 class="text-center">Create a Hall</h2>
         <br>
-        <form name="halloffame" (ngSubmit)="f.form.valid && createHall()" #f="ngForm" novalidate>
-            <div class="form-group">
-                <label for="HallMensaje"><b>Mensaje</b></label>
+        <form name="halloffame" (ngSubmit)="f.form.valid && createHalloffame()" #f="ngForm" novalidate>
 
-                <input type="text" mensaje="halloffameMensaje" class="form-control" id="halloffameMensaje" [(ngModel)]="halloffame.mensaje"
-                    #halloffameMensaje="ngModel" [ngClass]="{ 'is-invalid': f.submitted && halloffameMensaje.invalid }" required>
+            <div class="input-group mb-3">
+                
+                <input type="text" placeholder="Mensaje" name="usuarioLogin" class="form-control" id="usuarioLogin"
+                  [(ngModel)]="halloffame.mensaje" #usuarioLogin="ngModel"
+                  [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
                 <div class="invalid-feedback">
-                    <div>The hall's menssage is missing</div>
+                  <div>Debes ingresar un mensaje</div>
                 </div>
-            </div>
+              </div>
+
+     
             <div class="row form-inline justify-content-center align-self-center">
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-primary">Crear</button>
                 <div class="divider"></div>
                 <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
-            </div>
+              </div>
+
         </form>
     </div>
     <div class="col-3"></div>

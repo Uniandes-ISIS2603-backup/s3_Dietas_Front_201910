@@ -4,12 +4,13 @@ import { ComidalistarComponent } from './comidalistar/comidalistar.component';
 import { FormsModule } from '@angular/forms';
 import { ComidaService } from './comida.service';
 import {NgxPermissionsModule} from 'ngx-permissions';
+import { ComidaCrearComponent } from './comida-crear/comida-crear.component';
 
 @NgModule({
   imports: [
     CommonModule, FormsModule
   ],
-  declarations: [ComidalistarComponent],
+  declarations: [ComidalistarComponent, ComidaCrearComponent],
   exports:[ComidalistarComponent],
   providers: [ComidaService]
 })

@@ -21,6 +21,15 @@ export class FotoService {
        getFotos() : Observable<Foto[]> {
         return this.http.get<Foto[]>(API_URL + fotos);
     }
+    
+      /**
+    * Creates an foto
+    * @param foto The foto which will be created
+    * @returns The confirmation of the foto's creation
+    */
+   createFoto(foto:Foto): Observable<Foto> {
+    return this.http.post<Foto>(API_URL + fotos, foto);
+}
 }
 
 

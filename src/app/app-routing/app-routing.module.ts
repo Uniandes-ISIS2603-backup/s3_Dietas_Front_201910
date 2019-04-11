@@ -43,7 +43,7 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        component: AppComponent
+        redirectTo: 'home'
     }
     /**,
     {
@@ -85,16 +85,7 @@ const routes: Routes = [
         ]
     
       }
-      /**{
-        path: 'comidas',
-        children: [{
-          path: 'list',
-          component: ComidalistarComponent
       
-        }   
-        ]
-    
-      } */
    
 ];
 

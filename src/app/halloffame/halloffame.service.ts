@@ -41,7 +41,7 @@ export class HalloffameService {
     * @param halloffame The halloffame which will be created
     * @returns The confirmation of the halloffame's creation
     */
-   createHalloffame(halloffame): Observable<Halloffame> {
+   createHalloffame(halloffame:Halloffame): Observable<Halloffame> {
     return this.http.post<Halloffame>(API_URL + halls, halloffame);
 }
 
