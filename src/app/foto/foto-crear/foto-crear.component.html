@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <br>
+        <h2 class="text-center">Create a Foto</h2>
+        <br>
+        <form name="foto" (ngSubmit)="f.form.valid && createFoto()" #f="ngForm" novalidate>
+
+            <div class="input-group mb-3">
+                
+                <input type="text" placeholder="Nombre" name="fotoName" class="form-control" id="fotoName"
+                  [(ngModel)]="foto.nombre" #fotoName="ngModel"
+                  [ngClass]="{ 'is-invalid': f.submitted && fotoName.invalid }" required>
+                <div class="invalid-feedback">
+                  <div>Debes ingresar un nombre.</div>
+                </div>
+              </div>
+
+              <div class="input-group mb-3">
+                
+                  <input type="text" placeholder="Url" name="fotoUrl" class="form-control" id="fotoUrl"
+                    [(ngModel)]="foto.url" #fotoUrl="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && fotoUrl.invalid }" required>
+                  <div class="invalid-feedback">
+                    <div>Debes ingresar una Url.</div>
+                  </div>
+                </div>
+
+     
+            <div class="row form-inline justify-content-center align-self-center">
+                <button type="submit" class="btn btn-primary">Crear</button>
+                <div class="divider"></div>
+                <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
+              </div>
+
+        </form>
+    </div>
+    <div class="col-3"></div>
+</div>
