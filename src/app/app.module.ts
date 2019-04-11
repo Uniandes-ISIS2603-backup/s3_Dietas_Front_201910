@@ -9,6 +9,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpErrorInterceptor} from './interceptors/httperrorinterceptor.service';
 import {NgxPermissionsModule} from 'ngx-permissions';
 import { ModalDialogModule } from 'ngx-modal-dialog';
+
 import {DiaModule} from './dia/dia.module';
 import {SemanaModule}from './semana/semana.module';
 import {TipoDietaModule} from './tipo-dieta/tipo-dieta.module';
@@ -24,7 +25,12 @@ import { ComidaModule } from './comida/comida.module';
 import { QuejaYReclamoModule } from './quejaYReclamo/quejaYReclamo.module';
 
 import {PersonaModule} from './persona/persona.module';
+
 import { QuejaYReclamoEditarComponent } from './quejaYReclamo/queja-yreclamo-editar/queja-yreclamo-editar.component';
+
+import {SuspensionModule} from './suspension/suspension.module';
+import {CocinaModule} from './cocina/cocina.module';
+
 
 
 
@@ -56,7 +62,9 @@ import { QuejaYReclamoEditarComponent } from './quejaYReclamo/queja-yreclamo-edi
         FotoModule,
         HalloffameModule,
         ComidaModule,
-        QuejaYReclamoModule,
+        SuspensionModule,
+        CocinaModule
+
     ],
     bootstrap: [AppComponent],
     providers: [
@@ -68,3 +76,5 @@ import { QuejaYReclamoEditarComponent } from './quejaYReclamo/queja-yreclamo-edi
     ]
 })
 export class AppModule {}
+
+

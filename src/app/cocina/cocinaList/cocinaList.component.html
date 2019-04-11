@@ -7,11 +7,19 @@
       </tr>
       </thead>
       <tbody>
+       <tr>
+       <th>Id</th>
+       <th>Dirección</th>
+       </tr>
       <tr *ngFor="let c of cocinas">
-      <td> {{c.id}} -
-           {{c.direccion}}
-      </td>
+      <td> {{c.id}} </td>
+      <td> {{c.direccion}} </td>
       </tr>  
       </tbody>
       </table>
       </div>
+</div>
+
+
+<app-cocina-create></app-cocina-create>
+<app-cocina-editar></app-cocina-editar>
