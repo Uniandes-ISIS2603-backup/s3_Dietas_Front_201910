@@ -11,7 +11,8 @@
                    <tr *ngFor = "let h of halls">
                     <td style="cursor: pointer;">
 						        	<a class="figure-caption" (click)="onSelected(h.id)">{{h.id}}</a>
-					        	</td>
+                                </td>
+                                <td>{{h.mensaje}}</td>
 
 
                 </tr>
@@ -27,3 +28,4 @@
 		</div>
 	</div>
 </div>
+<app-halloffame-create></app-halloffame-create>
