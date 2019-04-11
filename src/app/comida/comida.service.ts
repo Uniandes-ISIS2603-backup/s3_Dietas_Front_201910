@@ -23,4 +23,13 @@ export class ComidaService {
        getComidas() : Observable<Comida[]> {
         return this.http.get<Comida[]>(API_URL + comidas);
     }
+
+    /**
+    * Creates an comida
+    * @param comida The comida which will be created
+    * @returns The confirmation of the comida's creation
+    */
+   createComida(comida:Comida): Observable<Comida> {
+    return this.http.post<Comida>(API_URL + comidas, comida);
+}
 }

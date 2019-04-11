@@ -1,15 +1,6 @@
 import{Persona} from'./persona';
 export class PersonaDetail extends Persona {
-   /**
-    * la fecha de ingreso
-    */
-    fechaIngreso: string;
-
-    /**
-    * Objetivos de la persona
-    */
-    obejtivos: string;
-
+  
     /**
      * tiempo de espera de mejora de la persona
      */
