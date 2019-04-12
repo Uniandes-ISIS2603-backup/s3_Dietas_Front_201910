@@ -13,6 +13,7 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 import {DiaModule} from './dia/dia.module';
 import {SemanaModule}from './semana/semana.module';
 import {TipoDietaModule} from './tipo-dieta/tipo-dieta.module';
+import {DietaModule} from './dieta/dieta.module';
 
 
 import {AppComponent} from './app.component';
@@ -61,9 +62,11 @@ import {CalificacionycomentarioModule} from './calificacionycomentario/calificac
         ComidaModule,
         SuspensionModule,
         CocinaModule,
+
+        CalificacionycomentarioModule,
+        DietaModule,
         QuejayreclamoModule
 
-        CalificacionycomentarioModule
 
 
     ],
