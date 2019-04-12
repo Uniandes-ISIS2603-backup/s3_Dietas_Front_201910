@@ -61,7 +61,7 @@ import {CalificacionycomentarioModule} from './calificacionycomentario/calificac
         ComidaModule,
         SuspensionModule,
         CocinaModule,
-        QuejayreclamoModule
+        QuejayreclamoModule,
 
         CalificacionycomentarioModule
 
