@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { HalloffameService } from '../halloffame.service';
 import { Halloffame } from '../halloffame';
 import { HalloffameDetail } from '../halloffame-detail';
+import { Persona } from 'src/app/persona/persona';
 
 @Component({
   selector: 'app-halloffame-detail',
@@ -24,9 +25,9 @@ export class HalloffameDetailComponent implements OnInit {
   ) { }
 
   /**
-  * The editorial whose details we want to show
+  * Las personas de cierto hall
   */
-  @Input() halloffameDetail: HalloffameDetail;
+  @Input() personas: Persona[];
 
 
 
@@ -37,24 +38,28 @@ export class HalloffameDetailComponent implements OnInit {
 
   /**
   * The method which retrieves the books of an editorial
-  */
+  
   getHalloffameDetail(): void {
     this.halloffameService.getHalloffameDetail(this.halloffame_id)
       .subscribe(editorialDetail => {
         this.halloffameDetail = editorialDetail
       });
   }
+  */
 
    /**
   * The method which initializes the component
   * We need to initialize the editorial so it is never considered as undefined
   */
   ngOnInit() {
+
+   /**
     this.halloffame_id = +this.route.snapshot.paramMap.get('id');
     if (this.halloffame_id) {
       this.halloffameDetail = new HalloffameDetail();
       this.getHalloffameDetail();
     }
+     */
 
   }
 }

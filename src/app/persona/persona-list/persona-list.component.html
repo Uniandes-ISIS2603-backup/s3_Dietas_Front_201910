@@ -4,20 +4,37 @@
         <table class="table table-striped responsive">
             <thead class="thead-dark">
                 <tr>
-                    <th>Persona id</th>    
+
+                    <th>Persona id</th>  
+                    <th>Nombre</th>   
+                    <th>Tipo</th>   
+                    <th>FechaIngreso</th>   
+                    <th>Objetivos</th>   
+                    <th>SolicitudEspecial</th>   
+                    <th>TarjetaFidelidad</th>   
+                    <th>TiempoEsperadoMejora</th>   
+                    
                 </tr>
             </thead>
             <tbody>
                 
                    <tr *ngFor = "let p of personas">
+
                     <td style="cursor: pointer;">
-						        	<a class="figure-caption" (click)="onSelected(h.id)">{{h.id}}</a>
+						        	<a class="figure-caption" (click)="onSelected(p.id)">{{p.id}}</a>
                                 </td>
-                                <td>{{p.nombre}}}</td>
+                                <td>{{p.nombre}}</td>
+                                <td>{{p.tipo}}</td>
+                                <td>{{p.fechaIngreso}}</td>                               
+                                <td>{{p.objetivos}}</td>
+                                <td>{{p.solicitudEspecial}}</td>
+                                <td>{{p.tarjetaFidelidad}}</td>
+                                <td>{{p.tiempoEsperadoMejora}}</td>
 
 
                 </tr>
             </tbody>
         </table>
     </div>
+    <app-persona-create></app-persona-create>
 

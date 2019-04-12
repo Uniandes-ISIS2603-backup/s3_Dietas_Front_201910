@@ -13,6 +13,8 @@ import { HalloffameDetailComponent } from '../halloffame/halloffame-detail/hallo
 import { ComidalistarComponent } from '../comida/comidalistar/comidalistar.component';
 
 import { PersonaListComponent } from '../persona/persona-list/persona-list.component';
+import { DietaListComponent } from '../dieta/dieta-list/dieta-list.component';
+import { PagoListComponent } from '../pago/pago-list/pago-list.component';
 
 import { SuspensionListComponent } from '../suspension/suspensionlist/suspensionlist.component';
 import { CocinaListComponent } from '../cocina/cocinalist/cocinalist.component';
@@ -22,6 +24,7 @@ import { CalificacionycomentarioListComponent } from '../calificacionycomentario
 
 
 import { AppComponent } from '../app.component';
+import { QuejayreclamoListComponent } from '../quejayreclamo/quejayreclamo-list/quejayreclamo-list.component';
 
 const routes: Routes = [
 
@@ -85,6 +88,17 @@ const routes: Routes = [
         ]
     
       },
+      {
+        path: 'quejasYReclamos',
+        children: [{
+          path: 'list',
+          component: QuejayreclamoListComponent,
+        
+        } ,
+          
+        ]
+    
+      },
       
       {
         path: 'comidas',
@@ -126,8 +140,16 @@ const routes: Routes = [
         ]
     
       },
-      
-      
+      {
+        path: 'dietas',
+        children: [{
+          path: 'list',
+          component: DietaListComponent
+         
+        }   
+        ]
+    
+      },
       {
         path: 'fotos',
         children: [{
@@ -138,6 +160,16 @@ const routes: Routes = [
         ]
     
         
+      },
+      {
+        path: 'pagos',
+        children: [{
+          path: 'list',
+          component: PagoListComponent
+         
+        }   
+        ]
+    
       }
       
    
@@ -153,4 +185,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 
+  
 }

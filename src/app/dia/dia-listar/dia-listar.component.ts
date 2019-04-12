@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import { DiaService } from '../dia.service';
+import { Dia } from '../dia';
+
 
 @Component({
   selector: 'dia-listar',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiaListarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private diaService: DiaService  /** , private router: Router*/) { }
+
+  dias:Dia[];
+
+  getDias():void{
+    this.diaService.getDias().subscribe(newDay=> this.dias=newDay);
+  }
 
   ngOnInit() {
+    this.getDias();
   }
 
 }

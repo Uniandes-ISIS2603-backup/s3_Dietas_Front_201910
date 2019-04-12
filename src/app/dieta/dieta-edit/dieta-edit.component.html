@@ -1,0 +1,61 @@
+<div class="row">
+        <div class="col-12">
+            <br>
+            <h2 class="text-center">Edit a Dieta</h2>
+            <br>
+            <form name="dieta" (ngSubmit)="f.form.valid && editDieta()" #f="ngForm" novalidate>
+                  <div class="form-group">
+                    <label for="dietaNombre"><b>Name</b></label>
+                    <input type="text" name="dietaNombre" class="form-control" id="dietaNombre" [(ngModel)]="dieta.nombre"
+                           #dietaNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dietaNombre.invalid }" required>
+                           <div class="invalid-feedback">
+                        <div>The dieta´s Nombre is missing</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label for="dietaTipo"><b>Tipo</b></label>
+                        <input type="text" name="dietaTipo" class="form-control" id="dietaTipo" [(ngModel)]="dieta.tipo"
+                               #dietaTipo="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dietaTipo.invalid }" required>
+                               <div class="invalid-feedback">
+                            <div>The dieta´s Tipo is missing</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="dietaObjetivo"><b>Objetivo</b></label>
+                            <input type="text" name="dietaObjetivo" class="form-control" id="dietaObjetivo" [(ngModel)]="dieta.objetivo"
+                                   #dietaObjetivo="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dietaObjetivo.invalid }" required>
+                                   <div class="invalid-feedback">
+                                <div>The dieta´s Objetivo is missing</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                <label for="dietaDiasSuspendida"><b>DiasSuspendida</b></label>
+                                <input type="text" name="dietaDiasSuspendida" class="form-control" id="dietaDiasSuspendida" [(ngModel)]="dieta.diasSuspendida"
+                                       #dietaDiasSuspendida="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dietaDiasSuspendida.invalid }" required>
+                                       <div class="invalid-feedback">
+                                    <div>The dieta´s DiasSuspendida is missing</div>
+                                </div>
+                            </div>
+                <div class="form-group">
+                    <label for="dietaId"><b>Id</b></label>
+                    <input type="text" name="dietaId" class="form-control" id="dietaId" [(ngModel)]="dieta.id"
+                           #dietaId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && dietaId.invalid }" required>
+                           <div class="invalid-feedback">
+                        <div>The dieta´s id is missing</div>
+                    </div>
+                </div>
+                
+                </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="row form-inline justify-content-center align-self-center">
+                <i  style="padding-right: 1em;"class="fa fa-save " (click)="editDieta()"></i>
+              
+                <i class="fa fa-ban" (click)="cancelEdition()"></i>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>

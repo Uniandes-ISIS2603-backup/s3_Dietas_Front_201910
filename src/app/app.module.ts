@@ -13,7 +13,8 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 import {DiaModule} from './dia/dia.module';
 import {SemanaModule}from './semana/semana.module';
 import {TipoDietaModule} from './tipo-dieta/tipo-dieta.module';
-
+import {DietaModule} from './dieta/dieta.module';
+import {PagoModule} from './pago/pago.module';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
@@ -27,12 +28,15 @@ import {PersonaModule} from './persona/persona.module';
 
 import {SuspensionModule} from './suspension/suspension.module';
 import {CocinaModule} from './cocina/cocina.module';
+import{QuejayreclamoModule} from './quejayreclamo/quejayreclamo.module';
 import {CalificacionycomentarioModule} from './calificacionycomentario/calificacionycomentario.module';
+
 
 
 @NgModule({
     declarations: [
-        AppComponent,        
+        AppComponent,
+          
     ],
     imports: [
         BrowserModule,
@@ -58,7 +62,12 @@ import {CalificacionycomentarioModule} from './calificacionycomentario/calificac
         ComidaModule,
         SuspensionModule,
         CocinaModule,
-        CalificacionycomentarioModule
+
+
+        CalificacionycomentarioModule,
+        DietaModule,
+        PagoModule,
+        QuejayreclamoModule
 
     ],
     bootstrap: [AppComponent],
@@ -71,7 +80,5 @@ import {CalificacionycomentarioModule} from './calificacionycomentario/calificac
     ]
 })
 export class AppModule {}
-
-
 
 
