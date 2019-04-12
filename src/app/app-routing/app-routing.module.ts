@@ -13,7 +13,6 @@ import { HalloffameDetailComponent } from '../halloffame/halloffame-detail/hallo
 import { ComidalistarComponent } from '../comida/comidalistar/comidalistar.component';
 import { SuspensionListComponent } from '../suspension/suspensionlist/suspensionlist.component';
 import { CocinaListComponent } from '../cocina/cocinalist/cocinalist.component';
-import { CalificacionycomentarioListComponent } from '../calificacionycomentario/calificacionycomentariolist/calificacionycomentariolist.component';
 
 import { AppComponent } from '../app.component';
 
