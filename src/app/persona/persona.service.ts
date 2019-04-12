@@ -26,6 +26,9 @@ export class PersonaService {
     
   }
 
+  getPersona(personaId:number): Observable<Persona> {
+    return this.http.get<Persona>(API_URL + personas + '/' + personaId);
+}
   getPersonas():Observable<Persona[]>{
     return this.http.get<Persona[]>(API_URL+personas);
   }
@@ -38,7 +41,9 @@ export class PersonaService {
     * @param persona The persona which will be created
     * @returns The confirmation of the persona's creation
     */
-   createHalloffame(persona:Persona): Observable<Persona> {
+   createPersona(persona:Persona): Observable<Persona> {
     return this.http.post<Persona>(API_URL + personas, persona);
    }
-}
+   updatePersona(persona: Persona): Observable<Persona> {
+    return this.http.put<Persona>(API_URL + personas + '/' + persona.id, persona);
+}}
