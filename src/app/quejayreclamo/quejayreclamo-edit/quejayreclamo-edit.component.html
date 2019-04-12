@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-12">
+      <br>
+      <h2 class="text-center">Edit a Queja</h2>
+      <br>
+      <form name="quejaYReclamo" (ngSubmit)="f.form.valid && editQueja()" #f="ngForm" novalidate>
+            <div class="form-group">
+              <label for="quejaYReclamoEspecificacion"><b>Especificacion</b></label>
+              <input type="text" name="quejaYReclamoEspecificacion" class="form-control" id="quejaYReclamoEspecificacion" [(ngModel)]="quejaYReclamo.especificacion"
+                     #quejaYReclamoEspecificacion="ngModel" [ngClass]="{ 'is-invalid': f.submitted && quejaYReclamoEspecificacion.invalid }" required>
+                     <div class="invalid-feedback">
+                  <div>The queja's especificacion is missing</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="quejaYReclamoId"><b>Id</b></label>
+              <input type="text" name="quejaYReclamoId" class="form-control" id="quejaYReclamoId" [(ngModel)]="quejaYReclamo.id"
+                     #quejaYReclamoId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && quejaYReclamoId.invalid }" required>
+                     <div class="invalid-feedback">
+                  <div>The queja's id is missing</div>
+              </div>
+          </div>
+          
+          </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+      <div class="row form-inline justify-content-center align-self-center">
+          <i  style="padding-right: 1em;"class="fa fa-save " (click)="editQueja()"></i>
+        
+          <i class="fa fa-ban" (click)="cancelEdition()"></i>
+      </div>
+  </div>
+</div>
+<br>
+<br>

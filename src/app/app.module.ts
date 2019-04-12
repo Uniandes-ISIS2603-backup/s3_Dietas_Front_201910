@@ -27,11 +27,13 @@ import {PersonaModule} from './persona/persona.module';
 
 import {SuspensionModule} from './suspension/suspension.module';
 import {CocinaModule} from './cocina/cocina.module';
+import{QuejayreclamoModule} from './quejayreclamo/quejayreclamo.module';
 
 
 @NgModule({
     declarations: [
-        AppComponent,        
+        AppComponent,
+          
     ],
     imports: [
         BrowserModule,
@@ -57,6 +59,7 @@ import {CocinaModule} from './cocina/cocina.module';
         ComidaModule,
         SuspensionModule,
         CocinaModule,
+        QuejayreclamoModule
 
     ],
     bootstrap: [AppComponent],
