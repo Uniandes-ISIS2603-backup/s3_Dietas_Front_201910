@@ -10,7 +10,7 @@ import {NgxPermissionsModule} from 'ngx-permissions';
 import {DietaListComponent} from './dieta-list/dieta-list.component';
 import {DietaCreateComponent} from './dieta-create/dieta-create.component';
 import {DietaDetailComponent} from './dieta-detail/dieta-detail.component';
-//import {DietaEditComponent} from './dieta-edit/dieta-edit.component';
+import {DietaEditComponent} from './dieta-edit/dieta-edit.component';
 
 import {DietaService} from './dieta.service';
 
@@ -26,10 +26,10 @@ import {DietaService} from './dieta.service';
         NgxPermissionsModule
     ],
     declarations: [
-        DietaListComponent, DietaDetailComponent, DietaCreateComponent, //DietaEditComponent
+        DietaListComponent, DietaDetailComponent, DietaCreateComponent, DietaEditComponent
     ],
     providers: [DietaService],
-    exports: [DietaListComponent, //DietaEditComponent
+    exports: [DietaListComponent, DietaEditComponent
     ]
 })
 export class DietaModule {}
