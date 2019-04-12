@@ -28,12 +28,15 @@ import {PersonaModule} from './persona/persona.module';
 
 import {SuspensionModule} from './suspension/suspension.module';
 import {CocinaModule} from './cocina/cocina.module';
+import{QuejayreclamoModule} from './quejayreclamo/quejayreclamo.module';
 import {CalificacionycomentarioModule} from './calificacionycomentario/calificacionycomentario.module';
+
 
 
 @NgModule({
     declarations: [
-        AppComponent,        
+        AppComponent,
+          
     ],
     imports: [
         BrowserModule,
@@ -59,8 +62,12 @@ import {CalificacionycomentarioModule} from './calificacionycomentario/calificac
         ComidaModule,
         SuspensionModule,
         CocinaModule,
+
         CalificacionycomentarioModule,
-        DietaModule
+        DietaModule,
+        QuejayreclamoModule
+
+
 
     ],
     bootstrap: [AppComponent],
