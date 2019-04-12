@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { HalloffameService } from '../halloffame.service';
 import { Halloffame } from '../halloffame';
 import { HalloffameDetail } from '../halloffame-detail';
-import { Persona } from 'src/app/persona/persona';
+import { Persona } from '../../persona/persona';
 
 @Component({
   selector: 'app-halloffame-detail',
