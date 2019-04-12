@@ -22,6 +22,7 @@ import { CalificacionycomentarioListComponent } from '../calificacionycomentario
 
 
 import { AppComponent } from '../app.component';
+import { QuejayreclamoListComponent } from '../quejayreclamo/quejayreclamo-list/quejayreclamo-list.component';
 
 const routes: Routes = [
 
@@ -79,6 +80,17 @@ const routes: Routes = [
         children: [{
           path: 'list',
           component: PersonaListComponent,
+        
+        } ,
+          
+        ]
+    
+      },
+      {
+        path: 'quejasYReclamos',
+        children: [{
+          path: 'list',
+          component: QuejayreclamoListComponent,
         
         } ,
           

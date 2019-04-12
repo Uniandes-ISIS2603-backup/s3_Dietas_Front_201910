@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="col">
+      <table class="table table-striped responsive">
+          <thead class="thead-dark">
+              <tr>
+                  <th>QuejasYReclamos id</th>   <th>QuejasYReclamos especificacion</th>   
+              </tr>
+          </thead>
+          <tbody>
+              
+                 <tr *ngFor = "let q of quejas">
+                  
+                    <a>{{q.id}}</a>
+                    <td>{{q.especificacion}}</td>
+
+
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  <app-quejayreclamo-create></app-quejayreclamo-create>
+  <app-quejayreclamo-edit></app-quejayreclamo-edit>
