@@ -1,3 +1,77 @@
-<p>
-  persona-create works!
-</p>
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-6">
+    <br>
+    <h2 class="text-center">Create a Persona</h2>
+    <br>
+    <form name="persona" (ngSubmit)="f.form.valid && createPersona()" #f="ngForm" novalidate>
+
+      <div class="input-group mb-3">
+        <input type="text" placeholder="Nombre" name="usuarioLogin" class="form-control" id="usuarioLogin"
+          [(ngModel)]="persona.nombre" #usuarioLogin="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
+        <div class="invalid-feedback">
+          <div>Debes ingresar un nombre</div>
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" placeholder="Tipo" name="usuarioLogin" class="form-control" id="usuarioLogin"
+          [(ngModel)]="persona.tipo" #usuarioLogin="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
+        <div class="invalid-feedback">
+          <div>Debes ingresar un tipo</div>
+        </div>
+      </div>
+      <div class="input-group mb-3">
+      <input type="text" placeholder="fechaIngreso(timestamp)" name="usuarioLogin" class="form-control" id="usuarioLogin"
+        [(ngModel)]="persona.fechaIngreso" #usuarioLogin="ngModel"
+        [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
+        <div class="invalid-feedback">
+           <div>Debes ingresar un fechaIngreso</div>
+         </div>
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" placeholder="Objetivos" name="usuarioLogin" class="form-control" id="usuarioLogin"
+          [(ngModel)]="persona.objetivos" #usuarioLogin="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
+          <div class="invalid-feedback">
+             <div>Debes ingresar un objetivos</div>
+           </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" placeholder="SolicitudEspecial" name="usuarioLogin" class="form-control" id="usuarioLogin"
+            [(ngModel)]="persona.solicitudEspecial" #usuarioLogin="ngModel"
+            [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
+            <div class="invalid-feedback">
+               <div>Debes ingresar un solicitudEspecial</div>
+             </div>
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" placeholder="TarjetaFidelidad" name="usuarioLogin" class="form-control" id="usuarioLogin"
+              [(ngModel)]="persona.tarjetaFidelidad" #usuarioLogin="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
+              <div class="invalid-feedback">
+                 <div>Debes ingresar un tarjetaFidelidad</div>
+               </div>
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" placeholder="TiempoEsperadoMejora" name="usuarioLogin" class="form-control" id="usuarioLogin"
+                [(ngModel)]="persona.tiempoEsperadoMejora" #usuarioLogin="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
+                <div class="invalid-feedback">
+                   <div>Debes ingresar un tiempoEsperadoMejora</div>
+                 </div>
+              </div>
+  
+
+
+<div class="row form-inline justify-content-center align-self-center">
+  <button type="submit" class="btn btn-primary">Crear</button>
+  <div class="divider"></div>
+  <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
+</div>
+
+</form>
+</div>
+<div class="col-3"></div>
+</div>
