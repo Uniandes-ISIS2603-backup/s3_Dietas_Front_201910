@@ -1,4 +1,28 @@
 <p>
   semana-listar works!
 </p>
-
+<div class="container-fluid">
+    <div class="col-md-2">
+    <table class="table table striped">
+    <thead class="thead dark">
+      <tr>
+      <th> Semanas  </th>
+      </tr>
+      </thead>
+      <tbody>
+       <tr>
+       <th>Id</th>
+       <th>Hora entrega</th>
+       <th>Lugar entrega</th>
+       <th>costo</th>
+       </tr>
+      <tr *ngFor="let s of semanas">
+      <td> {{s.id}} </td>
+      <td> {{s.horaEntrega}} </td>
+      <td> {{s.lugarEntrega}} </td>
+      <td> {{s.costo}} </td>
+      </tr>  
+      </tbody>
+      </table>
+      </div>
+</div>

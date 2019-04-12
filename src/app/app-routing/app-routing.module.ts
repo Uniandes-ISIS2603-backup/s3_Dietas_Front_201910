@@ -18,7 +18,7 @@ import { DietaListComponent } from '../dieta/dieta-list/dieta-list.component';
 import { SuspensionListComponent } from '../suspension/suspensionlist/suspensionlist.component';
 import { CocinaListComponent } from '../cocina/cocinalist/cocinalist.component';
 import { CalificacionycomentarioListComponent } from '../calificacionycomentario/calificacionycomentario-list/calificacionycomentario-list.component';
-
+import{DiaListarComponent} from '../dia/dia-listar/dia-listar.component';
 
 
 
@@ -154,6 +154,28 @@ const routes: Routes = [
         children: [{
           path: 'list',
           component: FotolistarComponent
+         
+        }   
+        ]
+    
+        
+      },
+      {
+        path: 'semanas',
+        children: [{
+          path: 'list',
+          component: SemanaListarComponent
+         
+        }   
+        ]
+    
+        
+      },
+      {
+        path: 'dias',
+        children: [{
+          path: 'list',
+          component: DiaListarComponent
          
         }   
         ]
