@@ -34,6 +34,16 @@ export class DietaService {
     getDietas(): Observable<Dieta[]> {
         return this.http.get<Dieta[]>(API_URL + dietas);
     }
+    
+
+     /**
+    * Returns the Observable object containing the dieta retrieved from the API
+    * @returns The dieta
+    */
+   getDietaDetail(dietaId): Observable<DietaDetail> {
+    console.log(dietaId+" "+API_URL + "dieta-" + dietaId+".json");
+      return this.http.get<DietaDetail>(API_URL + dietas +'/'+ dietaId + "/personas" );
+  }
 
     /**
     * Creates a new dieta
@@ -44,13 +54,15 @@ export class DietaService {
         return this.http.post<DietaDetail>(API_URL + dietas, dieta);
     }
 
+    
+
     /**
-    * Returns the Observable object with the details of a dieta retrieved from the API
-    * @returns The dieta details
+    * Returns the Observable object containing the halloffame retrieved from the API
+    * @returns The halloffame
     */
-    getDietaDetail(dietaId): Observable<DietaDetail> {
-        return this.http.get<DietaDetail>(API_URL + dietas + '/' + dietaId);
-    }
+   getDieta(dietaId:number): Observable<Dieta> {
+    return this.http.get<Dieta>(API_URL + dietas + '/' + dietaId);
+}
 
     /**
     * Creates a suspension
@@ -60,6 +72,7 @@ export class DietaService {
     createSuspension(dietaId, suspension): Observable<Suspension> {
         return this.http.post<Suspension>(API_URL + dietas + '/' + dietaId + suspensiones, suspension);
     }
+
 
     /**
     * Creates a semana
@@ -88,3 +101,5 @@ export class DietaService {
         return this.http.delete<DietaDetail>(API_URL + dietas + '/' + dietaId);
     }
 }
+
+
