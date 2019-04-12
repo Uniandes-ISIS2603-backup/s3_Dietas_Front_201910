@@ -28,6 +28,8 @@ import {PersonaModule} from './persona/persona.module';
 import {SuspensionModule} from './suspension/suspension.module';
 import {CocinaModule} from './cocina/cocina.module';
 import{QuejayreclamoModule} from './quejayreclamo/quejayreclamo.module';
+import {CalificacionycomentarioModule} from './calificacionycomentario/calificacionycomentario.module';
+
 
 
 @NgModule({
@@ -61,6 +63,9 @@ import{QuejayreclamoModule} from './quejayreclamo/quejayreclamo.module';
         CocinaModule,
         QuejayreclamoModule
 
+        CalificacionycomentarioModule
+
+
     ],
     bootstrap: [AppComponent],
     providers: [
@@ -72,5 +77,7 @@ import{QuejayreclamoModule} from './quejayreclamo/quejayreclamo.module';
     ]
 })
 export class AppModule {}
+
+
 
 
