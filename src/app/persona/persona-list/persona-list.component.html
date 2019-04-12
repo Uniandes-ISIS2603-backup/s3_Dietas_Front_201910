@@ -1,31 +1,23 @@
 
+<div class="container-fluid">
+    <div class="col">
+        <table class="table table-striped responsive">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Persona id</th>    
+                </tr>
+            </thead>
+            <tbody>
+                
+                   <tr *ngFor = "let p of personas">
+                    <td style="cursor: pointer;">
+						        	<a class="figure-caption" (click)="onSelected(h.id)">{{h.id}}</a>
+                                </td>
+                                <td>{{p.nombre}}}</td>
 
-	<div id="main-container">
 
-		<table>
-			<thead>
-       
-      	<tr>
-					<th>Personas</th>
-        
-				</tr>
-			</thead>
-      <tr>
-					<th>Id</th>
-          <th>Name</th>
-        
-				</tr>  
-			<tr *ngFor= "let c of personas">
-				<td>Nombre: {{c.name}}</td>
-				<td>Objetivos: {{c.objetivos}}</td>
-				<td>Fecha de ingreso:{{c.fechaIngreso}}</td>
-				<td>Tipo: {{c.tipo}}</td>
-				
-        	<!--<td style="cursor: pointer;">
-				<a class="figure-caption" [routerLink]="['/personas', { outlets: { 'detail': [c.id] } }]">{{c.name}}</a>
-				</td>
-			-->
-			</tr>
-		
-		</table>
-	</div>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+

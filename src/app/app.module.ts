@@ -19,19 +19,19 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 
-import { HalloffameModule } from './halloffame/halloffame.module';
-import { FotoModule } from './foto/foto.module';
-import { ComidaModule } from './comida/comida.module';
+import {HalloffameModule} from './halloffame/halloffame.module';
+import {FotoModule} from './foto/foto.module';
+import {ComidaModule} from './comida/comida.module';
 
 import {PersonaModule} from './persona/persona.module';
+
 import {SuspensionModule} from './suspension/suspension.module';
 import {CocinaModule} from './cocina/cocina.module';
 
 
-
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,        
     ],
     imports: [
         BrowserModule,
@@ -56,7 +56,8 @@ import {CocinaModule} from './cocina/cocina.module';
         HalloffameModule,
         ComidaModule,
         SuspensionModule,
-        CocinaModule
+        CocinaModule,
+
     ],
     bootstrap: [AppComponent],
     providers: [
@@ -68,4 +69,5 @@ import {CocinaModule} from './cocina/cocina.module';
     ]
 })
 export class AppModule {}
+
 

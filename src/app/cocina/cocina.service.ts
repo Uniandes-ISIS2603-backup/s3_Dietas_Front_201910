@@ -39,4 +39,25 @@ getCocinas(): Observable<Cocina[]>{
 }
 
 
+/**
+    * Returns the Observable object containing the halloffame retrieved from the API
+    * @returns The halloffame
+    */
+   getCocina(cocinaId:number): Observable<Cocina> {
+    return this.http.get<Cocina>(API_URL + cocinas + '/' + cocinaId);
+}
+
+
+
+
+  /**
+    * Updates an halloffame
+    * @param cocina The halloffame which will be update
+    * @returns The confirmation of the hall's update
+    */
+   updateCocina(cocina: Cocina): Observable<Cocina> {
+    return this.http.put<Cocina>(API_URL + cocinas + '/' + cocina.id, cocina);
+}
+
+
 }
