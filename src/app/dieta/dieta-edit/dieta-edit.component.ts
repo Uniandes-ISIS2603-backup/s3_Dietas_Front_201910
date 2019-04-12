@@ -2,7 +2,6 @@ import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angu
 import {DietaService} from '../dieta.service';
 import { ToastrService } from 'ngx-toastr';
 import { Dieta } from '../dieta';
-import {DietaDetail} from '../dieta-detail';
 
 @Component({
     selector: 'app-dieta-edit',

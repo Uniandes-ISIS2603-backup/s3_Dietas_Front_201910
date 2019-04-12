@@ -4,12 +4,13 @@ import { SuspensionListComponent } from './suspensionlist/suspensionlist.compone
 import { SuspensionService } from './suspension.service';
 import { SuspensionCreateComponent } from './suspension-create/suspension-create.component';
 import { FormsModule } from '@angular/forms';
+import { SuspensionEditarComponent } from './suspension-editar/suspension-editar.component';
 
 @NgModule({
   imports: [
     CommonModule, FormsModule
   ],
-  declarations: [SuspensionListComponent, SuspensionCreateComponent],
+  declarations: [SuspensionListComponent, SuspensionCreateComponent, SuspensionEditarComponent],
   exports: [SuspensionListComponent],
   providers: [SuspensionService]
 })

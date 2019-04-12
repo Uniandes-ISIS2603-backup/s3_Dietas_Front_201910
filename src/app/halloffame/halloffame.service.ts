@@ -31,9 +31,9 @@ export class HalloffameService {
     * Returns the Observable object containing the halloffame retrieved from the API
     * @returns The halloffame
     */
-    getHalloffameDetail(halloffameId): Observable<HalloffameDetail> {
-      console.log(halloffameId+" "+API_URL + "hall-" + halloffameId+".json");
-        return this.http.get<HalloffameDetail>(API_URL + halls +'/'+ halloffameId + "/personas" );
+    getHalloffameDetail(halloffameId:number): Observable<HalloffameDetail> {
+    
+        return this.http.get<HalloffameDetail>(API_URL + halls +'/'+ halloffameId );
     }
 
       /**
@@ -46,11 +46,13 @@ export class HalloffameService {
 }
 /**
     * Returns the Observable object containing the halloffame retrieved from the API
+    *  @param halloffameId The halloffame´s id which will be consulted
     * @returns The halloffame
     */
    getHalloffame(halloffameId:number): Observable<Halloffame> {
     return this.http.get<Halloffame>(API_URL + halls + '/' + halloffameId);
 }
+
   /**
     * Updates an halloffame
     * @param halloffame The halloffame which will be update

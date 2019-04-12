@@ -4,17 +4,17 @@
         <table class="table table-striped responsive">
             <thead class="thead-dark">
                 <tr>
-                    <th>Persona id</th>    
+                    <th>Nombre</th>   <th>fechaIngreso</th>  <th>Tiempo Esperado Mejora</th> <th>Obejtivos</th> 
                 </tr>
             </thead>
             <tbody>
                 
                    <tr *ngFor = "let p of personas">
-                    <td style="cursor: pointer;">
-						        	<a class="figure-caption" (click)="onSelected(h.id)">{{h.id}}</a>
-                                </td>
-                                <td>{{p.nombre}}}</td>
-
+                    
+								<td>{{p.nombre}}</td>
+								<td>{{p.fechaIngreso}}</td>
+								<td>{{p.tiempoEsperadoMejora}} Días</td>
+								<td>{{p.obejtivos}}</td>
 
                 </tr>
             </tbody>
