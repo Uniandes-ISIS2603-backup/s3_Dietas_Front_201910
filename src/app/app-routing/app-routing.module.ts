@@ -13,6 +13,7 @@ import { HalloffameDetailComponent } from '../halloffame/halloffame-detail/hallo
 import { ComidalistarComponent } from '../comida/comidalistar/comidalistar.component';
 
 import { PersonaListComponent } from '../persona/persona-list/persona-list.component';
+import { DietaListComponent } from '../dieta/dieta-list/dieta-list.component';
 
 import { SuspensionListComponent } from '../suspension/suspensionlist/suspensionlist.component';
 import { CocinaListComponent } from '../cocina/cocinalist/cocinalist.component';
@@ -138,8 +139,16 @@ const routes: Routes = [
         ]
     
       },
-      
-      
+      {
+        path: 'dietas',
+        children: [{
+          path: 'list',
+          component: DietaListComponent
+         
+        }   
+        ]
+    
+      },
       {
         path: 'fotos',
         children: [{
