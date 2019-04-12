@@ -16,15 +16,20 @@ export class PersonaListComponent implements OnInit{
 
   @Input() idHall:number;
 
-  getPersonasDeHall(hallId):void{
-    this.personaService.getPersonasDeHall(hallId).subscribe(clienteAux=> this.personas=clienteAux)
-  }
+  //getPersonasDeHall(hallId: number):void{
+    
+  //console.log("obteniendo personas ");
+    //this.personaService.getPersonasDeHall(hallId).subscribe(clienteAux=> this.personas=clienteAux);
+  //}
 
   getPersonas():void{
-    this.personaService.getPersonas().subscribe(clienteAux=> this.personas=clienteAux)
+    this.personaService.getPersonas().subscribe(clienteAux=> this.personas=clienteAux);
   }
   ngOnInit() {
+    //this.getPersonasDeHall(this.idHall);
     this.getPersonas();
+    
+   
   }
 
 }
