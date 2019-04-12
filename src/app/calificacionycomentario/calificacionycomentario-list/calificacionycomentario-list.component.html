@@ -1,0 +1,27 @@
+
+<div class="container-fluid">
+  <div class="col-md-2">
+  <table class="table table striped">
+  <thead class="thead dark">
+    <tr>
+    <th> CalificacionYComentario  </th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+            <th>Id</th>
+            <th>Calificación</th>
+            <th>Comentarios</th>
+            
+          </tr>
+    <tr *ngFor="let c of calificacionesycomentarios">
+    <td> {{c.id}} </td> 
+    <td> {{c.calificacion}} </td> 
+    <td> {{c.comentario}} </td> 
+    </tr> 
+    </tbody>
+    </table>
+    </div>
+    </div>
+    <app-calificacionycomentario-create></app-calificacionycomentario-create>
+    <app-calificacionycomentario-editar></app-calificacionycomentario-editar>

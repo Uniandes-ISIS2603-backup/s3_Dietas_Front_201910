@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-12">
+      <br>
+      <h2 class="text-center">Update a Cocina</h2>
+      <br>
+      <form name="cocina" (ngSubmit)="f.form.valid && updateCocina()" #f="ngForm" novalidate>
+            <div class="form-group">
+              <label for="cocinaDireccion"><b>Direccion</b></label>
+              <input type="text" name="cocinaDireccion" class="form-control" id="cocinaDireccion" [(ngModel)]="cocina.direccion"
+                     #cocinaDireccion="ngModel" [ngClass]="{ 'is-invalid': f.submitted && cocinaDireccion.invalid }" required>
+                     <div class="invalid-feedback">
+                  <div>The cocina´s Direccion is missing</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="cocinaId"><b>Id</b></label>
+              <input type="text" name="cocinaId" class="form-control" id="cocinaId" [(ngModel)]="cocina.id"
+                     #cocinaId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && cocinaId.invalid }" required>
+                     <div class="invalid-feedback">
+                  <div>The cocina´s Id is missing</div>
+              </div>
+          </div>
+          
+          </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+      <div class="row form-inline justify-content-center align-self-center">
+          <i  style="padding-right: 1em;"class="fa fa-save " (click)="updateCocina()"></i>
+        
+          <i class="fa fa-ban" (click)="cancelEdition()"></i>
+      </div>
+  </div>
+</div>
+<br>
+<br>

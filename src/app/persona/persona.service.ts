@@ -22,10 +22,19 @@ export class PersonaService {
     return this.http.get<Persona[]>(API_URL+halls+"/"+hallId+"/"+personas);
   }
 
-  getPersonasDetail():Observable<PersonaDetail[]>{
-    return this.http.get<PersonaDetail[]>(API_URL+halls+"/"+personas);
+  getPersonas():Observable<Persona[]>{
+    return this.http.get<Persona[]>(API_URL+personas);
   }
   getPersonaDetail(personaId:number): Observable<PersonaDetail> {
-        return this.http.get<PersonaDetail>(API_URL + "persona" + personaId+".json");
+        return this.http.get<PersonaDetail>(API_URL + personas+'/' + personaId+"/fotos");
     }
+
+     /**
+    * Creates an Persona
+    * @param persona The persona which will be created
+    * @returns The confirmation of the persona's creation
+    */
+   createHalloffame(persona:Persona): Observable<Persona> {
+    return this.http.post<Persona>(API_URL + personas, persona);
+   }
 }
