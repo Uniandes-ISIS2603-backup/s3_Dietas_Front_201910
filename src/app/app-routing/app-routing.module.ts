@@ -16,6 +16,8 @@ import { PersonaListComponent } from '../persona/persona-list/persona-list.compo
 
 import { SuspensionListComponent } from '../suspension/suspensionlist/suspensionlist.component';
 import { CocinaListComponent } from '../cocina/cocinalist/cocinalist.component';
+import { CalificacionycomentarioListComponent } from '../calificacionycomentario/calificacionycomentario-list/calificacionycomentario-list.component';
+
 
 
 
@@ -109,6 +111,16 @@ const routes: Routes = [
         children: [{
           path: 'list',
           component: CocinaListComponent
+         
+        }   
+        ]
+    
+      },
+      {
+        path: 'calificacionesycomentarios',
+        children: [{
+          path: 'list',
+          component: CalificacionycomentarioListComponent
          
         }   
         ]
