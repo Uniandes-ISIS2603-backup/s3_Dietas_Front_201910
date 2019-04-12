@@ -27,6 +27,7 @@ import {PersonaModule} from './persona/persona.module';
 
 import {SuspensionModule} from './suspension/suspension.module';
 import {CocinaModule} from './cocina/cocina.module';
+import {CalificacionycomentarioModule} from './calificacionycomentario/calificacionycomentario.module';
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import {CocinaModule} from './cocina/cocina.module';
         ComidaModule,
         SuspensionModule,
         CocinaModule,
+        CalificacionycomentarioModule
 
     ],
     bootstrap: [AppComponent],
@@ -69,5 +71,7 @@ import {CocinaModule} from './cocina/cocina.module';
     ]
 })
 export class AppModule {}
+
+
 
 
