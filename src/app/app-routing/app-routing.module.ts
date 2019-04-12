@@ -21,7 +21,7 @@ import {DiaListarComponent} from '../dia/dia-listar/dia-listar.component';
 import { SuspensionListComponent } from '../suspension/suspensionlist/suspensionlist.component';
 import { CocinaListComponent } from '../cocina/cocinalist/cocinalist.component';
 import { CalificacionycomentarioListComponent } from '../calificacionycomentario/calificacionycomentario-list/calificacionycomentario-list.component';
-
+import{TipoDietaListarComponent} from '../tipo-dieta/tipo-dieta-listar/tipo-dieta-listar.component';
 
 
 
@@ -182,7 +182,28 @@ const routes: Routes = [
         }   
         ]
     
+      },
+      {
+        path: 'semanas',
+        children: [{
+          path: 'list',
+          component: SemanaListarComponent
+         
+        }   
+        ]
+    
+      },
+      {
+        path: 'tiposDietas',
+        children: [{
+          path: 'listar',
+          component: TipoDietaListarComponent
+         
+        }   
+        ]
+    
       }
+      
       
    
 ];
