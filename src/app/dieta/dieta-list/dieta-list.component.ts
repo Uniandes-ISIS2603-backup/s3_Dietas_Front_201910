@@ -1,10 +1,11 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import 'rxjs/add/operator/filter';
-
-
+import { Router } from '@angular/router';
 import {Dieta} from '../../dieta/dieta';
 import {DietaService} from '../../dieta/dieta.service';
+import { DietaDetail } from '../dieta-detail';
+
+
 @Component({
     selector: 'app-dieta-list',
     templateUrl: './dieta-list.component.html',
@@ -12,44 +13,41 @@ import {DietaService} from '../../dieta/dieta.service';
 })
 export class DietaListComponent implements OnInit {
 
-    /**
-    * The list of dietas to display
-    */
-    @Input() dietas: Dieta[];
+/**
+     * Constructor for the component
+     * @param dietaService The author's services provider
+     */
+    constructor(private dietaService: DietaService, private router: Router) { }
 
-    /**
-    * The component's constructor
-    */
-    constructor(private dietaService: DietaService, private route: ActivatedRoute) {}
+   /**
+     * The list of halls which belong to the BookStore
+     */
+    dietas: Dieta[];
 
-    alldietas: string = 'no';
-    /**
-    * This method retrieves all the dietas in the App to show them in the list
-    */
+    dietas_id: number;
+    selectedDieta: DietaDetail;
+ /**
+     * Asks the service to update the list of halls
+     */
     getDietas(): void {
-        this.dietaService.getDietas()
-            .subscribe(dietas => {
-                this.dietas = dietas;
-            });
+        this.dietaService.getDietas().subscribe(d => 
+        this.dietas = d);
     }
+
+
+    onSelected(dietas_id: number): void {
+    this.dietas_id = dietas_id;
+    this.selectedDieta = new DietaDetail();
+    this.dietaService.getDietaDetail(dietas_id).subscribe(o => this.selectedDieta = o);
+  }
 
     /**
-    * The method which initializes the component
-    */
+     * This will initialize the component by retrieving the list of halls from the service
+     * This method will be called when the component is created
+     */
     ngOnInit() {
-        this.route.queryParams
-            .filter(params => params.allbooks)
-            .subscribe(params => {
-                console.log(params);
-
-                this.alldietas = params.alldietas;
-                console.log(this.alldietas);
-            });
-        if (this.alldietas == 'yes') {
-            console.log("alldietas");
-
-            this.getDietas();
-        }
+        this.getDietas();
     }
+   
 
 }
