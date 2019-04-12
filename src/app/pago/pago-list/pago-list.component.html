@@ -1,0 +1,25 @@
+<div class="container-fluid">
+        <div class="col-md-2">
+        <table class="table table striped">
+        <thead class="thead dark">
+          <tr>
+          <th> Pago  </th>
+          </tr>
+          </thead>
+          <tbody>
+           <tr>
+           <th>Id</th>
+           <th>Modo de pago</th>
+           </tr>
+          <tr *ngFor="let p of pagos">
+          <td> {{p.id}} </td>
+          <td> {{p.modoPago}} </td>
+          </tr>  
+          </tbody>
+          </table>
+          </div>
+    </div>
+    
+    
+    <app-pago-create></app-pago-create>
+    <app-pago-edit></app-pago-edit>

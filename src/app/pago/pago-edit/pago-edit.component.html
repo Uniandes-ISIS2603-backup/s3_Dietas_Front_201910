@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-12">
+        <br>
+        <h2 class="text-center">Update a Pago</h2>
+        <br>
+        <form name="pago" (ngSubmit)="f.form.valid && updatePago()" #f="ngForm" novalidate>
+              <div class="form-group">
+                <label for="modoPago"><b>Modo de pago</b></label>
+                <input type="text" name="modoPago" class="form-control" id="modoPago" [(ngModel)]="pago.modoPago"
+                       #modoPago="ngModel" [ngClass]="{ 'is-invalid': f.submitted && modoPago.invalid }" required>
+                       <div class="invalid-feedback">
+                    <div>The pago's modo de pago is missing</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pagoId"><b>Id</b></label>
+                <input type="text" name="pagoId" class="form-control" id="pagoId" [(ngModel)]="pago.id"
+                       #cocinaId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && pagoId.invalid }" required>
+                       <div class="invalid-feedback">
+                    <div>The pago's Id is missing</div>
+                </div>
+            </div>
+            
+            </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+        <div class="row form-inline justify-content-center align-self-center">
+            <i  style="padding-right: 1em;"class="fa fa-save " (click)="updatePago()"></i>
+          
+            <i class="fa fa-ban" (click)="cancelEdition()"></i>
+        </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  

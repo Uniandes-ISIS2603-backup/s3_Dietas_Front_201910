@@ -7,7 +7,7 @@ export class Dieta{
     /**
      * nombre de la dieta
      */
-    name: string;
+    nombre: string;
     /**
      * tipo de la dieta
      */
