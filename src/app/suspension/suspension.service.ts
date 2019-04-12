@@ -42,4 +42,26 @@ getSuspensiones(): Observable<Suspension[]>{
 }
 
 
+/**
+    * Returns the Observable object containing the halloffame retrieved from the API
+    * @returns The suspension
+    */
+   getSuspension(suspensionId:number): Observable<Suspension> {
+    return this.http.get<Suspension>(API_URL + suspensiones + '/' + suspensionId);
+}
+
+
+
+
+  /**
+    * Updates an Suspension
+    * @param suspension The Suspension which will be update
+    * @returns The confirmation of the Suspension's update
+    */
+   updateSuspension(suspension: Suspension): Observable<Suspension> {
+    return this.http.put<Suspension>(API_URL + suspensiones + '/' + suspension.id, suspension);
+}
+
+
+
 }

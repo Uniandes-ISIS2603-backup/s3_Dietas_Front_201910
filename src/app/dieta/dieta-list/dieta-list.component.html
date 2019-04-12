@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="col">
+        <table class="table table-striped responsive">
+            <thead class="thead-dark">
+                    <tr>
+                      <th> Dieta  </th>
+                       </tr>
+                   <tr>
+                    <th>Id</th>   
+                    <th>Name</th>   
+                    <th>Tipo</th>
+                    <th>Objetivos</th>   
+                    <th>Días Suspendida</th> 
+                </tr>
+            </thead>
+            <tbody>
+                
+                   <tr *ngFor = "let d of dietas">
+                    <td style="cursor: pointer;">
+						        	<a class="figure-caption" (click)="onSelected(d.id)">{{d.id}}</a>
+                                </td>                                
+                                <td>{{d.nombre}}</td>
+                                <td>{{d.tipo}}</td>
+                                <td>{{d.objetivo}}</td>
+                                <td>{{d.diasSuspendida}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+    <app-dieta-create></app-dieta-create>
+    <app-dieta-edit></app-dieta-edit>
+
+	
