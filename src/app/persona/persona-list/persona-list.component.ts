@@ -20,11 +20,11 @@ export class PersonaListComponent implements OnInit{
     this.personaService.getPersonasDeHall(hallId).subscribe(clienteAux=> this.personas=clienteAux)
   }
 
-  getPersonasDetail():void{
-    this.personaService.getPersonasDetail().subscribe(clienteAux=> this.personas=clienteAux)
+  getPersonas():void{
+    this.personaService.getPersonas().subscribe(clienteAux=> this.personas=clienteAux)
   }
   ngOnInit() {
-    this.getPersonasDetail();
+    this.getPersonas();
   }
 
 }
