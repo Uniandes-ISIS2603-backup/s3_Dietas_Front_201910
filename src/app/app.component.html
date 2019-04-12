@@ -45,56 +45,111 @@
     </footer>
 </div>
 <-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div>
+        <div class="texto-nav">
+        
+            <img src="http://hetlagewoud.nl/2017/wp-content/uploads/2017/08/organicfood5.jpg" class="img-fluid" alt="Responsive image" style=" height: 400px; width: 100%;overflow: hidden;background-position: center top;object-fit: cover" >
 
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+                <div class="container-fluid">
+                        <div class="navbar-header textoHead-nav" >
+                                <a class="navbar-brand" routerLink="auth/login">EasyProDiet</a>
+                        </div>
 
-<ul class="nav">
-	<li class="nav-item">
-   
-		<a class="nav-link active" routerLink="halls/list" routerLinkActive="active"> Halls id </a>
-	</li>
-  <li class="nav-item">
-   
-		<a class="nav-link active" routerLink="fotos/list" routerLinkActive="active"> Foto id </a>
-	</li>
-  <li class="nav-item">
-   
-		<a class="nav-link active" routerLink="comidas/list" routerLinkActive="active"> Comida id </a>
-    </li>
-    <li class="nav-item">
-   
-		<a class="nav-link active" routerLink="comidas/list" routerLinkActive="active"> Dia </a>
-    </li>
+                <ul class="nav navbar-nav" >
+                    <li class="nav-item bg-dark active" style="margin: 0 20px 0 20px">
+                
+                        <a class="nav-link active" routerLink="halls/list" routerLinkActive="active"> Halls id </a>
+                    </li>
+                <li class="nav-item active" style="margin: 0 20px 0 20px">
+                
+                        <a class="nav-link active" routerLink="fotos/list" routerLinkActive="active"> Foto id </a>
+                    </li>
+                <li class="nav-item active" style="margin: 0 20px 0 20px">
+                
+                        <a class="nav-link active" routerLink="comidas/list" routerLinkActive="active"> Comida id </a>
+                    </li>
+                    <li class="nav-item active" style="margin: 0 20px 0 20px">
+                
+                        <a class="nav-link active" routerLink="/list" routerLinkActive="active"> Dia </a>
+                    </li>
+            
+                    <li class="nav-item" style="margin: 0 20px 0 20px">
+                
+                        <a class="nav-link active" routerLink="/list" routerLinkActive="active"> Semana </a>
+                    </li>
+            
+                    <li class="nav-item" style="margin: 0 20px 0 20px">
+                
+                        <a class="nav-link active" routerLink="/list" routerLinkActive="active"> Tipos Dieta </a>
+                    </li>
+                    <li class="nav-item" style="margin: 0 20px 0 20px">
+                
+                        <a class="nav-link active" routerLink="personas/list" routerLinkActive="active"> Personas </a>
+                    </li>
+                    <li class="nav-item" style="margin: 0 20px 0 20px">
+                
+                        <a class="nav-link active" routerLink="quejasYReclamos/list" routerLinkActive="active"> Quejas y reclamos </a>
+                    </li>
+                    
+                    <li class="nav-item" style="margin: 0 20px 0 20px">
+                
+                        <a class="nav-link active" routerLink="suspensiones/list" routerLinkActive="active"> Suspensiones </a>
+                    </li>
+        
+                    <li class="nav-item" style="margin: 0 20px 0 20px">
+                
+                            <a class="nav-link active" routerLink="cocinas/list" routerLinkActive="active"> Cocinas </a>
+                        </li>
 
-    <li class="nav-item">
-   
-		<a class="nav-link active" routerLink="comidas/list" routerLinkActive="active"> Semana </a>
-    </li>
+                        <li class="nav-item" style="margin: 0 20px 0 20px">
+                
+                            <a class="nav-link active" routerLink="calificacionesycomentarios/list" routerLinkActive="active"> Calificaciones Y Comentarios </a>
+                        </li>
+            
+                    <li class="nav-item" style="margin: 0 20px 0 20px">
+                
+                        <a class="nav-link active" routerLink="/list" routerLinkActive="active"> Dietas </a>
+                    </li>
+                    <li class="nav-item" style="margin: 0 20px 0 20px">
+                
+                        <a class="nav-link active" routerLink="/list" routerLinkActive="active"> Pagos </a>
+                    </li>
+            
+                </ul>
 
-    <li class="nav-item">
-   
-		<a class="nav-link active" routerLink="comidas/list" routerLinkActive="active"> Tipos Dieta </a>
-    </li>
-    
-    <li class="nav-item">
-   
-		<a class="nav-link active" routerLink="pagos/list" routerLinkActive="active"> Pagos </a>
-    </li>
+            </div>
+            </nav>
 
-    <li class="nav-item">
-   
-		<a class="nav-link active" routerLink="dietas/list" routerLinkActive="active"> Dietas </a>
-    </li>
-</ul>
-
-<div class="container-fluid ">
-	<div class="border m-5 row">
-		<div class="col">
-			<router-outlet></router-outlet>
-
-		</div>
-    <div class="col">
-		<router-outlet name="detail"></router-outlet>
-		</div>
-  </div>  
+        </div>
+        <div>
+                <div class="container-fluid ">
+                    <div class="border m-5 row">
+                        <div class="col">
+                            <router-outlet></router-outlet>
+                        </div>
+                    <div class="col">
+                        <router-outlet name="detail"></router-outlet>
+                        </div>
+                  </div>  
+                </div>
+        </div>
+                        
 </div>
+<!--<semana-listar></semana-listar>
+<dia-listar></dia-listar>
+<tipo-dieta-listar></tipo-dieta-listar>-->
 
+</body>
+</html>

@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-12">
+      <br>
+      <h2 class="text-center">Update a Calificacion Y Comentario</h2>
+      <br>
+      <form name="calificacionycomentario" (ngSubmit)="f.form.valid && updateCalificacionycomentario()" #f="ngForm" novalidate>
+            <div class="form-group">
+              <label for="calificacionycomentarioCalificacion"><b>Calificación</b></label>
+              <input type="text" name="calificacionycomentarioCalificacion" class="form-control" id="calificacionycomentarioCalificacion" [(ngModel)]="calificacionycomentario.calificacion"
+                     #calificacionycomentarioCalificacion="ngModel" [ngClass]="{ 'is-invalid': f.submitted && calificacionycomentarioCalificacion.invalid }" required>
+                     <div class="invalid-feedback">
+                  <div>The calificacionycomentario`s Calificacion is missing</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="calificacionycomentarioId"><b>Id</b></label>
+              <input type="text" name="calificacionycomentarioId" class="form-control" id="calificacionycomentarioId" [(ngModel)]="calificacionycomentario.id"
+                     #calificacionycomentarioId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && calificacionycomentarioId.invalid }" required>
+                     <div class="invalid-feedback">
+                  <div>The calificacionycomentario´s id is missing</div>
+              </div>
+          </div>
+          
+          </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+      <div class="row form-inline justify-content-center align-self-center">
+          <i  style="padding-right: 1em;"class="fa fa-save " (click)="updateCalificacionycomentario()"></i>
+        
+          <i class="fa fa-ban" (click)="cancelEdition()"></i>
+      </div>
+  </div>
+</div>
+<br>
+<br>
+

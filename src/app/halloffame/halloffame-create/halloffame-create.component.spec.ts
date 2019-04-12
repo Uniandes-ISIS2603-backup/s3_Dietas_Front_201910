@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DiaListarComponent } from './dia-listar.component';
+import { HalloffameCreateComponent } from './halloffame-create.component';
 
-describe('DiaListarComponent', () => {
-  let component: DiaListarComponent;
-  let fixture: ComponentFixture<DiaListarComponent>;
+describe('HalloffameCreateComponent', () => {
+  let component: HalloffameCreateComponent;
+  let fixture: ComponentFixture<HalloffameCreateComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DiaListarComponent ]
+      declarations: [ HalloffameCreateComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DiaListarComponent);
+    fixture = TestBed.createComponent(HalloffameCreateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

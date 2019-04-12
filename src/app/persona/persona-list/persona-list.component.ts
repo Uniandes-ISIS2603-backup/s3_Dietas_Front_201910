@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import{Persona} from '../persona'
 import{PersonaDetail} from '../persona-detail'
 import{PersonaService} from '../persona.service'
@@ -12,13 +12,19 @@ export class PersonaListComponent implements OnInit{
   
   constructor(private personaService:PersonaService) { }
 
-  personas: PersonaDetail[];
+  personas: Persona[];
 
-  getPersonasDetail():void{
-    this.personaService.getPersonasDetail().subscribe(clienteAux=> this.personas=clienteAux)
+  @Input() idHall:number;
+
+  getPersonasDeHall(hallId):void{
+    this.personaService.getPersonasDeHall(hallId).subscribe(clienteAux=> this.personas=clienteAux)
+  }
+
+  getPersonas():void{
+    this.personaService.getPersonas().subscribe(clienteAux=> this.personas=clienteAux)
   }
   ngOnInit() {
-    this.getPersonasDetail();
+    this.getPersonas();
   }
 
 }

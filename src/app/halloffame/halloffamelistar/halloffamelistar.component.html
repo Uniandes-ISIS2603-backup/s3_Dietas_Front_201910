@@ -1,9 +1,9 @@
 <div class="container-fluid">
-    <div class="col-md-2">
-        <table class="table table-striped">
+    <div class="col">
+        <table class="table table-striped responsive">
             <thead class="thead-dark">
                 <tr>
-                    <th>Hall id</th>    
+                    <th>Hall id</th>   <th>Hall mensaje</th>   
                 </tr>
             </thead>
             <tbody>
@@ -11,7 +11,8 @@
                    <tr *ngFor = "let h of halls">
                     <td style="cursor: pointer;">
 						        	<a class="figure-caption" (click)="onSelected(h.id)">{{h.id}}</a>
-					        	</td>
+                                </td>
+                                <td>{{h.mensaje}}</td>
 
 
                 </tr>
@@ -27,3 +28,5 @@
 		</div>
 	</div>
 </div>
+<app-halloffame-create></app-halloffame-create>
+<app-halloffame-editar></app-halloffame-editar>

@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <br>
+        <h2 class="text-center">Create a Suspension</h2>
+        <br>
+        <form name="suspension" (ngSubmit)="f.form.valid && createSuspension()" #f="ngForm" novalidate>
+            <div class="form-group">
+               
+              <label for="SuspensionVigente"><b>Vigente</b></label>
+                <input type="text" mensaje="suspensionVigente" class="form-control" id="suspensionVigente" [(ngModel)]="suspension.vigente"
+                    #suspensionVigente="ngModel" [ngClass]="{ 'is-invalid': f.submitted && suspensionVigente.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>The suspension vigencia is missing</div>
+                </div>
+
+                <label for="SuspensionComentarios"><b>Comentarios</b></label>
+                <input type="text" mensaje="suspensionComentarios" class="form-control" id="suspensionComentarios" [(ngModel)]="suspension.comentarios"
+                    #suspensionComentarios="ngModel" [ngClass]="{ 'is-invalid': f.submitted && suspensionComentarios.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>The suspension comentario is missing</div>
+                </div>
+                
+
+                <label for="SuspensionNumDias"><b>Duración</b></label>
+                <input type="text" mensaje="suspensionNumDias" class="form-control" id="suspensionNumDias" [(ngModel)]="suspension.numDias"
+                    #suspensionNumDias="ngModel" [ngClass]="{ 'is-invalid': f.submitted && suspensionNumDias.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>The suspension duracion is missing</div>
+                </div>
+
+
+            </div>
+            <div class="row form-inline justify-content-center align-self-center">
+                <button type="submit" class="btn btn-primary">Create</button>
+                <div class="divider"></div>
+                <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-3"></div>
+</div>

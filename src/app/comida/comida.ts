@@ -19,4 +19,5 @@ export class Comida {
         * The comida's alimentos y la cantidad de cada uno
         */
        alimentosYCantidades: string;
+       
     }

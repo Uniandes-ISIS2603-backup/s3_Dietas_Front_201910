@@ -5,11 +5,21 @@ import {NgxPermissionsGuard} from 'ngx-permissions';
 
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
+import {SemanaListarComponent} from '../semana/semana-listar/semana-listar.component';
 
 import { HalloffamelistarComponent } from '../halloffame/halloffamelistar/halloffamelistar.component';
 import { FotolistarComponent } from '../foto/fotolistar/fotolistar.component';
 import { HalloffameDetailComponent } from '../halloffame/halloffame-detail/halloffame-detail.component';
 import { ComidalistarComponent } from '../comida/comidalistar/comidalistar.component';
+
+import { PersonaListComponent } from '../persona/persona-list/persona-list.component';
+
+import { SuspensionListComponent } from '../suspension/suspensionlist/suspensionlist.component';
+import { CocinaListComponent } from '../cocina/cocinalist/cocinalist.component';
+import { CalificacionycomentarioListComponent } from '../calificacionycomentario/calificacionycomentario-list/calificacionycomentario-list.component';
+
+
+
 
 import { AppComponent } from '../app.component';
 
@@ -42,7 +52,7 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        component: AppComponent
+        redirectTo: 'home'
     }
     /**,
     {
@@ -65,6 +75,18 @@ const routes: Routes = [
     
       },
       {
+        path: 'personas',
+        children: [{
+          path: 'list',
+          component: PersonaListComponent,
+        
+        } ,
+          
+        ]
+    
+      },
+      
+      {
         path: 'comidas',
         children: [{
           path: 'list',
@@ -75,6 +97,38 @@ const routes: Routes = [
     
       },
       {
+        path: 'suspensiones',
+        children: [{
+          path: 'list',
+          component: SuspensionListComponent
+         
+        }   
+        ]
+    
+      },
+      {
+        path: 'cocinas',
+        children: [{
+          path: 'list',
+          component: CocinaListComponent
+         
+        }   
+        ]
+    
+      },
+      {
+        path: 'calificacionesycomentarios',
+        children: [{
+          path: 'list',
+          component: CalificacionycomentarioListComponent
+         
+        }   
+        ]
+    
+      },
+      
+      
+      {
         path: 'fotos',
         children: [{
           path: 'list',
@@ -83,17 +137,9 @@ const routes: Routes = [
         }   
         ]
     
+        
       }
-      /**{
-        path: 'comidas',
-        children: [{
-          path: 'list',
-          component: ComidalistarComponent
       
-        }   
-        ]
-    
-      } */
    
 ];
 
