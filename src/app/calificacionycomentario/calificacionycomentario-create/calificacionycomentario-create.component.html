@@ -10,7 +10,7 @@
           <div class="form-group">
              
             <label for="CalificacionycomentarioCalificacion"><b>Calificacion</b></label>
-              <input type="text" mensaje="calificacionycomentarioCalificacion" class="form-control" id="calificacionycomentarioCalificacion" [(ngModel)]="calificacionycomentario.calificacion"
+              <input type="text" name="calificacionycomentarioCalificacion" class="form-control" id="calificacionycomentarioCalificacion" [(ngModel)]="calificacionycomentario.calificacion"
                   #calificacionycomentarioCalificacion="ngModel" [ngClass]="{ 'is-invalid': f.submitted && calificacionycomentarioCalificacion.invalid }" required>
               <div class="invalid-feedback">
                   <div>The calificacionycomentario`s Calificacion is missing</div>
@@ -18,7 +18,7 @@
 
 
               <label for="CalificacionycomentarioComentario"><b>Comentario</b></label>
-              <input type="text" mensaje="calificacionycomentarioComentario" class="form-control" id="calificacionycomentarioComentario" [(ngModel)]="calificacionycomentario.comentario"
+              <input type="text" name="calificacionycomentarioComentario" class="form-control" id="calificacionycomentarioComentario" [(ngModel)]="calificacionycomentario.comentario"
                   #calificacionycomentarioComentario="ngModel" [ngClass]="{ 'is-invalid': f.submitted && calificacionycomentarioComentario.invalid }" required>
               <div class="invalid-feedback">
                   <div>The calificacionycomentario`s Comentario is missing</div>
