@@ -1,3 +1,26 @@
 <p>
   tipo-dieta-listar works!
 </p>
+<div class="container-fluid">
+  <div class="col-md-2">
+    <table class="table table striped">
+      <thead class="thead dark">
+        <tr>
+          <th> Tipos dieta </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Tipo</th>
+        </tr>
+        <tr *ngFor="let t of tipoDietas">
+          <td> {{t.id}} </td>
+          <td>{{t.nombre}}</td>
+          <td>{{t.tipo}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

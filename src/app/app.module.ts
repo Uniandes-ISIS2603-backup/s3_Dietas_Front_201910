@@ -63,7 +63,7 @@ import {CalificacionycomentarioModule} from './calificacionycomentario/calificac
         SuspensionModule,
         CocinaModule,
 
-
+        
         CalificacionycomentarioModule,
         DietaModule,
         PagoModule,
@@ -80,7 +80,5 @@ import {CalificacionycomentarioModule} from './calificacionycomentario/calificac
     ]
 })
 export class AppModule {}
-
-
 
 
