@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { TipoDietaService } from '../tipo-dieta.service';
+import { Router } from '@angular/router';
+import { TipoDieta } from '../tipo-dieta';
+
 
 @Component({
   selector: 'tipo-dieta-listar',
@@ -7,8 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipoDietaListarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tipoDietaService:TipoDietaService, private router:Router) { }
+  tiposDietas:TipoDieta[];
+  
+
+  getTipoDietas():void{
+    this.tipoDietaService.getTipoDietas().subscribe(o =>this.tiposDietas = o)
+  }
   ngOnInit() {
+    this.getTipoDietas();
   }
 
 }
