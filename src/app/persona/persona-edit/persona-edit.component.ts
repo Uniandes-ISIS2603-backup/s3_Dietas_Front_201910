@@ -13,7 +13,7 @@ export class PersonaEditComponent implements OnInit {
  /**
     * Constructor for the component
     * @param dp DatePipe to format the date.
-    * @param halloffameService The halls' services provider
+    * @param personaService The halls' services provider
     * @param toastrService The toastr to show messages to the user
     */
    constructor(
@@ -63,7 +63,7 @@ export class PersonaEditComponent implements OnInit {
     this.personaService.updatePersona(this.persona)
             .subscribe(() => {
                 this.update.emit();
-                this.toastrService.success("The persona's information was updated", "Hall edition");
+                this.toastrService.success("The persona's information was updated", "Persona edition");
             });
 }
 

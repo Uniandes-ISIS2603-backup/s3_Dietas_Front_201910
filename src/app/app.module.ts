@@ -63,7 +63,7 @@ import {CalificacionycomentarioModule} from './calificacionycomentario/calificac
         SuspensionModule,
         CocinaModule,
 
-
+        
         CalificacionycomentarioModule,
         DietaModule,
         PagoModule,
