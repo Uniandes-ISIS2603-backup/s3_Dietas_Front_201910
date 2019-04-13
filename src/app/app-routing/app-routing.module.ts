@@ -194,7 +194,7 @@ const routes: Routes = [
     
       },
       {
-        path: 'tiposDietas',
+        path: 'tipoDietas',
         children: [{
           path: 'listar',
           component: TipoDietaListarComponent
