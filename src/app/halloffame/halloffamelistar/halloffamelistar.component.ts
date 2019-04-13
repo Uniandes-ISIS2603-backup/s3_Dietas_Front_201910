@@ -93,5 +93,5 @@ export class HalloffamelistarComponent implements OnInit{
         this.getHalls();
     }
 
-    
+
 }
