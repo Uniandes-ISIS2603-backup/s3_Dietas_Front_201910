@@ -9,7 +9,7 @@ import { Halloffame} from '../halloffame';
 import { PersonaService } from '../../persona/persona.service';
 
 import { HalloffameDetail } from '../halloffame-detail';
-import { Persona } from 'src/app/persona/persona';
+import { Persona } from '../../persona/persona';
 
 
 @Component({
