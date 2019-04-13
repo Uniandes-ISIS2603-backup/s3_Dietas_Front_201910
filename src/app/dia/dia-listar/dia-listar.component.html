@@ -1,3 +1,24 @@
 <p>
   dia-listar works!
 </p>
+<div class="container-fluid">
+  <div class="col-md-2">
+    <table class="table table striped">
+      <thead class="thead dark">
+        <tr>
+          <th> Dias </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Id</th>
+          <th>Especial</th>
+        </tr>
+        <tr *ngFor="let d of dias">
+          <td> {{d.id}} </td>
+          <td>{{d.diaEspecial}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
