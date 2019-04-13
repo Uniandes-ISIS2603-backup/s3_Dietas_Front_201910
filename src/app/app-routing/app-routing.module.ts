@@ -14,6 +14,7 @@ import { ComidalistarComponent } from '../comida/comidalistar/comidalistar.compo
 
 import { PersonaListComponent } from '../persona/persona-list/persona-list.component';
 import { DietaListComponent } from '../dieta/dieta-list/dieta-list.component';
+import { PagoListComponent } from '../pago/pago-list/pago-list.component';
 
 import { SuspensionListComponent } from '../suspension/suspensionlist/suspensionlist.component';
 import { CocinaListComponent } from '../cocina/cocinalist/cocinalist.component';
@@ -159,6 +160,16 @@ const routes: Routes = [
         ]
     
         
+      },
+      {
+        path: 'pagos',
+        children: [{
+          path: 'list',
+          component: PagoListComponent
+         
+        }   
+        ]
+    
       }
       
    
@@ -174,4 +185,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 
+  
 }

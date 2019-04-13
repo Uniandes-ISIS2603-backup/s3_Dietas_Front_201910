@@ -4,6 +4,7 @@
         <table class="table table-striped responsive">
             <thead class="thead-dark">
                 <tr>
+
                     <th>Persona id</th>  
                     <th>Nombre</th>   
                     <th>Tipo</th>   
@@ -18,6 +19,7 @@
             <tbody>
                 
                    <tr *ngFor = "let p of personas">
+
                     <td style="cursor: pointer;">
 						        	<a class="figure-caption" (click)="onSelected(p.id)">{{p.id}}</a>
                                 </td>
@@ -28,7 +30,7 @@
                                 <td>{{p.solicitudEspecial}}</td>
                                 <td>{{p.tarjetaFidelidad}}</td>
                                 <td>{{p.tiempoEsperadoMejora}}</td>
-                                
+
 
                 </tr>
             </tbody>

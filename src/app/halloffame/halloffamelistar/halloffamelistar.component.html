@@ -22,8 +22,8 @@
 
 	<div class="border row">
 		<div class="col">
-			<div *ngIf="selectedHall">
-				<app-halloffame-detail [halloffameDetail]="selectedHall"> </app-halloffame-detail>
+			<div *ngIf="selectedHall.id">
+				<app-halloffame-detail [personas]="selectedHall.personas"> </app-halloffame-detail>
 			</div>
 		</div>
 	</div>

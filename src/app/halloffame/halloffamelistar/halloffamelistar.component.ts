@@ -6,7 +6,10 @@ import { HalloffameService } from '../halloffame.service';
 
 import { Halloffame} from '../halloffame';
 
+import { PersonaService } from '../../persona/persona.service';
+
 import { HalloffameDetail } from '../halloffame-detail';
+import { Persona } from 'src/app/persona/persona';
 
 
 @Component({
@@ -16,20 +19,37 @@ import { HalloffameDetail } from '../halloffame-detail';
 })
 export class HalloffamelistarComponent implements OnInit{
 
-/**
+  
+
+     /**
      * Constructor for the component
      * @param halloffameService The author's services provider
      */
-    constructor(private halloffameService: HalloffameService, private router: Router) { }
+    constructor(private halloffameService: HalloffameService, private personaService : PersonaService, private router: Router) { }
 
    /**
-     * The list of halls which belong to the BookStore
+     * The list of halls which belong to the Dietas
      */
     halls: Halloffame[];
 
+     /**
+     * The list of personas which belong to the hall
+     */
+    personas: Persona[];
+
+    /**
+     * The id of the hall
+     */
     halls_id: number;
+
+
+     /**
+     * el hall seleccionado
+     */
     selectedHall: HalloffameDetail;
- /**
+
+
+     /**
      * Asks the service to update the list of halls
      */
     getHalls(): void {
@@ -38,10 +58,30 @@ export class HalloffamelistarComponent implements OnInit{
     }
 
 
-    onSelected(halls_id: number): void {
-    this.halls_id = halls_id;
-    this.selectedHall = new HalloffameDetail();
-    this.halloffameService.getHalloffameDetail(halls_id).subscribe(o => this.selectedHall = o);
+
+
+     /**
+     *  vuelve las personas a personas del hall
+     */
+    getPersonasDeHall(hallId: number):void{
+      console.log("obteniendo personas ");
+      this.personaService.getPersonasDeHall(hallId).subscribe(clienteAux=> this.personas=clienteAux);
+    }
+  
+
+
+    /**
+     *  selecciona el hall que fue cliqueado
+     */
+    onSelected(phalls_id: number): void {
+    this.halls_id = phalls_id;
+    this.halloffameService.getHalloffameDetail(phalls_id).subscribe(o =>
+      { 
+        this.selectedHall = o;
+        console.log("hall listar id .ts"+this.selectedHall.id);
+      });
+
+   
   }
 
     /**
@@ -49,6 +89,9 @@ export class HalloffamelistarComponent implements OnInit{
      * This method will be called when the component is created
      */
     ngOnInit() {
+      this.selectedHall = new HalloffameDetail();
         this.getHalls();
     }
+
+    
 }

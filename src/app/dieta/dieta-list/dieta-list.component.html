@@ -18,14 +18,18 @@
                    <tr *ngFor = "let d of dietas">
                     <td style="cursor: pointer;">
 						        	<a class="figure-caption" (click)="onSelected(d.id)">{{d.id}}</a>
-                                </td>
-                                <td>{{d.name}}</td>
-                                <td>{{d.objetivo}}</td>
+                                </td>                                
+                                <td>{{d.nombre}}</td>
                                 <td>{{d.tipo}}</td>
+                                <td>{{d.objetivo}}</td>
+                                <td>{{d.diasSuspendida}}</td>
                 </tr>
             </tbody>
         </table>
     </div>
     
+    
+    <app-dieta-create></app-dieta-create>
+    <app-dieta-edit></app-dieta-edit>
 
 	

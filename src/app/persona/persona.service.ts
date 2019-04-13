@@ -19,7 +19,11 @@ export class PersonaService {
   constructor(private http: HttpClient) { }
   
   getPersonasDeHall(hallId:number):Observable<Persona[]>{
-    return this.http.get<Persona[]>(API_URL+halls+"/"+hallId+"/"+personas);
+
+
+
+    return this.http.get<Persona[]>(`${API_URL}${halls}/${hallId}${personas}`);
+    
   }
 
   getPersona(personaId:number): Observable<Persona> {
@@ -33,7 +37,7 @@ export class PersonaService {
     }
 
      /**
-    * Creates an Persona
+    * Creates a Persona
     * @param persona The persona which will be created
     * @returns The confirmation of the persona's creation
     */

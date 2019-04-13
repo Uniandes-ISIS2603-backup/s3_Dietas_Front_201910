@@ -8,14 +8,14 @@
             <div class="form-group">
                
               <label for="SuspensionVigente"><b>Vigente</b></label>
-                <input type="text" mensaje="suspensionVigente" class="form-control" id="suspensionVigente" [(ngModel)]="suspension.vigente"
+                <input type="text" name="suspensionVigente" class="form-control" id="suspensionVigente" [(ngModel)]="suspension.vigente"
                     #suspensionVigente="ngModel" [ngClass]="{ 'is-invalid': f.submitted && suspensionVigente.invalid }" required>
                 <div class="invalid-feedback">
                     <div>The suspension vigencia is missing</div>
                 </div>
 
                 <label for="SuspensionComentarios"><b>Comentarios</b></label>
-                <input type="text" mensaje="suspensionComentarios" class="form-control" id="suspensionComentarios" [(ngModel)]="suspension.comentarios"
+                <input type="text" name="suspensionComentarios" class="form-control" id="suspensionComentarios" [(ngModel)]="suspension.comentarios"
                     #suspensionComentarios="ngModel" [ngClass]="{ 'is-invalid': f.submitted && suspensionComentarios.invalid }" required>
                 <div class="invalid-feedback">
                     <div>The suspension comentario is missing</div>
@@ -23,7 +23,7 @@
                 
 
                 <label for="SuspensionNumDias"><b>Duración</b></label>
-                <input type="text" mensaje="suspensionNumDias" class="form-control" id="suspensionNumDias" [(ngModel)]="suspension.numDias"
+                <input type="text" name="suspensionNumDias" class="form-control" id="suspensionNumDias" [(ngModel)]="suspension.numDias"
                     #suspensionNumDias="ngModel" [ngClass]="{ 'is-invalid': f.submitted && suspensionNumDias.invalid }" required>
                 <div class="invalid-feedback">
                     <div>The suspension duracion is missing</div>
