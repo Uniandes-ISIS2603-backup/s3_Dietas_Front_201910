@@ -8,13 +8,14 @@ import { PersonaService } from './persona.service';
 import { PersonaListComponent } from './persona-list/persona-list.component';
 import { PersonaDetailComponent } from './persona-detail/persona-detail.component';
 import { PersonaCreateComponent } from './persona-create/persona-create.component';
+import { PersonaEditComponent } from './persona-edit/persona-edit.component';
 @NgModule({
   imports: [
     CommonModule,AppRoutingModule,FormsModule
   ],
-  declarations: [PersonaListComponent, PersonaDetailComponent,PersonaCreateComponent],
+  declarations: [PersonaListComponent, PersonaDetailComponent,PersonaCreateComponent,PersonaEditComponent],
   providers: [PersonaService],
-  exports:[PersonaListComponent,PersonaCreateComponent],
-  bootstrap:[PersonaListComponent,PersonaCreateComponent]
+  exports:[PersonaListComponent,PersonaCreateComponent,PersonaEditComponent],
+  
 })
 export class PersonaModule { }

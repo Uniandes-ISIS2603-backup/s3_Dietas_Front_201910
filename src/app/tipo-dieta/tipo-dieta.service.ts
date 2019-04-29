@@ -1,23 +1,17 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import {Dia} from './dia';
 import { Observable } from 'rxjs';
+import { TipoDieta } from './tipo-dieta';
 
 const API_URL = environment.apiURL;
-const dias = '/dias';
-
-
+const tipoDietas='/tipoDietas';
 @Injectable()
-export class DiaService {
+export class TipoDietaService {
 
   constructor(private http: HttpClient) { }
 
-  getDias(): Observable<Dia[]>{
-    return this.http.get<Dia[]>(API_URL + dias);
-  }
-
-  createDia(dia:Dia):Observable<Dia>{
-    return this.http.post<Dia>(API_URL + dia, dia);
+  getTipoDietas(): Observable<TipoDieta[]>{
+    return this.http.get<TipoDieta[]>(API_URL + tipoDietas);
   }
 }
