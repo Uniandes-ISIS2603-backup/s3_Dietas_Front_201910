@@ -70,15 +70,15 @@
                 <ul class="nav navbar-nav" >
                     <li class="nav-item bg-dark active" style="margin: 0 20px 0 20px">
                 
-                        <a class="nav-link active dropdown" routerLink="halls/list" routerLinkActive="active"> Halls id </a>
+                        <a class="nav-link active dropdown" routerLink="halls/list" routerLinkActive="active"> Halls  </a>
                     </li>
                 <li class="nav-item active" style="margin: 0 20px 0 20px">
                 
-                        <a class="nav-link active" routerLink="fotos/list" routerLinkActive="active"> Foto id </a>
+                        <a class="nav-link active" routerLink="fotos/list" routerLinkActive="active"> Foto  </a>
                     </li>
                 <li class="nav-item active" style="margin: 0 20px 0 20px">
                 
-                        <a class="nav-link active" routerLink="comidas/list" routerLinkActive="active"> Comida id </a>
+                        <a class="nav-link active" routerLink="comidas/list" routerLinkActive="active"> Comida  </a>
                     </li>
                     <li class="nav-item active" style="margin: 0 20px 0 20px">
                 
@@ -129,6 +129,23 @@
             
                 </ul>
 
+            </div>
+            <div class="navbar-nav ml-auto flex-column">
+                <div class="flex-row" *ngxPermissionsOnly="['GUEST']">
+                    <div class="form-inline">
+                        <li class="right-space"><a id="signup-navbar-item" routerLink="/auth/sign-up"><span class="fa fa-user"></span>
+                                Sign Up</a></li>
+                        <li><a id="login-navbar-item" routerLink="/auth/login"><span class="fa fa-sign-in"></span>Login</a></li>
+                    </div>
+                </div>
+                <div class="flex-row" *ngxPermissionsOnly="['CLIENT', 'ADMIN']">
+                    <div class="form-inline">
+                        <li><a id="logout-navbar-item" (click)="logout()" href="#"><span class="fa fa-sign-out"></span>Logout</a></li>
+                    </div>
+                </div>
+                <button id="checkout-navbar-item" type="button" class="btn btn-default">
+                    <a href="#"><span class="fa fa-shopping-cart"></span>Checkout</a>
+                </button>
             </div>
             </nav>
 

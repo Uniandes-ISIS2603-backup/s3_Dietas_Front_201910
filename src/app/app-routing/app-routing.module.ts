@@ -81,12 +81,11 @@ const routes: Routes = [
         {
           path: 'add',
           component: HalloffameCreateComponent,
-          canActivate: [NgxPermissionsGuard],
           data: {
-              permissions: {
-                  only: ['ADMIN']
-              }
-          }
+            permissions: {
+                only: ['ADMIN']
+            }
+        }
         },{
           path: 'edit',
           component: HalloffameEditarComponent,

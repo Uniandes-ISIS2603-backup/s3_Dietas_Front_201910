@@ -89,7 +89,7 @@ export class HalloffamelistarComponent implements OnInit{
      * This method will be called when the component is created
      */
     ngOnInit() {
-      this.selectedHall = new HalloffameDetail();
+        this.selectedHall = new HalloffameDetail();
         this.getHalls();
     }
 
