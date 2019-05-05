@@ -27,6 +27,8 @@ import{TipoDietaListarComponent} from '../tipo-dieta/tipo-dieta-listar/tipo-diet
 
 import { AppComponent } from '../app.component';
 import { QuejayreclamoListComponent } from '../quejayreclamo/quejayreclamo-list/quejayreclamo-list.component';
+import { HalloffameCreateComponent } from '../halloffame/halloffame-create/halloffame-create.component';
+import { HalloffameEditarComponent } from '../halloffame/halloffame-editar/halloffame-editar.component';
 
 const routes: Routes = [
 
@@ -62,7 +64,7 @@ const routes: Routes = [
     /**,
     {
         path: '**',
-        redirectTo: 'home',
+        redirectTo: 'home', app-halloffame-editar
     } */,
     {
         path: 'halls',
@@ -75,8 +77,26 @@ const routes: Routes = [
           path: ':id',
           component: HalloffameDetailComponent,
           outlet: 'detail'
-        }   
-        ]
+        },
+        {
+          path: 'add',
+          component: HalloffameCreateComponent,
+          canActivate: [NgxPermissionsGuard],
+          data: {
+              permissions: {
+                  only: ['ADMIN']
+              }
+          }
+        },{
+          path: 'edit',
+          component: HalloffameEditarComponent,
+          canActivate: [NgxPermissionsGuard],
+          data: {
+              permissions: {
+                  only: ['ADMIN']
+              }
+          }
+        }]
     
       },
       {
