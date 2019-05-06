@@ -10,4 +10,9 @@
     font-weight: bold;
 
 }
+.carousel-indicators{
+  height: 90px;
+  width: 90px;
+  color: brown;
+}  
 
