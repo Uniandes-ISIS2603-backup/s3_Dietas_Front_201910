@@ -63,6 +63,7 @@ halloffame: Halloffame;
    * This function will initialize the component
    */
    ngOnInit() {
+       console.log("entra en create");
        this.halloffame = new Halloffame();
    }
 
