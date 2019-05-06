@@ -7,6 +7,15 @@
     <form name="persona" (ngSubmit)="f.form.valid && createPersona()" #f="ngForm" novalidate>
 
       <div class="input-group mb-3">
+        <input type="text" placeholder="Id" name="usuarioLogin" class="form-control" id="usuarioLogin"
+          [(ngModel)]="persona.id" #usuarioLogin="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
+        <div class="invalid-feedback">
+          <div>Debes ingresar un Id</div>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
         <input type="text" placeholder="Nombre" name="usuarioLogin" class="form-control" id="usuarioLogin"
           [(ngModel)]="persona.nombre" #usuarioLogin="ngModel"
           [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
