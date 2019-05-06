@@ -30,6 +30,7 @@ import {SuspensionModule} from './suspension/suspension.module';
 import {CocinaModule} from './cocina/cocina.module';
 import{QuejayreclamoModule} from './quejayreclamo/quejayreclamo.module';
 import {CalificacionycomentarioModule} from './calificacionycomentario/calificacionycomentario.module';
+import { HalloffameCreateComponent } from './halloffame/halloffame-create/halloffame-create.component';
 
 
 
@@ -63,7 +64,7 @@ import {CalificacionycomentarioModule} from './calificacionycomentario/calificac
         SuspensionModule,
         CocinaModule,
 
-        
+       
         CalificacionycomentarioModule,
         DietaModule,
         PagoModule,
