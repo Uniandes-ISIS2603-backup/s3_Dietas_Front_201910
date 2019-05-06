@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-12">
+      <br>
+      <h2 class="text-center">Update a Suspension</h2>
+      <br>
+      <form name="suspension" (ngSubmit)="f.form.valid && updateSuspension()" #f="ngForm" novalidate>
+            <div class="form-group">
+              <label for="suspensionVigente"><b>Vigente</b></label>
+              <input type="text" name="suspensionVigente" class="form-control" id="suspensionVigente" [(ngModel)]="suspension.vigente"
+                     #suspensionVigente="ngModel" [ngClass]="{ 'is-invalid': f.submitted && suspensionVigente.invalid }" required>
+                     <div class="invalid-feedback">
+                  <div>The suspension´s Vigente is missing</div>
+              </div>
+          </div>
+          <div class="form-group">
+            <label for="suspensionComentarios"><b>Comentarios</b></label>
+            <input type="text" name="suspensionComentarios" class="form-control" id="suspensionComentarios" [(ngModel)]="suspension.comentarios"
+                   #suspensionComentarios="ngModel" [ngClass]="{ 'is-invalid': f.submitted && suspensionComentarios.invalid }" required>
+                   <div class="invalid-feedback">
+                <div>The suspension´s Comentarios is missing</div>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="suspensionNumeroDias"><b>Duración</b></label>
+          <input type="text" name="suspensionNumeroDias" class="form-control" id="suspensionNumeroDias" [(ngModel)]="suspension.numeroDias"
+                 #suspensionNumeroDias="ngModel" [ngClass]="{ 'is-invalid': f.submitted && suspensionNumeroDias.invalid }" required>
+                 <div class="invalid-feedback">
+              <div>The suspension´s Numero Dias is missing</div>
+          </div>
+      </div>
+          <div class="form-group">
+              <label for="suspensionId"><b>Id</b></label>
+              <input type="text" name="suspensionId" class="form-control" id="suspensionId" [(ngModel)]="suspension.id"
+                     #suspensionId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && suspensionId.invalid }" required>
+                     <div class="invalid-feedback">
+                  <div>The suspension´s Id is missing</div>
+              </div>
+          </div>
+          
+          </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+      <div class="row form-inline justify-content-center align-self-center">
+          <i  style="padding-right: 1em;"class="fa fa-save " (click)="updateSuspension()"></i>
+        
+          <i class="fa fa-ban" (click)="cancelEdition()"></i>
+      </div>
+  </div>
+</div>
+<br>
+<br>

@@ -1,3 +1,83 @@
-<p>
-  persona-edit works!
-</p>
+<div class="row">
+  <div class="col-12">
+      <br>
+      <h2 class="text-center">Edit a Persona</h2>
+      <br>
+      <form name="persona" (ngSubmit)="f.form.valid && editPersona()" #f="ngForm" novalidate>
+        <div class="form-group">
+          <label for="personaId"><b>Id</b></label>
+          <input type="text" name="personaId" class="form-control" id="personaId" [(ngModel)]="persona.id"
+                 #personaId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && personaId.invalid }" required>
+                 <div class="invalid-feedback">
+              <div>The persona's id is missing</div>
+          </div>
+      </div>
+          <div class="form-group">
+            <label for="personaTipo"><b>Tipo</b></label>
+            <input type="text" name="personaTipo" class="form-control" id="personaTipo" [(ngModel)]="persona.tipo"
+                   #personaTipo="ngModel" [ngClass]="{ 'is-invalid': f.submitted && personaTipo.invalid }" required>
+                   <div class="invalid-feedback">
+                <div>The personaTipo is missing</div>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="personaNombre"><b>Nombre</b></label>
+          <input type="text" name="personaNombre" class="form-control" id="personaNombre" [(ngModel)]="persona.nombre"
+                 #personaNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && personaNombre.invalid }" required>
+                 <div class="invalid-feedback">
+              <div>The personaNombre is missing</div>
+          </div>
+      </div>
+         <div class="form-group">
+            <label for="personaFechaIngreso"><b>Fecha de Ingreso</b></label>
+            <input type="text" name="personaFechaIngreso" class="form-control" id="personaFechaIngreso" [(ngModel)]="persona.fechaIngreso"
+                   #personaFechaIngreso="ngModel" [ngClass]="{ 'is-invalid': f.submitted && personaFechaIngreso.invalid }" required>
+                   <div class="invalid-feedback">
+                <div>The personaFechaIngreso is missing</div>
+            </div>
+        </div>
+          <div class="form-group">
+            <label for="personaObjetivos"><b>Objetivos</b></label>
+            <input type="text" name="personaObjetivos" class="form-control" id="personaObjetivos" [(ngModel)]="persona.objetivos"
+                   #personaObjetivos="ngModel" [ngClass]="{ 'is-invalid': f.submitted && personaObjetivos.invalid }" required>
+                   <div class="invalid-feedback">
+                <div>The personaFechaIngreso is missing</div>
+            </div>
+        </div>
+          <div class="form-group">
+            <label for="personaSolicitudEspecial"><b>Solicitud Especial</b></label>
+            <input type="text" name="personaSolicitudEspecial" class="form-control" id="personaSolicitudEspecial" [(ngModel)]="persona.solicitudEspecial"
+                   #personaSolicitudEspecial="ngModel" [ngClass]="{ 'is-invalid': f.submitted && personaSolicitudEspecial.invalid }" required>
+                   <div class="invalid-feedback">
+                <div>The personaSolicitudEspecial is missing</div>
+            </div>
+        </div>
+            <div class="form-group">
+            <label for="personaTarjetFidelidad"><b>Tarjeta de Fidelidad</b></label>
+            <input type="text" name="personaTarjetFidelidad" class="form-control" id="personaTarjetFidelidad" [(ngModel)]="persona.tarjetaFidelidad"
+                   #personaTarjetFidelidad="ngModel" [ngClass]="{ 'is-invalid': f.submitted && personaTarjetFidelidad.invalid }" required>
+                   <div class="invalid-feedback">
+                <div>The personaTarjetFidelidad is missing</div>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="personaTiempoEsperadoMejora"><b>Tiempo esperado mejora</b></label>
+          <input type="text" name="personaTiempoEsperadoMejora" class="form-control" id="personaTiempoEsperadoMejora" [(ngModel)]="persona.tiempoEsperadoMejora"
+                 #personaTarjetFidelidad="ngModel" [ngClass]="{ 'is-invalid': f.submitted && personaTiempoEsperadoMejora.invalid }" required>
+                 <div class="invalid-feedback">
+              <div>The personaTiempoEsperadoMejora is missing</div>
+          
+      </div>
+  </div>
+
+<div class="row">
+  <div class="col-12">
+      <div class="row form-inline justify-content-center align-self-center">
+          <i  style="padding-right: 1em;"class="fa fa-save " (click)="editPersona()"></i>
+        
+          <i class="fa fa-ban" (click)="cancelEdition()"></i>
+      </div>
+  </div>
+</div>
+<br>
+<br>

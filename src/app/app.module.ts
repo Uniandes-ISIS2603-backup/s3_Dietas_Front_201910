@@ -63,12 +63,11 @@ import {CalificacionycomentarioModule} from './calificacionycomentario/calificac
         SuspensionModule,
         CocinaModule,
 
+        
         CalificacionycomentarioModule,
         DietaModule,
         PagoModule,
         QuejayreclamoModule
-
-
 
     ],
     bootstrap: [AppComponent],
@@ -81,7 +80,5 @@ import {CalificacionycomentarioModule} from './calificacionycomentario/calificac
     ]
 })
 export class AppModule {}
-
-
 
 

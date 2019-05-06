@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Semana } from './semana';
 
 const API_URL = environment.apiURL;
-const semanas ="semanas";
+const semanas ="/semanas";
 
 @Injectable({
   providedIn: 'root'
