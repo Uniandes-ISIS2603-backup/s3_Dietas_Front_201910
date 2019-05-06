@@ -28,8 +28,10 @@
 		</div>
 	</div>
 </div>
-<button routerLink="/halls/add">Añadir Hall</button>
-<!--<app-halloffame-create></app-halloffame-create>-->
-<!--<app-halloffame-editar></app-halloffame-editar>-->
-<button routerLink="/halls/edit">Editar Hall</button>
+<!--<a class="btn btn-default" routerLink="halls/add" routerLinkActive="active" >Añadir Hall</a>-->
+
+<!--<button routerLink="/halls/add" *ngxPermissionsOnly="['ADMIN']" >Añadir Hall</button>-->
+<app-halloffame-create></app-halloffame-create>
+<app-halloffame-editar></app-halloffame-editar>
+<!--<button routerLink="/halls/edit" *ngxPermissionsOnly="['ADMIN']">Editar Hall</button>-->
 

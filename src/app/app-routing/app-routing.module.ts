@@ -69,6 +69,17 @@ const routes: Routes = [
     {
         path: 'halls',
         children: [{
+
+          path: 'add' ,          
+          component: HalloffameCreateComponent,
+         
+         /**  canActivate: [NgxPermissionsGuard],
+          data: {
+            permissions: {
+                only: ['ADMIN']
+            }
+        } */
+        },{
           path: 'list',
           component: HalloffamelistarComponent
         
@@ -77,25 +88,18 @@ const routes: Routes = [
           path: ':id',
           component: HalloffameDetailComponent,
           outlet: 'detail'
-        },
-        {
-          path: 'add',
-          component: HalloffameCreateComponent,
-          data: {
-            permissions: {
-                only: ['ADMIN']
-            }
         }
-        },{
-          path: 'edit',
-          component: HalloffameEditarComponent,
-          canActivate: [NgxPermissionsGuard],
-          data: {
-              permissions: {
-                  only: ['ADMIN']
-              }
-          }
-        }]
+        ,{
+                path: ':id/edit',
+                component: HalloffameEditarComponent,
+                canActivate: [NgxPermissionsGuard],
+                data: {
+                    permissions: {
+                        only: ['ADMIN']
+                    }
+                }
+                
+            }]  
     
       },
       {

@@ -12,6 +12,8 @@ import { HalloffameDetail } from '../halloffame-detail';
 import { Persona } from '../../persona/persona';
 
 
+
+
 @Component({
   selector: 'app-halloffamelistar',
   templateUrl: './halloffamelistar.component.html',
@@ -89,6 +91,7 @@ export class HalloffamelistarComponent implements OnInit{
      * This method will be called when the component is created
      */
     ngOnInit() {
+      console.log("entra en lsitar");
         this.selectedHall = new HalloffameDetail();
         this.getHalls();
     }
