@@ -59,27 +59,16 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        redirectTo: 'home'
+        component: FotolistarComponent
     }
-    /**,
+    ,
     {
         path: '**',
-        redirectTo: 'home', app-halloffame-editar
-    } */,
+        redirectTo: 'home'
+    } ,
     {
         path: 'halls',
         children: [{
-
-          path: 'add' ,          
-          component: HalloffameCreateComponent,
-         
-         /**  canActivate: [NgxPermissionsGuard],
-          data: {
-            permissions: {
-                only: ['ADMIN']
-            }
-        } */
-        },{
           path: 'list',
           component: HalloffamelistarComponent
         
@@ -88,29 +77,15 @@ const routes: Routes = [
           path: ':id',
           component: HalloffameDetailComponent,
           outlet: 'detail'
-        }
-        ,{
-                path: ':id/edit',
-                component: HalloffameEditarComponent,
-                canActivate: [NgxPermissionsGuard],
-                data: {
-                    permissions: {
-                        only: ['ADMIN']
-                    }
-                }
-                
-            }]  
+        }]  
     
       },
       {
         path: 'personas',
         children: [{
           path: 'list',
-          component: PersonaListComponent,
-        
-        } ,
-          
-        ]
+          component: PersonaListComponent
+        } ]
     
       },
       {
