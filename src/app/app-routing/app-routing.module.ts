@@ -29,7 +29,7 @@ import { AppComponent } from '../app.component';
 import { QuejayreclamoListComponent } from '../quejayreclamo/quejayreclamo-list/quejayreclamo-list.component';
 import { HalloffameCreateComponent } from '../halloffame/halloffame-create/halloffame-create.component';
 import { HalloffameEditarComponent } from '../halloffame/halloffame-editar/halloffame-editar.component';
-
+import{HomePrincipalComponent} from '../home/home-principal/home-principal.component';
 const routes: Routes = [
 
     {
@@ -59,13 +59,8 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        redirectTo: 'home'
-    }
-    /**,
-    {
-        path: '**',
-        redirectTo: 'home', app-halloffame-editar
-    } */,
+        component:HomePrincipalComponent
+    },
     {
         path: 'halls',
         children: [{
