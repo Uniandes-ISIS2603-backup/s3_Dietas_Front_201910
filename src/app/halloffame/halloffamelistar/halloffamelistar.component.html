@@ -29,9 +29,14 @@
 	</div>
 </div>
 <!--<a class="btn btn-default" routerLink="halls/add" routerLinkActive="active" >Añadir Hall</a>-->
+<button  *ngxPermissionsOnly="['ADMIN']" type="col button" class="btn btn-primary" [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir Hall</button>
+<div *ngIf="mostrarCrear" >
 
-<!--<button routerLink="/halls/add" *ngxPermissionsOnly="['ADMIN']" >Añadir Hall</button>-->
-<app-halloffame-create></app-halloffame-create>
+    <app-halloffame-create (cancel)="mostrarCrearM()"  (create)="ngOnInit()"></app-halloffame-create>
+
+</div>
+
+<!--<app-halloffame-create ></app-halloffame-create>-->
 <app-halloffame-editar></app-halloffame-editar>
 <!--<button routerLink="/halls/edit" *ngxPermissionsOnly="['ADMIN']">Editar Hall</button>-->
 

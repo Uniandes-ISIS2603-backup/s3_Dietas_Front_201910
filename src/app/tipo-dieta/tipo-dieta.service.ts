@@ -14,4 +14,5 @@ export class TipoDietaService {
   getTipoDietas(): Observable<TipoDieta[]>{
     return this.http.get<TipoDieta[]>(API_URL + tipoDietas);
   }
+
 }
