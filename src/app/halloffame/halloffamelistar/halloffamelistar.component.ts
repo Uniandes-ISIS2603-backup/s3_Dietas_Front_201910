@@ -31,10 +31,14 @@ export class HalloffamelistarComponent implements OnInit{
 
     mostrarCrear : boolean;
 
+    mostrarEditar : boolean;
     
   
     mostrarCrearM(): void{
       this.mostrarCrear = !this.mostrarCrear;
+    }
+    mostrarEditarM(): void{
+      this.mostrarEditar = !this.mostrarEditar;
     }
    /**
      * The list of halls which belong to the Dietas
@@ -99,6 +103,7 @@ export class HalloffamelistarComponent implements OnInit{
      */
     ngOnInit() {
       this.mostrarCrear=false;
+      this.mostrarEditar=false;
      
       this.selectedHall = new HalloffameDetail();
       this.getHalls();
