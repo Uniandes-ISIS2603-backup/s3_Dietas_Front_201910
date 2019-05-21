@@ -31,7 +31,7 @@ import {CocinaModule} from './cocina/cocina.module';
 import{QuejayreclamoModule} from './quejayreclamo/quejayreclamo.module';
 import {CalificacionycomentarioModule} from './calificacionycomentario/calificacionycomentario.module';
 import { HalloffameCreateComponent } from './halloffame/halloffame-create/halloffame-create.component';
-
+import { HomeModule} from './home/home.module';
 
 
 @NgModule({
@@ -40,6 +40,7 @@ import { HalloffameCreateComponent } from './halloffame/halloffame-create/hallof
           
     ],
     imports: [
+        HomeModule,
         BrowserModule,
         DiaModule,
         TipoDietaModule,
