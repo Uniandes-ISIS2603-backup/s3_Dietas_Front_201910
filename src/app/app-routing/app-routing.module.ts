@@ -63,10 +63,6 @@ const routes: Routes = [
     }
     ,
     {
-        path: '**',
-        redirectTo: 'home'
-    } ,
-    {
         path: 'halls',
         children: [{
           path: 'list',

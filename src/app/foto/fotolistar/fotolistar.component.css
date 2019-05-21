@@ -8,3 +8,18 @@ and open the template in the editor.
     Author     : estudiante
 */
 
+#lg{
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: firebrick;
+  }
+  
+  .button:hover {
+    background-color: darkred; /* Green */
+    color: white;
+  }
