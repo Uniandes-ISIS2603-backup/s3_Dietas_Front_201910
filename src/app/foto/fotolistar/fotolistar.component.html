@@ -31,7 +31,7 @@
     <div *ngIf="!mostrarCrear">
         <button *ngxPermissionsOnly="['ADMIN']" type="col button" class="btn btn-primary btn-lg btn-block"
             [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir
-            Hall</button>
+            Foto</button>
     </div>
     <div>
         <div *ngIf="mostrarCrear">
@@ -42,7 +42,7 @@
 
         <button *ngxPermissionsOnly="['ADMIN']" type="button" class=" button btn btn-danger btn-lg btn-block"
             [ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}" (click)="mostrarEditarM()">Editar
-            Hall</button>
+            Foto</button>
         <div *ngIf="mostrarEditar">
 
             <app-foto-editar (cancel)="mostrarEditarM()" (create)="ngOnInit()"></app-foto-editar>
