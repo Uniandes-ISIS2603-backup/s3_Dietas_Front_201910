@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="col">
+    <div class="col listar-component col-sm-6 ">
         <table class="table table-striped responsive">
             <thead class="thead-dark">
                 <tr>
@@ -28,15 +28,28 @@
 		</div>
 	</div>
 </div>
+
+
 <!--<a class="btn btn-default" routerLink="halls/add" routerLinkActive="active" >Añadir Hall</a>-->
-<button  *ngxPermissionsOnly="['ADMIN']" type="col button" class="btn btn-primary" [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir Hall</button>
+<div class="row">
+    <div class="col-sm-4 col-centered">
+<button  *ngxPermissionsOnly="['ADMIN']" type="col button" class="btn btn-primary btn-lg btn-block" [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir Hall</button>
 <div *ngIf="mostrarCrear" >
 
     <app-halloffame-create (cancel)="mostrarCrearM()"  (create)="ngOnInit()"></app-halloffame-create>
 
 </div>
+</div>
+<div class="col-sm-4 col-centered">
+<button  *ngxPermissionsOnly="['ADMIN']" type="col button" class=" button btn btn-primary btn-lg btn-block" [ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}" (click)="mostrarEditarM()">Editar Hall</button>
+<div *ngIf="mostrarEditar" >
 
+    <app-halloffame-editar (cancel)="mostrarEditarM()"  (editar)="ngOnInit()"></app-halloffame-editar>
+
+</div>
+</div>
+</div>
 <!--<app-halloffame-create ></app-halloffame-create>-->
-<app-halloffame-editar></app-halloffame-editar>
+
 <!--<button routerLink="/halls/edit" *ngxPermissionsOnly="['ADMIN']">Editar Hall</button>-->
 
