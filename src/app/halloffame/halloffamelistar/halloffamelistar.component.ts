@@ -21,7 +21,7 @@ import { Persona } from '../../persona/persona';
 })
 export class HalloffamelistarComponent implements OnInit{
 
-  
+
 
      /**
      * Constructor for the component
@@ -29,6 +29,17 @@ export class HalloffamelistarComponent implements OnInit{
      */
     constructor(private halloffameService: HalloffameService, private personaService : PersonaService, private router: Router) { }
 
+    mostrarCrear : boolean;
+
+    mostrarEditar : boolean;
+    
+  
+    mostrarCrearM(): void{
+      this.mostrarCrear = !this.mostrarCrear;
+    }
+    mostrarEditarM(): void{
+      this.mostrarEditar = !this.mostrarEditar;
+    }
    /**
      * The list of halls which belong to the Dietas
      */
@@ -91,9 +102,12 @@ export class HalloffamelistarComponent implements OnInit{
      * This method will be called when the component is created
      */
     ngOnInit() {
-      console.log("entra en lsitar");
-        this.selectedHall = new HalloffameDetail();
-        this.getHalls();
+      this.mostrarCrear=false;
+      this.mostrarEditar=false;
+     
+      this.selectedHall = new HalloffameDetail();
+      this.getHalls();
+        
     }
 
 

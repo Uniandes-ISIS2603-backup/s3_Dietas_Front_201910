@@ -17,6 +17,12 @@ export class FotolistarComponent implements OnInit {
      */
     constructor(private FotoService: FotoService) { }
 
+    mostrarCrear : boolean;
+
+    mostrarCrearM(): void{
+        this.mostrarCrear = !this.mostrarCrear;
+      }
+
     /**
      * The list of fotos which belong to Dietas
      */
@@ -34,6 +40,7 @@ export class FotolistarComponent implements OnInit {
      */
     ngOnInit() {
         this.getFotos();
+        this.mostrarCrear=false;
     }
 
 }
