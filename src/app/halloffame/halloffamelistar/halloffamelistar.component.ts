@@ -99,7 +99,7 @@ export class HalloffamelistarComponent implements OnInit{
      */
     ngOnInit() {
       this.mostrarCrear=false;
-      console.log("entra en lsitar");
+     
       this.selectedHall = new HalloffameDetail();
       this.getHalls();
         
