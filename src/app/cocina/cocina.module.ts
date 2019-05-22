@@ -5,11 +5,10 @@ import { CocinaService } from './cocina.service';
 import { CocinaCreateComponent } from './cocina-create/cocina-create.component';
 import { FormsModule } from '@angular/forms';
 import { CocinaEditarComponent } from './cocina-editar/cocina-editar.component';
+import {NgxPermissionsModule} from 'ngx-permissions';
 
 @NgModule({
-  imports: [
-    CommonModule, FormsModule
-  ],
+  imports: [CommonModule, FormsModule, NgxPermissionsModule],
   declarations: [CocinaListComponent, CocinaCreateComponent, CocinaEditarComponent],
   exports: [CocinaListComponent],
   providers: [CocinaService]

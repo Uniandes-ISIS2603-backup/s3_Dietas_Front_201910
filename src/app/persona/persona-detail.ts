@@ -6,7 +6,7 @@ import { Pago } from '../pago/pago';
 import { QuejaYReclamo } from '../quejayreclamo/quejayreclamo';
 export class PersonaDetail extends Persona {
   
-  fotos: Foto;
+  fotos: Foto[];
   calificaciones: Calificacionycomentario[];
   dietas: Dieta[];
   pagos: Pago[];
