@@ -23,13 +23,41 @@
                                 <td>{{d.tipo}}</td>
                                 <td>{{d.objetivo}}</td>
                                 <td>{{d.diasSuspendida}}</td>
+                                <td>
+                                        <button *ngxPermissionsOnly="['ADMIN']" type="col button"
+                                        class=" button btn btn-primary btn-lg btn-block"
+                                        [ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}"
+                                        (click)="mostrarEditarM(d.id)">Editar</button>
+                                </td>
                 </tr>
             </tbody>
         </table>
     </div>
     
+    <div class="row">
+            <div class="col-sm-4 col-centered">
+                <button *ngxPermissionsOnly="['ADMIN']" type="col button" class="btn btn-primary btn-lg btn-block"
+                    [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir
+                    Dieta</button>
+                <div *ngIf="mostrarCrear">
+        
+                    <app-dieta-create (cancel)="mostrarCrearM()" (create)="ngOnInit()"></app-dieta-create>
+        
+                </div>
+            </div>
+    </div>
     
-    <app-dieta-create></app-dieta-create>
-    <app-dieta-edit></app-dieta-edit>
+    <div class="row">
+            <div class="col-sm-4 col-centered">
+                <div *ngIf="mostrarEditar">
+            
+                    <app-dieta-edit [dieta_id]="dietas_id" (cancel)="mostrarEditarM()" (editar)="ngOnInit()">
+                    </app-dieta-edit>
+            
+                </div>
+            </div>
+    </div>
+            
+    
 
 	

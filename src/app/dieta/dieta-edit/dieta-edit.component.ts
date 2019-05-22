@@ -82,6 +82,7 @@ export class DietaEditComponent implements OnInit, OnChanges {
     */
     ngOnInit() {
         this.dieta = new Dieta();
+        this.getDieta();
     }
     
     /**
@@ -89,6 +90,7 @@ export class DietaEditComponent implements OnInit, OnChanges {
     */
     ngOnChanges() {
         this.ngOnInit();
+        this.getDieta();
     }
     
     }

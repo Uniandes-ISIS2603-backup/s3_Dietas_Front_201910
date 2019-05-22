@@ -23,3 +23,4 @@ describe('HalloffameEditarComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
