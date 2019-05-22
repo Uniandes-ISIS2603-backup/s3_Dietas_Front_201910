@@ -16,4 +16,12 @@ export class SemanaService {
   getDias():Observable<Semana[]>{
     return this.http.get<Semana[]>(API_URL + semanas);
   }
+
+  createSemana(semana:Semana):Observable<Semana>
+  {
+    return this.http.post<Semana>(API_URL + semanas,semana);
+  }
+  updateSemana(semana:Semana):Observable<Semana>{
+    return this.http.put<Semana>(API_URL + semanas + '/' + semana.id, semana);
+  }
 }
