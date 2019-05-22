@@ -45,7 +45,17 @@ margin:0;
   margin:0;
 }
 .mainBackground{
-  background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/04/00/85/9357ff2fc21175b.jpg");
+  background-image: url("shttps://png.pngtree.com/thumb_back/fw800/back_pic/04/00/85/9357ff2fc21175b.jpg");
   background-size: cover;
 }
 
+.letra{
+  font-family: Bookman, URW Bookman L, serif;
+  font-size: 25px;
+}
+
+.letra-nav-bar{
+  font-family: Bookman, URW Bookman L, serif;
+  font-weight: bolder;
+  font-size: 25px;
+}
