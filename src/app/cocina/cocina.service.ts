@@ -49,7 +49,6 @@ getCocinas(): Observable<Cocina[]>{
 
 
 
-
   /**
     * Updates an halloffame
     * @param cocina The halloffame which will be update
@@ -58,6 +57,12 @@ getCocinas(): Observable<Cocina[]>{
    updateCocina(cocina: Cocina): Observable<Cocina> {
     return this.http.put<Cocina>(API_URL + cocinas + '/' + cocina.id, cocina);
 }
+
+
+deleteCocina(cocina: Cocina): Observable<Cocina>{
+  return this.http.delete<Cocina>(API_URL + cocinas + '/' + cocina.id);
+}
+
 
 
 }

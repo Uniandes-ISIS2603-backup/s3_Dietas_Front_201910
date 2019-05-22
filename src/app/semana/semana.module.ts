@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { SemanaCreateComponent } from './semana-create/semana-create.component';
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule, FormsModule
   ],
   declarations: [SemanaListarComponent, SemanaDetailComponent, SemanaCreateComponent],
   exports:[SemanaListarComponent],

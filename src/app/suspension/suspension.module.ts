@@ -5,11 +5,10 @@ import { SuspensionService } from './suspension.service';
 import { SuspensionCreateComponent } from './suspension-create/suspension-create.component';
 import { FormsModule } from '@angular/forms';
 import { SuspensionEditarComponent } from './suspension-editar/suspension-editar.component';
+import {NgxPermissionsModule} from 'ngx-permissions';
 
 @NgModule({
-  imports: [
-    CommonModule, FormsModule
-  ],
+  imports: [CommonModule, FormsModule, NgxPermissionsModule],
   declarations: [SuspensionListComponent, SuspensionCreateComponent, SuspensionEditarComponent],
   exports: [SuspensionListComponent],
   providers: [SuspensionService]
