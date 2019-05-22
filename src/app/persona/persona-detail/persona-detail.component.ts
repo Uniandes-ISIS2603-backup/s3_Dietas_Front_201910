@@ -1,7 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { ActivatedRoute, Params } from '@angular/router';
-
+import { Foto } from '../../foto/foto';
+import { Calificacionycomentario } from '../../calificacionycomentario/calificacionycomentario';
+import { QuejaYReclamo } from '../../quejayreclamo/quejayreclamo';
+import { Pago } from '../../Pago/Pago';
+import { Dieta } from '../../Dieta/Dieta';
 import { PersonaService } from '../persona.service';
 import { Persona } from '../persona';
 import { PersonaDetail } from '../persona-detail';
@@ -27,6 +31,11 @@ export class PersonaDetailComponent implements OnInit {
   * The editorial whose details we want to show
   */
   personaDetail: PersonaDetail;
+  @Input() fotos:Foto[];
+  @Input() cyc:Calificacionycomentario[];
+  @Input() quejayreclamo:QuejaYReclamo[];
+  @Input() pagos:Pago[];
+  @Input() dietas:Dieta[];
 
 
 

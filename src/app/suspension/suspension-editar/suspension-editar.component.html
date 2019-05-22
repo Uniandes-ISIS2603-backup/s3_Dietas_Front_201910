@@ -43,9 +43,14 @@
 <div class="row">
   <div class="col-12">
       <div class="row form-inline justify-content-center align-self-center">
-          <i  style="padding-right: 1em;"class="fa fa-save " (click)="updateSuspension()"></i>
+       <!--  <i  style="padding-right: 1em;"class="fa fa-save " (click)="updateSuspension()"></i>
         
-          <i class="fa fa-ban" (click)="cancelEdition()"></i>
+          <i class="fa fa-ban" (click)="cancelEdition()"></i>-->
+          <button type="submit" class="btn btn-primary" (click)="updateSuspension()">Guardar</button>
+          <div class="divider"></div>
+          <button type="button" class="btn btn-danger" (click)="cancelEdition()">Cancel</button>
+
+
       </div>
   </div>
 </div>

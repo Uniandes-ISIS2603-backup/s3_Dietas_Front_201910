@@ -13,6 +13,8 @@ export class CalificacionycomentarioListComponent implements OnInit {
 
 
 calificacionesycomentarios: Calificacionycomentario[];
+mostrarCrear : boolean;
+mostrarEditar : boolean;
 
 
 /**
@@ -28,6 +30,15 @@ this.calificacionycomentarioService.getCalificacionesycomentarios().subscribe(c 
 
 ngOnInit() {
 this.getCalificacionesycomentarios();
+}
+
+
+mostrarCrearM():void{
+  this.mostrarCrear=!this.mostrarCrear;
+}
+
+mostrarEditarM(): void{
+  this.mostrarEditar = !this.mostrarEditar;
 }
 
 

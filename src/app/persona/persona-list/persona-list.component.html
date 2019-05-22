@@ -36,6 +36,14 @@
             </tbody>
         </table>
     </div>
+   <div class="border row">
+            <div class="col">
+                <div *ngIf="selectedPersona.id">
+                    <app-persona-detail [cyc]="selectedPersona.cyc"> </app-persona-detail>
+                </div>
+            </div>
+        </div>
+    </div>
     <app-persona-create></app-persona-create>
     <app-persona-edit></app-persona-edit>
 

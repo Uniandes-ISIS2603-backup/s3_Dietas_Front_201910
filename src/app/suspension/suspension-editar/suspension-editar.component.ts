@@ -74,6 +74,7 @@ export class SuspensionEditarComponent implements OnInit, OnChanges {
 }
 
 
+
 /**
 * Emits the signal to tell the parent component that the
 * user no longer wants to create an user
@@ -88,6 +89,7 @@ cancelEdition(): void {
 */
 ngOnInit() {
   this.suspension = new Suspension();
+  this.getSuspension();
 }
 
 /**
