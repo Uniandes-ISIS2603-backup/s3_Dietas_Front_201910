@@ -31,14 +31,20 @@ export class HalloffamelistarComponent implements OnInit{
 
     mostrarCrear : boolean;
 
+
+
     mostrarEditar : boolean;
-    
   
     mostrarCrearM(): void{
       this.mostrarCrear = !this.mostrarCrear;
+     
     }
-    mostrarEditarM(): void{
+
+    mostrarEditarM(id:number): void{
       this.mostrarEditar = !this.mostrarEditar;
+      this.onSelected(id);
+      console.log("id: "+id);
+      console.log("halls_id: "+this.halls_id);
     }
    /**
      * The list of halls which belong to the Dietas
@@ -60,7 +66,7 @@ export class HalloffamelistarComponent implements OnInit{
      * el hall seleccionado
      */
     selectedHall: HalloffameDetail;
-
+    aEditar:Halloffame;
 
      /**
      * Asks the service to update the list of halls
@@ -86,6 +92,15 @@ export class HalloffamelistarComponent implements OnInit{
     /**
      *  selecciona el hall que fue cliqueado
      */
+    onSelected2(phalls_id: number): void{   
+    this.halls_id = phalls_id;
+    this.halloffameService.getHalloffameDetail(phalls_id).subscribe(o =>
+      { 
+        this.selectedHall = o;
+        console.log("hall listar id .ts"+this.selectedHall.id);
+      });
+      this.mostrarEditar =true;
+    }
     onSelected(phalls_id: number): void {
     this.halls_id = phalls_id;
     this.halloffameService.getHalloffameDetail(phalls_id).subscribe(o =>
@@ -93,8 +108,6 @@ export class HalloffamelistarComponent implements OnInit{
         this.selectedHall = o;
         console.log("hall listar id .ts"+this.selectedHall.id);
       });
-
-   
   }
 
     /**
