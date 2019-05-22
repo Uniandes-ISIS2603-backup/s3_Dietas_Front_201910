@@ -7,6 +7,7 @@ import { environment } from '../../environments/environment';
 
 const API_URL=environment.apiURL;
 const pagos = "/pagos";
+const halls='/personas';
 
 /**
 * The service provider for everything related to pago
@@ -28,7 +29,10 @@ getPagos(): Observable<Pago[]>{
   return this.http.get<Pago[]>(API_URL + pagos);
 }
 
-
+getPagosDePersonas(personaId:number):Observable<Pago[]>{
+  return this.http.get<Pago[]>(`${API_URL}${halls}/${personaId}${pagos}`);
+  
+}
  /**
     * Creates a pago
     * @param pago The suspension which will be created

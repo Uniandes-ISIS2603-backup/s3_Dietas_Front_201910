@@ -15,7 +15,7 @@ import { PersonaEditComponent } from './persona-edit/persona-edit.component';
   ],
   declarations: [PersonaListComponent, PersonaDetailComponent,PersonaCreateComponent,PersonaEditComponent],
   providers: [PersonaService],
-  exports:[PersonaListComponent,PersonaCreateComponent,PersonaEditComponent],
+  exports:[PersonaListComponent,PersonaCreateComponent,PersonaEditComponent,PersonaDetailComponent],
   
 })
 export class PersonaModule { }

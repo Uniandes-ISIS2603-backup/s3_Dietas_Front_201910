@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 
 const API_URL = environment.apiURL;
 const fotos = '/fotos';
-
+const personas='/personas';
 @Injectable()
 export class FotoService {
 
@@ -21,7 +21,10 @@ export class FotoService {
        getFotos() : Observable<Foto[]> {
         return this.http.get<Foto[]>(API_URL + fotos);
     }
+    getFotosDePersona(personaId:number):Observable<Foto[]>{
+      return this.http.get<Foto[]>(`${API_URL}${personas}/${personaId}${fotos}`);
     
+    }
       /**
     * Creates an foto
     * @param foto The foto which will be created
