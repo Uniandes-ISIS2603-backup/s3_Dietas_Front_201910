@@ -32,6 +32,9 @@
 .nomargin{
 margin:0;
 }
+.nopadding{
+  padding:0;
+}
 
 
 #footer{
@@ -39,4 +42,24 @@ margin:0;
 }
 
 
+.descripcion{
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/61/49/7657a74e84f3672.jpg");
+  color: white;
+  margin:0;
+}
+.mainBackground{
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/04/00/85/9357ff2fc21175b.jpg");
+  background-size: cover;
+}
+
+.letra{
+  font-family: Bookman, URW Bookman L, serif;
+  font-size: 25px;
+}
+
+.letra-nav-bar{
+  font-family: Bookman, URW Bookman L, serif;
+  font-weight: bolder;
+  font-size: 25px;
+}
 
