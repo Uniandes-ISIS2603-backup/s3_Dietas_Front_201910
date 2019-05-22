@@ -5,11 +5,10 @@ import { CalificacionycomentarioService } from './calificacionycomentario.servic
 import { FormsModule } from '@angular/forms';
 import { CalificacionycomentarioCreateComponent } from './calificacionycomentario-create/calificacionycomentario-create.component';
 import { CalificacionycomentarioEditarComponent } from './calificacionycomentario-editar/calificacionycomentario-editar.component';
+import {NgxPermissionsModule} from 'ngx-permissions';
 
 @NgModule({
-  imports: [
-    CommonModule, FormsModule
-  ],
+  imports: [ CommonModule, FormsModule, NgxPermissionsModule ],
   declarations: [CalificacionycomentarioListComponent, CalificacionycomentarioCreateComponent, CalificacionycomentarioEditarComponent],
   exports: [CalificacionycomentarioListComponent],
   providers: [CalificacionycomentarioService]
