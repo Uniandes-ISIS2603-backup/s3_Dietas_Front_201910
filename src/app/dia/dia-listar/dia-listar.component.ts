@@ -12,7 +12,7 @@ import { Dia } from '../dia';
 export class DiaListarComponent implements OnInit {
 
   constructor(private diaService: DiaService  /** , private router: Router*/) { }
-
+  mostrarCrear : boolean;
   dias:Dia[];
 
   getDias():void{
@@ -21,6 +21,10 @@ export class DiaListarComponent implements OnInit {
 
   ngOnInit() {
     this.getDias();
+  }
+
+  mostrarCrearM():void{
+    this.mostrarCrear=!this.mostrarCrear;
   }
 
 }
