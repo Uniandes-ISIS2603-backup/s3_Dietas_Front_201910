@@ -15,6 +15,9 @@ export class PagoListComponent implements OnInit {
   * The list of pagos to display
   */
 @Input() pagos: Pago[];
+mostrarCrear : boolean;
+mostrarEditar : boolean;
+
 
 /**
      * Constructor for the component
@@ -37,5 +40,14 @@ this.pagoService.getPagos().subscribe(c => this.pagos = c);
     this.getPagos();
   }
 
+  mostrarCrearM():void{
+    this.mostrarCrear=!this.mostrarCrear;
+  }
+  
+  mostrarEditarM(): void{
+    this.mostrarEditar = !this.mostrarEditar;
+  }
+
+ 
 
 }

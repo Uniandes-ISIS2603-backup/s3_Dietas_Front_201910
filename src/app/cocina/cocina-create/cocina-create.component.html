@@ -1,5 +1,4 @@
 
-
 <div class="row">
   <div class="col-3"></div>
   <div class="col-6">
@@ -7,15 +6,17 @@
       <h2 class="text-center">Create a Cocina</h2>
       <br>
       <form name="cocina" (ngSubmit)="f.form.valid && createCocina()" #f="ngForm" novalidate>
-          <div class="form-group">
+         
+      
+            <div class="input-group mb-3">         
+           
+               <input type="text" placeholder="Dirección" name="usuarioLogin" class="form-control" id="usuarioLogin"
+                [(ngModel)]="cocina.direccion" #usuarioLogin="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
+               <div class="invalid-feedback">
+                <div>Debes ingresar una dirección</div>
+              </div>
              
-            <label for="CocinaDireccion"><b>Dirección</b></label>
-              <input type="text" mensaje="cocinaDireccion" class="form-control" id="cocinaDireccion" [(ngModel)]="cocina.direccion"
-                  #cocinaDireccion="ngModel" [ngClass]="{ 'is-invalid': f.submitted && cocinaDireccion.invalid }" required>
-              <div class="invalid-feedback">
-                  <div>The cocina Direccion is missing</div>
-              </div>  
-
 
           </div>
           <div class="row form-inline justify-content-center align-self-center">

@@ -13,10 +13,16 @@
         <tr>
           <th>Id</th>
           <th>Especial</th>
+          <th>Editar</th>
         </tr>
         <tr *ngFor="let d of dias">
           <td> {{d.id}} </td>
           <td>{{d.diaEspecial}}</td>
+          <td>
+            <button *ngxPermissionsOnly="['ADMIN']" type="col button"
+            class=" button btn btn-primary"
+            (click)="showHideEdit(d.id)"><span class="fa fa-pencil"></span></button>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -29,6 +35,9 @@
         <div *ngIf="mostrarCrear">
             <dia-create (cancel)="mostrarCrearM()" (create)="ngOnInit()"></dia-create>
         </div>
+        <div *ngIf="showEdit">
+            <dia-edit [dia_id]="idDia" (cancel)="showHideEdit()" (update)="ngOnInit()"></dia-edit>
+        </div>
   </div>
-  <dia-edit></dia-edit>
+  
 </div>

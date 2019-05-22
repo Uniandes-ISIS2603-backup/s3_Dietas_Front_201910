@@ -14,6 +14,8 @@ export class SuspensionListComponent implements OnInit {
   * The list of suspensiones to display
   */
 @Input() suspensiones: Suspension[];
+mostrarCrear : boolean;
+mostrarEditar : boolean;
 
 
 /**
@@ -38,5 +40,12 @@ ngOnInit() {
   this.getSuspensiones();
 }
 
+mostrarCrearM():void{
+  this.mostrarCrear=!this.mostrarCrear;
+}
+
+mostrarEditarM(): void{
+  this.mostrarEditar = !this.mostrarEditar;
+}
 
 }

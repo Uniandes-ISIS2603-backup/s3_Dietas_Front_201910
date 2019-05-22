@@ -20,6 +20,30 @@
       </div>
 </div>
 
-
+<!--
 <app-cocina-create></app-cocina-create>
 <app-cocina-editar></app-cocina-editar>
+-->
+
+
+<div class="row">
+    <div *ngxPermissionsOnly="['ADMIN']" class="col-sm-4 col-centered">
+      <button type= "col button" class="btn btn-primary"
+      [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir Cocina</button>
+          <div *ngIf="mostrarCrear">
+              <app-cocina-create (cancel)="mostrarCrearM()" (create)="ngOnInit()"></app-cocina-create>
+          </div>
+    </div>   
+</div>
+
+<div class="row">
+    <div *ngxPermissionsOnly="['ADMIN']" class="col-sm-4 col-centered">
+      <button type= "col button" class="btn btn-primary"
+      [ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}" (click)="mostrarEditarM()">Editar Cocina</button>
+          <div *ngIf="mostrarEditar">
+              <app-cocina-editar (cancel)="mostrarEditarM()" (create)="ngOnInit()"></app-cocina-editar>
+          </div>
+    </div>   
+</div>
+
+

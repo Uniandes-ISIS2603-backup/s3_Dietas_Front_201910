@@ -24,10 +24,30 @@
       </table>
       </div>
 </div>
+<!--
 <app-suspension-create></app-suspension-create>
 <app-suspension-editar></app-suspension-editar>
-
+-->
     
+<div class="row">
+            <div *ngxPermissionsOnly="['CLIENT', 'ADMIN']" class="col-sm-4 col-centered">
+              <button type= "col button" class="btn btn-primary"
+              [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir Suspensión</button>
+                  <div *ngIf="mostrarCrear">
+                      <app-suspension-create (cancel)="mostrarCrearM()" (create)="ngOnInit()"></app-suspension-create>
+                  </div>
+            </div>   
+        </div>
+        
+        <div class="row">
+            <div *ngxPermissionsOnly="['CLIENT', 'ADMIN']" class="col-sm-4 col-centered">
+              <button type= "col button" class="btn btn-primary"
+              [ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}" (click)="mostrarEditarM()">Editar Suspensión</button>
+                  <div *ngIf="mostrarEditar">
+                      <app-suspension-editar (cancel)="mostrarEditarM()" (create)="ngOnInit()"></app-suspension-editar>
+                  </div>
+            </div>   
+        </div>
 
      
      

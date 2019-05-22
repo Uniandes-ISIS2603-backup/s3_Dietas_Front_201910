@@ -32,6 +32,7 @@ export class PersonaService {
   getPersonaDetail(personaId:number): Observable<PersonaDetail> {
         return this.http.get<PersonaDetail>(API_URL + personas+'/' + personaId);
     }
+     
 
      /**
     * Creates a Persona

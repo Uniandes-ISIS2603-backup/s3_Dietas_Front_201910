@@ -1,15 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { ActivatedRoute, Params } from '@angular/router';
-
-import { PersonaService } from '../persona.service';
-import { Persona } from '../persona';
 import { Foto } from '../../foto/foto';
-import { PersonaDetail } from '../persona-detail';
 import { Calificacionycomentario } from '../../calificacionycomentario/calificacionycomentario';
 import { QuejaYReclamo } from '../../quejayreclamo/quejayreclamo';
-import { Pago } from '../../pago/pago';
-import { Dieta } from '../../dieta/dieta';
+import { Pago } from '../../Pago/Pago';
+import { Dieta } from '../../Dieta/Dieta';
+import { PersonaService } from '../persona.service';
+import { Persona } from '../persona';
+import { PersonaDetail } from '../persona-detail';
 
 @Component({
   selector: 'app-persona-detail',
@@ -32,12 +31,14 @@ export class PersonaDetailComponent implements OnInit {
   * The editorial whose details we want to show
   */
   personaDetail: PersonaDetail;
+
   @Input() fotos2: Foto[];
   @Input() calificaciones: Calificacionycomentario[];
   @Input() quejasYReclamos: QuejaYReclamo[];
   @Input() pagos: Pago[];
   @Input() dietas: Dieta[];
   @Input() persona_id: number;
+
   /**
   * The editorial's id retrieved from the address
   */

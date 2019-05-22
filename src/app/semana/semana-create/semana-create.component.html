@@ -1,3 +1,46 @@
-<p>
-  semana-create works!
-</p>
+
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <br>
+        <h2 class="text-center">Create Semana</h2>
+        <br>
+        <form name="semana" (ngSubmit)="f.form.valid && createSemana()" #f="ngForm" novalidate>
+  
+            <div class="input-group mb-3">
+                
+                <input type="text" placeholder="horaEntrega"  class="form-control" id="usuarioLogin"
+                  [(ngModel)]="semana.horaEntrega" #usuarioLogin="ngModel"
+                  [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
+                <div class="invalid-feedback">
+                  <div>Debes ingresar una hora de entrega</div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                
+                  <input type="text" placeholder="lugarEntrega"  class="form-control" id="usuarioLogin"
+                    [(ngModel)]="semana.lugarEntrega" #usuarioLogin="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
+                  <div class="invalid-feedback">
+                    <div>Debes ingresar un lugar de entrega</div>
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                
+                    <input type="text" placeholder="costo"  class="form-control" id="usuarioLogin"
+                      [(ngModel)]="semana.costo" #usuarioLogin="ngModel"
+                      [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
+                    <div class="invalid-feedback">
+                      <div>Debes ingresar el costo</div>
+                    </div>
+                  </div> 
+     
+            <div class="row form-inline justify-content-center align-self-center">
+                <button type="submit" class="btn btn-primary">Crear</button>
+                <div class="divider"></div>
+                <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
+              </div>
+  
+        </form>
+    </div>
+  </div>

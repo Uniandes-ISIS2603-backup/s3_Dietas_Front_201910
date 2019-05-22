@@ -15,13 +15,17 @@ export class DiaEditComponent implements OnInit, OnChanges {
     private toastrService: ToastrService
   ) {   }
 
-  @Input() dia_id:number;
+  @Input() 
+  dia_id:number;
 
 
   @Output() cancel = new EventEmitter();
   @Output() update = new EventEmitter();
 
   dia:Dia;
+
+ 
+
 
 getDia():void{
   this.diaService.getDia(this.dia_id)
@@ -32,6 +36,7 @@ getDia():void{
 }
 
   editDia():void{
+    //console.log("este es el id" + this.dia_id)
     this.diaService.updateDia(this.dia)
     .subscribe(() =>{
       this.update.emit();
@@ -48,6 +53,7 @@ getDia():void{
   }
   ngOnInit() {
     this.dia = new Dia();
+    this.getDia();
   }
 
 }
