@@ -20,17 +20,4 @@ export class DiaService {
   createDia(dia:Dia):Observable<Dia>{
     return this.http.post<Dia>(API_URL + dia, dia);
   }
-
-  getDia(diaId:number):Observable<Dia>{
-    return this.http.get<Dia>(API_URL+ dias + '/' + diaId);
-  }
-
-  /**
-   * Método que actualiza un dia
-   * @param dia dia el cual se va a actualizar
-   * @returns la confirmación del cambio
-   */
-  updateDia(dia : Dia):Observable<Dia>{
-    return this.http.put<Dia>(API_URL+ dias + '/'+ dia.id,dia);
-  }
 }

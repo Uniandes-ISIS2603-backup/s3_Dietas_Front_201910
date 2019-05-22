@@ -29,7 +29,7 @@ import { AppComponent } from '../app.component';
 import { QuejayreclamoListComponent } from '../quejayreclamo/quejayreclamo-list/quejayreclamo-list.component';
 import { HalloffameCreateComponent } from '../halloffame/halloffame-create/halloffame-create.component';
 import { HalloffameEditarComponent } from '../halloffame/halloffame-editar/halloffame-editar.component';
-import{HomePrincipalComponent} from '../home/home-principal/home-principal.component';
+
 const routes: Routes = [
 
     {
@@ -59,12 +59,27 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        component: FotolistarComponent
+        redirectTo: 'home'
     }
-    ,
+    /**,
+    {
+        path: '**',
+        redirectTo: 'home', app-halloffame-editar
+    } */,
     {
         path: 'halls',
         children: [{
+
+          path: 'add' ,          
+          component: HalloffameCreateComponent,
+         
+         /**  canActivate: [NgxPermissionsGuard],
+          data: {
+            permissions: {
+                only: ['ADMIN']
+            }
+        } */
+        },{
           path: 'list',
           component: HalloffamelistarComponent
         
@@ -73,15 +88,29 @@ const routes: Routes = [
           path: ':id',
           component: HalloffameDetailComponent,
           outlet: 'detail'
-        }]  
+        }
+        ,{
+                path: ':id/edit',
+                component: HalloffameEditarComponent,
+                canActivate: [NgxPermissionsGuard],
+                data: {
+                    permissions: {
+                        only: ['ADMIN']
+                    }
+                }
+                
+            }]  
     
       },
       {
         path: 'personas',
         children: [{
           path: 'list',
-          component: PersonaListComponent
-        } ]
+          component: PersonaListComponent,
+        
+        } ,
+          
+        ]
     
       },
       {

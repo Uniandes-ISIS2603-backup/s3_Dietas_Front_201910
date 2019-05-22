@@ -22,13 +22,5 @@
     </table>
   </div>
 </div>
-<div class="row">
-  <div *ngxPermissionsOnly="['ADMIN']" class="col-sm-4 col-centered">
-    <button type= "col button" class="btn btn-primary"
-    [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir dia</button>
-        <div *ngIf="mostrarCrear">
-            <dia-create (cancel)="mostrarCrearM()" (create)="ngOnInit()"></dia-create>
-        </div>
-  </div>
-  <dia-edit></dia-edit>
-</div>
+<dia-create></dia-create>
+<dia-edit></dia-edit>

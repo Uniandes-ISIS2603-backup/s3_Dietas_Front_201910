@@ -21,7 +21,7 @@ import { Persona } from '../../persona/persona';
 })
 export class HalloffamelistarComponent implements OnInit{
 
-
+  
 
      /**
      * Constructor for the component
@@ -29,23 +29,6 @@ export class HalloffamelistarComponent implements OnInit{
      */
     constructor(private halloffameService: HalloffameService, private personaService : PersonaService, private router: Router) { }
 
-    mostrarCrear : boolean;
-
-
-
-    mostrarEditar : boolean;
-  
-    mostrarCrearM(): void{
-      this.mostrarCrear = !this.mostrarCrear;
-     
-    }
-
-    mostrarEditarM(id:number): void{
-      this.mostrarEditar = !this.mostrarEditar;
-      this.onSelected(id);
-      console.log("id: "+id);
-      console.log("halls_id: "+this.halls_id);
-    }
    /**
      * The list of halls which belong to the Dietas
      */
@@ -66,7 +49,7 @@ export class HalloffamelistarComponent implements OnInit{
      * el hall seleccionado
      */
     selectedHall: HalloffameDetail;
-    aEditar:Halloffame;
+
 
      /**
      * Asks the service to update the list of halls
@@ -92,15 +75,6 @@ export class HalloffamelistarComponent implements OnInit{
     /**
      *  selecciona el hall que fue cliqueado
      */
-    onSelected2(phalls_id: number): void{   
-    this.halls_id = phalls_id;
-    this.halloffameService.getHalloffameDetail(phalls_id).subscribe(o =>
-      { 
-        this.selectedHall = o;
-        console.log("hall listar id .ts"+this.selectedHall.id);
-      });
-      this.mostrarEditar =true;
-    }
     onSelected(phalls_id: number): void {
     this.halls_id = phalls_id;
     this.halloffameService.getHalloffameDetail(phalls_id).subscribe(o =>
@@ -108,6 +82,8 @@ export class HalloffamelistarComponent implements OnInit{
         this.selectedHall = o;
         console.log("hall listar id .ts"+this.selectedHall.id);
       });
+
+   
   }
 
     /**
@@ -115,12 +91,9 @@ export class HalloffamelistarComponent implements OnInit{
      * This method will be called when the component is created
      */
     ngOnInit() {
-      this.mostrarCrear=false;
-      this.mostrarEditar=false;
-     
-      this.selectedHall = new HalloffameDetail();
-      this.getHalls();
-        
+      console.log("entra en lsitar");
+        this.selectedHall = new HalloffameDetail();
+        this.getHalls();
     }
 
 
