@@ -17,6 +17,19 @@ export class ComidalistarComponent implements OnInit {
      */
     constructor(private ComidaService: ComidaService) { }
 
+
+    mostrarCrear : boolean;
+
+    mostrarEditar : boolean;
+    
+  
+    mostrarCrearM(): void{
+      this.mostrarCrear = !this.mostrarCrear;
+    }
+    mostrarEditarM(): void{
+      this.mostrarEditar = !this.mostrarEditar;
+    }
+
     /**
      * The list of Comida which belong to Dietas
      */
@@ -33,6 +46,8 @@ export class ComidalistarComponent implements OnInit {
      * This method will be called when the component is created
      */
     ngOnInit() {
+        this.mostrarCrear=false;
+        this.mostrarEditar=false;
         this.getComidas();
     }
 

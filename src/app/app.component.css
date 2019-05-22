@@ -11,6 +11,9 @@
 
 }
 
+.nav-bar-color{
+  background-color: lightcoral;
+}
 
 #lg {
   width: 100%;
@@ -18,7 +21,17 @@
   padding:0;
 }
 
+.texto-grande{
+  background-color: antiquewhite;
+  padding: 20px ;
+  font-family: serif;
+  margin: 0px;
+
+}
 .nomargin{
 margin:0;
 }
 
+#footer{
+  background-color: antiquewhite;
+}
