@@ -6,10 +6,11 @@ import { FormsModule } from '@angular/forms';
 import { FotoService } from './foto.service';
 import { FotoCrearComponent } from './foto-crear/foto-crear.component';
 import { FotoEditarComponent } from './foto-editar/foto-editar.component';
+import { NgxPermissionsModule } from 'ngx-permissions';
 
 @NgModule({
   imports: [
-    CommonModule, FormsModule
+    CommonModule, FormsModule, NgxPermissionsModule
   ],
   declarations: [FotolistarComponent, FotoCrearComponent, FotoEditarComponent],
   exports:[FotolistarComponent],

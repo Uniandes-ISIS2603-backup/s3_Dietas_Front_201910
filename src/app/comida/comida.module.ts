@@ -7,9 +7,10 @@ import {NgxPermissionsModule} from 'ngx-permissions';
 import { ComidaCrearComponent } from './comida-crear/comida-crear.component';
 import { ComidaEditarComponent } from './comida-editar/comida-editar.component';
 
+
 @NgModule({
   imports: [
-    CommonModule, FormsModule
+    CommonModule, FormsModule, NgxPermissionsModule
   ],
   declarations: [ComidalistarComponent, ComidaCrearComponent, ComidaEditarComponent],
   exports:[ComidalistarComponent],

@@ -5,10 +5,12 @@ import { DiaService } from './dia.service';
 import { DiaCreateComponent } from './dia-create/dia-create.component';
 import { FormsModule } from '@angular/forms';
 import { DiaEditComponent } from './dia-edit/dia-edit.component';
+import{NgxPermissionsModule} from 'ngx-permissions';
 
 @NgModule({
   imports: [
-    CommonModule,FormsModule
+    CommonModule,FormsModule,
+    NgxPermissionsModule
    ],
   declarations: [DiaListarComponent, DiaCreateComponent, DiaEditComponent],
   exports:[DiaListarComponent],

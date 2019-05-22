@@ -3,6 +3,7 @@ import { HalloffameService } from '../halloffame.service';
 import {ToastrService} from 'ngx-toastr';
 import { Halloffame } from '../halloffame';
 
+
 @Component({
   selector: 'app-halloffame-create',
   templateUrl: './halloffame-create.component.html',
@@ -19,6 +20,7 @@ export class HalloffameCreateComponent implements OnInit {
     private hallofFameService: HalloffameService,
     private toastrService: ToastrService
 ) {}
+
 
 /**
 * The new halloffame
