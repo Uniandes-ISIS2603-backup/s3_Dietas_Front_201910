@@ -29,7 +29,6 @@ import {DietaService} from './dieta.service';
         DietaListComponent, DietaDetailComponent, DietaCreateComponent, DietaEditComponent
     ],
     providers: [DietaService],
-    exports: [DietaListComponent, DietaEditComponent
-    ]
+    exports: [DietaListComponent]
 })
 export class DietaModule {}
