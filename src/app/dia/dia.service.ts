@@ -10,6 +10,8 @@ const dias = '/dias';
 
 @Injectable()
 export class DiaService {
+  
+
 
   constructor(private http: HttpClient) { }
 
@@ -31,6 +33,6 @@ export class DiaService {
    * @returns la confirmación del cambio
    */
   updateDia(dia : Dia):Observable<Dia>{
-    return this.http.put<Dia>(API_URL+ dias + '/'+ dia.id,dia);
+    return this.http.put<Dia>(API_URL+ dias + '/'+  dia.id,dia);
   }
 }
