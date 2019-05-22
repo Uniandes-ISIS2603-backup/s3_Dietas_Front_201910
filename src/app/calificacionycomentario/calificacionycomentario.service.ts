@@ -5,8 +5,8 @@ import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 const API_URL=environment.apiURL;
-const calificacionesycomentarios = "/calificacionycomentario";
-
+const calificacionesycomentarios = "/calificacionesYComentarios";
+const personas='/personas';
 
 @Injectable()
 export class CalificacionycomentarioService {
@@ -25,9 +25,14 @@ export class CalificacionycomentarioService {
     */
 getCalificacionesycomentarios(): Observable<Calificacionycomentario[]>{
   return this.http.get<Calificacionycomentario[]>(API_URL + calificacionesycomentarios);
+ 
 }
 
-
+getCalificacionYComentarioDePersona(hallId:number):Observable<Calificacionycomentario[]>{
+  console.log(this.http.get<Calificacionycomentario[]>(`${API_URL}${personas}/${hallId}${calificacionesycomentarios}`)[0].comentario);
+  return this.http.get<Calificacionycomentario[]>(`${API_URL}${personas}/${hallId}${calificacionesycomentarios}`);
+  
+}
  /**
     * Creates a cocina
     * @param cocina The suspension which will be created

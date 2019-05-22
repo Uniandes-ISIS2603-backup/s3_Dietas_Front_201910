@@ -1,47 +1,79 @@
-<div class="container-fluid">
-    <div class="col listar-component col-sm-3">
-    </div>
-    <div class="col listar-component col-sm-6">
-        <table class="table table-striped responsive">
-            <thead class="thead-dark">
-                <tr>
-                    <th>Hall id</th>
-                    <th>Hall mensaje</th>
-                </tr>
-            </thead>
-            <tbody>
+<div>
+    <div class="container-fluid listar-component mainBackground">
+        <div class="row">
+            <div class="col col-sm-2">
+            </div>
+            <div class="col col-sm-6 col-centered">
+                <table class="table table-striped responsive">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Hall id</th>
+                            <th>Hall mensaje</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                <tr *ngFor="let h of halls">
-                    <td style="cursor: pointer;">
-                        <a class="figure-caption" (click)="onSelected(h.id)">{{h.id}}</a>
-                    </td>
-                    <td>{{h.mensaje}}</td>
-                    <td>
-                        <button *ngxPermissionsOnly="['ADMIN']" type="col button"
-                            class=" button btn btn-primary btn-lg btn-block"
-                            [ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}"
-                            (click)="mostrarEditarM(h.id)">Editar</button>
+                        <tr *ngFor="let h of halls">
+                            <td style="cursor: pointer;">
+                                <a class="figure-caption" (click)="onSelected(h.id)">{{h.id}}</a>
+                            </td>
+                            <td>{{h.mensaje}}</td>
+                            <td>
+                                <button *ngxPermissionsOnly="['ADMIN']" type="col button"
+                                    class=" button btn btn-primary btn-lg btn-block"
+                                    [ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}"
+                                    (click)="mostrarEditarM(h.id)"><span class="fa fa-pencil"></span></button>
 
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-</div>
-<!--<a class="btn btn-default" routerLink="halls/add" routerLinkActive="active" >Añadir Hall</a>-->
-<div class="row">
-    <div class="col-sm-4 col-centered">
-        <button *ngxPermissionsOnly="['ADMIN']" type="col button" class="btn btn-primary btn-lg btn-block"
-            [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir
-            Hall</button>
-        <div *ngIf="mostrarCrear">
-
-            <app-halloffame-create (cancel)="mostrarCrearM()" (create)="ngOnInit()"></app-halloffame-create>
-
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col col-sm-4">
+                <div *ngIf="selectedHall.id">
+                    <app-halloffame-detail [personas]="selectedHall.personas"> </app-halloffame-detail>
+                </div>
+            </div>
         </div>
     </div>
-    <!--
+    <!--<a class="btn btn-default" routerLink="halls/add" routerLinkActive="active" >Añadir Hall</a>-->
+    <div class="row">
+        <div class="col col-sm-3">
+        </div>
+        <div class="col-sm-4 col-centered">
+
+            <button *ngxPermissionsOnly="['ADMIN']" type="col button" class="btn btn-primary btn-lg btn-block"
+                [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir
+                Hall
+            </button>
+        </div>
+
+        <div class="col col-sm-5">
+        </div>
+    </div>
+    <div class="row ">
+
+        <div class="col col-sm-5 margins">
+            <div *ngIf="mostrarCrear">
+
+                <app-halloffame-create (cancel)="mostrarCrearM()" (create)="ngOnInit()"></app-halloffame-create>
+
+            </div>
+        </div>
+        <div class="col col-sm-5 margins">
+            <div *ngIf="mostrarEditar">
+
+                <app-halloffame-editar [halloffame_id]="halls_id" (cancel)="mostrarEditarM()" (editar)="ngOnInit()">
+                </app-halloffame-editar>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!--
     <div class="col-sm-4 col-centered">
         <button *ngxPermissionsOnly="['ADMIN']" type="col button" class=" button btn btn-primary btn-lg btn-block"
             [ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}" (click)="mostrarEditarM()">Editar
@@ -54,17 +86,8 @@
     </div>
     
 -->
-</div>
-<div class="row">
-    <div class="col-sm-4 col-centered">
-        <div *ngIf="mostrarEditar">
 
-            <app-halloffame-editar [halloffame_id]="halls_id" (cancel)="mostrarEditarM()" (editar)="ngOnInit()">
-            </app-halloffame-editar>
 
-        </div>
-    </div>
-</div>
 
 <!--<app-halloffame-create ></app-halloffame-create>-->
 
