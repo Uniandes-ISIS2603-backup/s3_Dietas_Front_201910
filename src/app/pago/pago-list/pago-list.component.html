@@ -20,6 +20,30 @@
           </div>
     </div>
     
+   
+
+    <div class="row">
+      
+        <div *ngxPermissionsOnly="['ADMIN']" class="col-sm-4 col-centered">
+          <button type= "col button" class="btn btn-primary"
+          [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir Pago</button>
+              <div *ngIf="mostrarCrear">
+                  <app-pago-create (cancel)="mostrarCrearM()" (create)="ngOnInit()"></app-pago-create>
+              </div>
+        </div>   
+    </div>
+  
+
+    <div class="row">
+      
+        <div *ngxPermissionsOnly="['ADMIN']" class="col-sm-4 col-centered">
+          <button type= "col button" class="btn btn-primary"
+          [ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}" (click)="mostrarEditarM()">Editar Pago</button>
+              <div *ngIf="mostrarEditar">
+                  <app-pago-edit (cancel)="mostrarEditarM()" (create)="ngOnInit()"></app-pago-edit>
+              </div>
+        </div>   
+    </div>
+   
+
     
-    <app-pago-create></app-pago-create>
-    <app-pago-edit></app-pago-edit>

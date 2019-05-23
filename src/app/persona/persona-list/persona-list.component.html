@@ -29,13 +29,19 @@
                                 <td>{{p.objetivos}}</td>
                                 <td>{{p.solicitudEspecial}}</td>
                                 <td>{{p.tarjetaFidelidad}}</td>
-                                <td>{{p.tiempoEsperadoMejora}}</td>
-
+                                <td>{{p.tiempoEsperadoMejora}}</td> 
 
                 </tr>
             </tbody>
         </table>
     </div>
-    <app-persona-create></app-persona-create>
-    <app-persona-edit></app-persona-edit>
+
+
+    <div *ngIf="selectedPersona.id">
+            <app-persona-detail [fotos2]="selectedPersona.fotos" [calificaciones]="selectedPersona.calificaciones" [quejasYReclamos]="selectedPersona.quejas" 
+             [pagos]="selectedPersona.pagos" [dietas]="selectedPersona.dietas" [persona_id]= "personas_id" > </app-persona-detail>
+           
+ <!--   <app-persona-create></app-persona-create>
+    <app-persona-edit></app-persona-edit>-->
+
 

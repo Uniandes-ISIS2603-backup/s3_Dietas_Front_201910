@@ -19,9 +19,6 @@ export class PersonaService {
   constructor(private http: HttpClient) { }
   
   getPersonasDeHall(hallId:number):Observable<Persona[]>{
-
-
-
     return this.http.get<Persona[]>(`${API_URL}${halls}/${hallId}${personas}`);
     
   }
@@ -33,8 +30,9 @@ export class PersonaService {
     return this.http.get<Persona[]>(API_URL+personas);
   }
   getPersonaDetail(personaId:number): Observable<PersonaDetail> {
-        return this.http.get<PersonaDetail>(API_URL + personas+'/' + personaId+"/fotos");
+        return this.http.get<PersonaDetail>(API_URL + personas+'/' + personaId);
     }
+     
 
      /**
     * Creates a Persona

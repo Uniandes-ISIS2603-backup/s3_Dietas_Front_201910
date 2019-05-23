@@ -1,19 +1,21 @@
-#main-container{
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: firebrick;
+  }
+  
+  .button:hover {
+    background-color: darkred; /* Green */
+    color: white;
+  }
+  .col-centered{
+    float: none;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-
-table{
-	background-color: white;
-	text-align: center;
-	border-collapse: collapse;
-	width: 100%;
-}
-
-thead{
-	background-color: #0d071b;
-	border-bottom: solid 5px rgb(30, 9, 124);
-	color: white;
-}
-
-tr:nth-child(even){
-	background-color: rgb(197, 160, 38);
+.listar-component{
+    margin: 10px;
+    text-align: center;
+    margin: 10 auto;
 }

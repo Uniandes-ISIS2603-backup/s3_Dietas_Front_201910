@@ -23,5 +23,32 @@
     </table>
     </div>
     </div>
+
+    <!--
     <app-calificacionycomentario-create></app-calificacionycomentario-create>
     <app-calificacionycomentario-editar></app-calificacionycomentario-editar>
+    -->
+
+
+    <div class="row">
+      
+        <div *ngxPermissionsOnly="['CLIENT', 'ADMIN']" class="col-sm-4 col-centered">
+          <button type= "col button" class="btn btn-primary"
+          [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir Calificacion Y Comentario</button>
+              <div *ngIf="mostrarCrear">
+                  <app-calificacionycomentario-create (cancel)="mostrarCrearM()" (create)="ngOnInit()"></app-calificacionycomentario-create>
+              </div>
+        </div>   
+    </div>
+  
+    
+    <div class="row">
+        <div *ngxPermissionsOnly="['CLIENT', 'ADMIN']" class="col-sm-4 col-centered">
+          <button type= "col button" class="btn btn-primary"
+          [ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}" (click)="mostrarEditarM()">Editar Calificacion Y Comentario</button>
+              <div *ngIf="mostrarEditar">
+                  <app-calificacionycomentario-editar (cancel)="mostrarEditarM()" (create)="ngOnInit()"></app-calificacionycomentario-editar>
+              </div>
+        </div>   
+    </div>
+  

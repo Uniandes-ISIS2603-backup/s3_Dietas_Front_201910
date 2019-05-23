@@ -7,25 +7,24 @@
       <h2 class="text-center">Create a Calificacion Y Comentario</h2>
       <br>
       <form name="calificacionycomentario" (ngSubmit)="f.form.valid && createCalificacionycomentario()" #f="ngForm" novalidate>
-          <div class="form-group">
+          
+              <div class="input-group mb-3">         
+           
+                    <input type="text" placeholder="Calificación" name="usuarioLogin" class="form-control" id="usuarioLogin"
+                     [(ngModel)]="calificacionycomentario.calificacion" #usuarioLogin="ngModel"
+                     [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
+                    <div class="invalid-feedback">
+                     <div>The calificacionycomentario`s Calificacion is missing</div>
+                   </div>
+
+                   <input type="text" placeholder="Comentario" name="usuarioLogin" class="form-control" id="usuarioLogin"
+                     [(ngModel)]="calificacionycomentario.comentario" #usuarioLogin="ngModel"
+                     [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
+                    <div class="invalid-feedback">
+                     <div>The calificacionycomentario`s Comentario is missing</div>
+                   </div>
+
              
-            <label for="CalificacionycomentarioCalificacion"><b>Calificacion</b></label>
-              <input type="text" name="calificacionycomentarioCalificacion" class="form-control" id="calificacionycomentarioCalificacion" [(ngModel)]="calificacionycomentario.calificacion"
-                  #calificacionycomentarioCalificacion="ngModel" [ngClass]="{ 'is-invalid': f.submitted && calificacionycomentarioCalificacion.invalid }" required>
-              <div class="invalid-feedback">
-                  <div>The calificacionycomentario`s Calificacion is missing</div>
-              </div>  
-
-
-              <label for="CalificacionycomentarioComentario"><b>Comentario</b></label>
-              <input type="text" name="calificacionycomentarioComentario" class="form-control" id="calificacionycomentarioComentario" [(ngModel)]="calificacionycomentario.comentario"
-                  #calificacionycomentarioComentario="ngModel" [ngClass]="{ 'is-invalid': f.submitted && calificacionycomentarioComentario.invalid }" required>
-              <div class="invalid-feedback">
-                  <div>The calificacionycomentario`s Comentario is missing</div>
-              </div>
-
-
-
           </div>
           <div class="row form-inline justify-content-center align-self-center">
               <button type="submit" class="btn btn-primary">Create</button>

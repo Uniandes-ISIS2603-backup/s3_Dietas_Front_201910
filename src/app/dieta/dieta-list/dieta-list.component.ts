@@ -19,13 +19,33 @@ export class DietaListComponent implements OnInit {
      */
     constructor(private dietaService: DietaService, private router: Router) { }
 
+    mostrarCrear : boolean;
+
+
+
+    mostrarEditar : boolean;
+  
+    mostrarCrearM(): void{
+      this.mostrarCrear = !this.mostrarCrear;
+     
+    }
+
+    mostrarEditarM(id:number): void{
+      this.mostrarEditar = !this.mostrarEditar;
+      this.onSelected(id);
+      console.log("id: "+id);
+      console.log("dieta_id: "+this.dietas_id);
+    }
+
    /**
      * The list of halls which belong to the BookStore
      */
     dietas: Dieta[];
 
     dietas_id: number;
-    selectedDieta: DietaDetail;
+    selectedDieta: Dieta;
+
+    aEditar:Dieta;
  /**
      * Asks the service to update the list of halls
      */
@@ -34,7 +54,14 @@ export class DietaListComponent implements OnInit {
         this.dietas = d);
     }
 
-
+    onSelected2(pdietas_id: number): void{   
+      this.dietas_id = pdietas_id;
+      this.dietaService.getDieta(pdietas_id).subscribe(o =>
+        { 
+          this.selectedDieta = o;
+        });
+        this.mostrarEditar =true;
+      }
     onSelected(dietas_id: number): void {
     this.dietas_id = dietas_id;
     this.selectedDieta = new DietaDetail();
@@ -46,6 +73,10 @@ export class DietaListComponent implements OnInit {
      * This method will be called when the component is created
      */
     ngOnInit() {
+      this.mostrarCrear=false;
+      this.mostrarEditar=false;
+     
+      this.selectedDieta = new DietaDetail();
         this.getDietas();
     }
    
