@@ -7,10 +7,10 @@ import { QuejaYReclamo } from '../quejayreclamo/quejayreclamo';
 export class PersonaDetail extends Persona {
   
   fotos: Foto[];
-  calificaciones: Calificacionycomentario[];
+  calificacionesYComentarios: Calificacionycomentario[];
   dietas: Dieta[];
   pagos: Pago[];
-  quejas: QuejaYReclamo[];
+  quejasYReclamos: QuejaYReclamo[];
   
 
 
