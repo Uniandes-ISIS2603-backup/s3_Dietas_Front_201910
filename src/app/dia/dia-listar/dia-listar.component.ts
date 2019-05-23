@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { DiaService } from '../dia.service';
 import { Dia } from '../dia';
+import { Comida } from '../../comida/comida';
+import { DiaDetail } from '../dia-detail';
+import { ComidaService } from '../../comida/comida.service';
 
 
 @Component({
@@ -11,23 +14,32 @@ import { Dia } from '../dia';
 })
 export class DiaListarComponent implements OnInit {
 
-  constructor(private diaService: DiaService  /** , private router: Router*/) { }
+  constructor(private diaService: DiaService  , private comidaService:ComidaService , private router: Router) { }
   mostrarCrear : boolean;
 
     idDia:number;
   dias:Dia[];
   diaActual:Dia;
   showEdit:boolean;
+  comidas:Comida[];
+  selectedDia : DiaDetail;
 
   getDias():void{
     this.diaService.getDias().subscribe(newDay=> this.dias=newDay);
+  }
+
+  getComidasDeDia(diaId:number):void{
+    this.comidaService.getComidasDeDia(diaId).subscribe(o=>
+      {
+        this.comidas=o;
+      })
   }
 
   ngOnInit() {
     this.getDias();
     this.showEdit=false;
     this.mostrarCrear=false;
-    this.diaActual= new Dia();
+    this.selectedDia= new DiaDetail();
   }
 
   showHideEdit(id:number): void {
@@ -42,14 +54,14 @@ export class DiaListarComponent implements OnInit {
   updateDia()
   {
       this.showEdit = false;
+      this.mostrarCrear=false;
   }
   onSelected(pDia_id:number):void{
     this.idDia= pDia_id;
     this.showEdit= true;
-    this.diaService.getDia(pDia_id).subscribe(o=>
+    this.diaService.getDiaDetail(pDia_id).subscribe(o=>
       {
-        this.diaActual= o;
-        console.log("aaa:   " + this.diaActual.id);
+        this.selectedDia= o;
       })
   }
 
