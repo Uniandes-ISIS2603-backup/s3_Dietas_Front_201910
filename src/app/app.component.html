@@ -43,25 +43,9 @@
 
                         <li class="nav-item active" style="margin: auto 10px auto 10px">
 
-                            <a class="nav-link active" routerLink="semanas/list" routerLinkActive="active"> Semana </a>
-                        </li>
-
-                        <li class="nav-item active" style="margin: auto 10px auto 10px">
-
-                            <a class="nav-link active" routerLink="tipoDietas/listar" routerLinkActive="active"> Tipos
-                                Dieta </a>
-                        </li>
-                        <li class="nav-item active" style="margin: auto 10px auto 10px">
-
                             <a class="nav-link active" routerLink="personas/list" routerLinkActive="active"> Personas
                             </a>
                         </li>
-                        <li class="nav-item active" style="margin: auto 10px auto 10px">
-
-                            <a class="nav-link active" routerLink="quejasYReclamos/list" routerLinkActive="active">
-                                Quejas y reclamos </a>
-                        </li>
-
                         <li class="nav-item active" style="margin: auto 10px auto 10px">
 
 
@@ -78,14 +62,14 @@
 
                             <a class="nav-link active" routerLink="dietas/list" routerLinkActive="active"> Dietas </a>
                         </li>
-                        <li class="nav-item active" style="margin: auto 10px auto 10px">
-
-                            <a class="nav-link active" routerLink="pagos/list" routerLinkActive="active"> Pagos </a>
-                        </li>
+                       
+                        <div  *ngxPermissionsOnly="['CLIENT']">
+                            
                         <li class="nav-item active" style="margin: auto 10px auto 10px">
 
                                 <a class="nav-link active" routerLink="personas/formulario" routerLinkActive="active"> Persona </a>
                         </li>
+                    </div>
 
                     </ul>
                     
