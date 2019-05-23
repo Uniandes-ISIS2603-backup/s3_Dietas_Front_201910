@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 
-
+const dietas = '/dietas';
 
 const API_URL= environment.apiURL;
 const suspensiones = "/suspensiones";
@@ -31,6 +31,11 @@ getSuspensiones(): Observable<Suspension[]>{
   return this.http.get<Suspension[]>(API_URL + suspensiones);
 }
 
+getSuspensionesDeDieta(dietaId:number):Observable<Suspension[]>{
+
+  return this.http.get<Suspension[]>(`${API_URL}${dietas}/${dietaId}${suspensiones}`);
+  
+}
 
    /**
     * Creates an suspension

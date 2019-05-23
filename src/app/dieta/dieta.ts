@@ -1,4 +1,7 @@
 import {Persona} from '../persona/persona';
+import {Semana} from '../semana/semana';
+import {Suspension} from '../suspension/suspension';
+
 export class Dieta{
     /**
      * id de la dieta
@@ -24,4 +27,8 @@ export class Dieta{
      * Persona a la cual fue asignada la dieta
      */
     persona: Persona;
+
+    semanas: Semana[];
+
+    suspension: Suspension[];
 }

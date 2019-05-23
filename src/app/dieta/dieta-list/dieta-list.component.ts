@@ -4,7 +4,10 @@ import { Router } from '@angular/router';
 import {Dieta} from '../../dieta/dieta';
 import {DietaService} from '../../dieta/dieta.service';
 import { DietaDetail } from '../dieta-detail';
-
+import { SuspensionService } from '../../suspension/suspension.service';
+import { SemanaService } from '../../semana/semana.service';
+import { Semana } from '../../semana/semana';
+import { Suspension } from '../../suspension/suspension';
 
 @Component({
     selector: 'app-dieta-list',
@@ -17,7 +20,7 @@ export class DietaListComponent implements OnInit {
      * Constructor for the component
      * @param dietaService The author's services provider
      */
-    constructor(private dietaService: DietaService, private router: Router) { }
+    constructor(private suspensionService:SuspensionService, private semanaService:SemanaService,private dietaService: DietaService, private router: Router) { }
 
     mostrarCrear : boolean;
 
@@ -37,16 +40,28 @@ export class DietaListComponent implements OnInit {
       console.log("dieta_id: "+this.dietas_id);
     }
 
+    suspensiones:Suspension[];
+    semanas:Semana[];
+
    /**
      * The list of halls which belong to the BookStore
      */
     dietas: Dieta[];
 
-    dietas_id: number;
+    @Input() dietas_id: number;
     selectedDieta: Dieta;
 
     aEditar:Dieta;
- /**
+
+    getSuspensionesDeDieta(dietaId: number):void{
+      console.log("obteniendo suspensiones ");
+      this.suspensionService.getSuspensionesDeDieta(dietaId).subscribe(clienteAux=> this.suspensiones=clienteAux);
+    } 
+    getSemanasDeDieta(dietaId: number):void{
+      console.log("obteniendo semanas ");
+      this.semanaService.getSemanasDeDieta(dietaId).subscribe(clienteAux=> this.semanas=clienteAux);
+    }  
+    /**
      * Asks the service to update the list of halls
      */
     getDietas(): void {

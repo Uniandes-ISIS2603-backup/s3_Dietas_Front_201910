@@ -10,7 +10,14 @@
     font-weight: bold;
 
 }
-
+.iconFront{
+  position:absolute; 
+}
+.img1 {
+  position:relative; 
+  top:-10px; 
+  left:0px; 
+  }
 .nav-bar-color{
   background-color: lightcoral;
 }
