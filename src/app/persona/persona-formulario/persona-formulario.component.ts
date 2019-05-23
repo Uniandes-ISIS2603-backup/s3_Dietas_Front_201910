@@ -47,6 +47,10 @@ export class PersonaFormularioComponent implements OnInit {
         });
   }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
   ngOnInit() {
     this.selectedPersona = new PersonaDetail();
   }
