@@ -23,6 +23,21 @@ export class PersonaListComponent implements OnInit{
   constructor(private personaService:PersonaService,private fotoService:FotoService,private calificacionService:CalificacionycomentarioService, 
     private quejaYReclamoService:QuejaYReclamoService,private pagoService:PagoService,private dietaService:DietaService) { }
 
+    mostrarCrear : boolean;
+
+
+
+    mostrarEditar : boolean; 
+    mostrarCrearM(): void{
+      this.mostrarCrear = !this.mostrarCrear;
+     
+    }
+
+    mostrarEditarM(id:number): void{
+      this.mostrarEditar = !this.mostrarEditar;
+      this.personas_id=id;
+      this.onSelected(id);
+    }
   personas: Persona[];
 
   calificacionesYComentarios: Calificacionycomentario[];
@@ -34,6 +49,7 @@ export class PersonaListComponent implements OnInit{
   @Input() idHall:number;
   selectedPersona: PersonaDetail;
   @Input() personas_id:number;
+  aEditar:Persona;
 
   //getPersonasDeHall(hallId: number):void{
     
@@ -51,28 +67,12 @@ export class PersonaListComponent implements OnInit{
 //      console.log("obteniendo calificaciones ");
 //      this.calificacionService.getCalificacionYComentarioDePersona(personaId).subscribe(clienteAux=> this.calificaciones=clienteAux);
 //    }
-    getFotoDePersona(personaId: number):void{
-      console.log("obteniendo fotos ");
-      this.fotoService.getFotosDePersona(personaId).subscribe(clienteAux=> this.fotos=clienteAux);
-    }  
-//    getQuejaYReclamoDePersona(personaId: number):void{
-//      console.log("obteniendo quejas ");
-//      this.quejaYReclamoService.getQuejasDePersonas(personaId).subscribe(clienteAux=> this.quejas=clienteAux);
-//    } 
-    getPagosDePersona(personaId: number):void{
-      console.log("obteniendo pagos ");
-      this.pagoService.getPagosDePersonas(personaId).subscribe(clienteAux=> this.pagos=clienteAux);
-    } 
-    getDietasDePersona(personaId: number):void{
-      console.log("obteniendo dietas ");
-      this.dietaService.getDietasDePersonas(personaId).subscribe(clienteAux=> this.dietas=clienteAux);
-    } 
-
+    
         /**
      *  selecciona el hall que fue cliqueado
      */
     onSelected(ppersona_id: number): void {
-      this.personas_id = ppersona_id;
+      
       this.personaService.getPersonaDetail(ppersona_id).subscribe(o =>
         { 
           this.selectedPersona = o;
@@ -81,10 +81,11 @@ export class PersonaListComponent implements OnInit{
       
     }
 
-  ngOnInit() {
-    
+  ngOnInit() {    
+    this.mostrarCrear=false;
+    this.mostrarEditar=false;
     this.selectedPersona = new PersonaDetail();
-    this.getPersonas(); 
+    this.getPersonas();
    
   }
 

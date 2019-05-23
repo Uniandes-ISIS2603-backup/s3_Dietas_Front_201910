@@ -32,6 +32,13 @@
                         <td>{{p.solicitudEspecial}}</td>
                         <td>{{p.tarjetaFidelidad}}</td>
                         <td>{{p.tiempoEsperadoMejora}}</td>
+                        <td>
+                                <button *ngxPermissionsOnly="['ADMIN']" type="col button"
+                                    class=" button btn btn-primary btn-lg btn-block"
+                                    [ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}"
+                                    (click)="mostrarEditarM(p.id)"><span class="fa fa-pencil"></span></button>
+
+                            </td>
 
                     </tr>
                 </tbody>
@@ -52,9 +59,46 @@
 
 
     </div>
+    
 
 </div>
 
 
+<div class="row">
+        <div class="col col-sm-3">
+        </div>
+        <div class="col-sm-4 col-centered">
+
+            <button *ngxPermissionsOnly="['ADMIN']" type="col button" class="btn btn-primary btn-lg btn-block"
+                [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir
+                Persona
+            </button>
+        </div>
+        <div class="col col-sm-5">
+        </div>
+    </div>
+    <div class="row ">
+
+        <div class="col col-sm-5 margins">
+            <div *ngIf="mostrarCrear">
+
+                <app-persona-create (cancel)="mostrarCrearM()" (create)="ngOnInit()"></app-persona-create>
+
+            </div>
+        </div>
+        <div class="col col-sm-5 margins">
+            <div *ngIf="mostrarEditar">
+
+                <app-persona-edit [personas_id]="personas_id" (cancel)="mostrarEditarM()" (update)="ngOnInit()">
+                </app-persona-edit>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
 <!-- <app-persona-create></app-persona-create>
     <app-persona-edit></app-persona-edit>-->
+

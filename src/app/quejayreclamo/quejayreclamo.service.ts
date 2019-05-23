@@ -29,6 +29,7 @@ export class QuejaYReclamoService {
   //      console.log(`${API_URL}${personas}/${personaId}${quejas}`);
   //     return (Observable<QuejaYReclamo[]>)this.http.get<QuejaYReclamo[]>(`${API_URL}${personas}/${personaId}${quejas}`);
   //  }
+
     /**
     * Creates an queja
     * @param queja The halloffame which will be created

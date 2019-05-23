@@ -25,7 +25,7 @@ export class PersonaEditComponent implements OnInit {
 /**
 * The halloffame id as received from the parent component
 */
-@Input() persona_id: number;
+@Input() personas_id: number;
 
 /**
 * The output which tells the parent component
@@ -49,7 +49,8 @@ export class PersonaEditComponent implements OnInit {
     * Retrieves the information of the halloffame
     */
    getPersona(): void {
-    this.personaService.getPersona(this.persona_id)
+    console.log("es"+this.personas_id);
+    this.personaService.getPersona(this.personas_id)
         .subscribe(fo => {
             this.persona = fo;
         });
@@ -59,7 +60,7 @@ export class PersonaEditComponent implements OnInit {
     * Updates the information of the halloffame
     */
    editPersona(): void {
-    
+    console.log("entré"+this.persona.id)
     this.personaService.updatePersona(this.persona)
             .subscribe(() => {
                 this.update.emit();
@@ -81,6 +82,7 @@ cancelEdition(): void {
 */
 ngOnInit() {
     this.persona = new Persona();
+    this.getPersona();
 }
 
 /**
