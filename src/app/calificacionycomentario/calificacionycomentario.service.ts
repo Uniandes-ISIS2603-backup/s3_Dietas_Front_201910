@@ -28,11 +28,11 @@ getCalificacionesycomentarios(): Observable<Calificacionycomentario[]>{
  
 }
 
-getCalificacionYComentarioDePersona(hallId:number):Observable<Calificacionycomentario[]>{
-  console.log(this.http.get<Calificacionycomentario[]>(`${API_URL}${personas}/${hallId}${calificacionesycomentarios}`)[0].comentario);
-  return this.http.get<Calificacionycomentario[]>(`${API_URL}${personas}/${hallId}${calificacionesycomentarios}`);
-  
-}
+//getCalificacionYComentarioDePersona(hallId:number):Observable<Calificacionycomentario[]>{
+//  console.log(this.http.get<Calificacionycomentario[]>(`${API_URL}${personas}/${hallId}${calificacionesycomentarios}`)[0]);
+//  return this.http.get<Calificacionycomentario[]>(`${API_URL}${personas}/${hallId}${calificacionesycomentarios}`);
+//  
+//}
  /**
     * Creates a cocina
     * @param cocina The suspension which will be created
