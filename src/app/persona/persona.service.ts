@@ -19,9 +19,6 @@ export class PersonaService {
   constructor(private http: HttpClient) { }
   
   getPersonasDeHall(hallId:number):Observable<Persona[]>{
-
-
-
     return this.http.get<Persona[]>(`${API_URL}${halls}/${hallId}${personas}`);
     
   }

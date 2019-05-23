@@ -31,38 +31,38 @@ export class PersonaDetailComponent implements OnInit {
   * The editorial whose details we want to show
   */
   personaDetail: PersonaDetail;
-  @Input() fotos:Foto[];
-  @Input() cyc:Calificacionycomentario[];
-  @Input() quejayreclamo:QuejaYReclamo[];
-  @Input() pagos:Pago[];
-  @Input() dietas:Dieta[];
 
-
+  @Input() fotos2: Foto[];
+  @Input() calificaciones: Calificacionycomentario[];
+  @Input() quejasYReclamos: QuejaYReclamo[];
+  @Input() pagos: Pago[];
+  @Input() dietas: Dieta[];
+  @Input() persona_id: number;
 
   /**
   * The editorial's id retrieved from the address
   */
-   @Input() persona_id: number;
-    loader:any
-  getPersonaDetail(): void {
-    this.personaService.getPersonaDetail(this.persona_id)
-      .subscribe(o => {
-        this.personaDetail = o
-      });
-  }
+
+   // loader:any
+ // getPersonaDetail(): void {
+ //   this.personaService.getPersonaDetail(this.persona_id)
+ //     .subscribe(o => {
+ //       this.personaDetail = o
+    //  });
+  //}
 
   onLoad(params) {
 
-    this.persona_id = parseInt(params['id']);
-    this.personaDetail = new PersonaDetail();
-    this.getPersonaDetail();
+//    this.persona_id = parseInt(params['id']);
+//    this.personaDetail = new PersonaDetail();
+//    this.getPersonaDetail();
   }
   ngOnInit() {
-    this.loader = this.route.params.subscribe((params: Params) => this.onLoad(params));
+   // this.loader = this.route.params.subscribe((params: Params) => this.onLoad(params));
   }
 
   ngOnDestroy() {
-    this.loader.unsubscribe();
+//this.loader.unsubscribe();
   }
 
 }

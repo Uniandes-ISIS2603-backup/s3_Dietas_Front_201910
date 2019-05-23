@@ -13,6 +13,7 @@ const API_URL = environment.apiURL;
 const dietas = '/dietas';
 const suspensiones = '/suspensiones';
 const semanas = '/semanas';
+const personas='/personas';
 
 
 /**
@@ -42,9 +43,12 @@ export class DietaService {
     */
    getDietaDetail(dietaId): Observable<DietaDetail> {
     console.log(dietaId+" "+API_URL + "dieta-" + dietaId+".json");
-      return this.http.get<DietaDetail>(API_URL + dietas +'/'+ dietaId + "/personas" );
+      return this.http.get<DietaDetail>(API_URL + dietas +'/'+ dietaId );
   }
-
+  getDietasDePersonas(personaId:number):Observable<Dieta[]>{
+    return this.http.get<Dieta[]>(`${API_URL}${personas}/${personaId}${dietas}`);
+  
+  }
     /**
     * Creates a new dieta
     * @param dieta The new dieta
