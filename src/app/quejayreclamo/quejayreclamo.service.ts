@@ -27,7 +27,7 @@ export class QuejaYReclamoService {
 
    getQuejasDePersonas(personaId:number):Observable<QuejaYReclamo[]>{
         console.log(`${API_URL}${personas}/${personaId}${quejas}`);
-       return (Observable<QuejaYReclamo[]>)this.http.get<QuejaYReclamo[]>(`${API_URL}${personas}/${personaId}${quejas}`);
+       return this.http.get<QuejaYReclamo[]>(`${API_URL}${personas}/${personaId}${quejas}`);
    }
     /**
     * Creates an queja
