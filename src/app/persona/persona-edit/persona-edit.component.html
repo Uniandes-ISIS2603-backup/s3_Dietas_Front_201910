@@ -4,14 +4,14 @@
       <h2 class="text-center">Edit a Persona</h2>
       <br>
       <form name="persona" (ngSubmit)="f.form.valid && editPersona()" #f="ngForm" novalidate>
-        <div class="form-group">
+  <!--     <div class="form-group">
           <label for="personaId"><b>Id</b></label>
           <input type="text" name="personaId" class="form-control" id="personaId" [(ngModel)]="persona.id"
                  #personaId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && personaId.invalid }" required>
                  <div class="invalid-feedback">
               <div>The persona's id is missing</div>
           </div>
-      </div>
+      </div>--> 
           <div class="form-group">
             <label for="personaTipo"><b>Tipo</b></label>
             <input type="text" name="personaTipo" class="form-control" id="personaTipo" [(ngModel)]="persona.tipo"

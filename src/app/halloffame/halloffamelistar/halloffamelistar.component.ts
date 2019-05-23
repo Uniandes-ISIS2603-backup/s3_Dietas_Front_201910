@@ -73,10 +73,6 @@ export class HalloffamelistarComponent implements OnInit{
         this.halloffameService.getHalls().subscribe(theHalls => 
         this.halls = theHalls);
     }
-
-
-
-
      /**
      *  vuelve las personas a personas del hall
      */

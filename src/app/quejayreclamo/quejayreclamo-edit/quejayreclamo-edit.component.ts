@@ -80,6 +80,7 @@ cancelEdition(): void {
 */
 ngOnInit() {
     this.quejaYReclamo = new QuejaYReclamo();
+    this.getQueja();
 }
 
 /**

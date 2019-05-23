@@ -43,5 +43,5 @@ export class PersonaService {
     return this.http.post<Persona>(API_URL + personas, persona);
    }
    updatePersona(persona: Persona): Observable<Persona> {
-    return this.http.put<Persona>(API_URL + personas + '/' + persona.id, persona);
+    return this.http.put<Persona>(`${API_URL}${personas}/${persona.id}`, persona);
 }}

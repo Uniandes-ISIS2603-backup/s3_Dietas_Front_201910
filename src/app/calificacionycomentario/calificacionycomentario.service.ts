@@ -6,6 +6,7 @@ import { environment } from '../../environments/environment';
 
 const API_URL=environment.apiURL;
 const calificacionesycomentarios = "/calificacionesYComentarios";
+const calificacionesycomentarios2 = "/calificacionycomentario";
 const personas='/personas';
 
 @Injectable()
@@ -24,15 +25,15 @@ export class CalificacionycomentarioService {
     * @returns The list of cocinas in real time
     */
 getCalificacionesycomentarios(): Observable<Calificacionycomentario[]>{
-  return this.http.get<Calificacionycomentario[]>(API_URL + calificacionesycomentarios);
+  return this.http.get<Calificacionycomentario[]>(API_URL + calificacionesycomentarios2);
  
 }
 
-//getCalificacionYComentarioDePersona(hallId:number):Observable<Calificacionycomentario[]>{
-//  console.log(this.http.get<Calificacionycomentario[]>(`${API_URL}${personas}/${hallId}${calificacionesycomentarios}`)[0]);
-//  return this.http.get<Calificacionycomentario[]>(`${API_URL}${personas}/${hallId}${calificacionesycomentarios}`);
-//  
-//}
+getCalificacionYComentarioDePersona(hallId:number):Observable<Calificacionycomentario[]>{
+  console.log(this.http.get<Calificacionycomentario[]>(`${API_URL}${personas}/${hallId}${calificacionesycomentarios}`)[0]);
+  return this.http.get<Calificacionycomentario[]>(`${API_URL}${personas}/${hallId}${calificacionesycomentarios}`);
+  
+}
  /**
     * Creates a cocina
     * @param cocina The suspension which will be created

@@ -1,86 +1,139 @@
-
-			<p class="h4 p-3">
-
-				Fotos De Personas:</p>			
-			<div class="col">
+		<div class="col">
 				<table class="table table-striped responsive">
-					<thead class="thead-dark">
-						<tr>
-							<th>id</th>   <th>Nombre</th> <th>Imagen</th>  
-						</tr>
-					</thead>
-					<tbody>
+				
+						<tr><th>
+							<div class="col">
+								<table class="table table-striped responsive">
+									<thead class="thead-dark">
+										<tr>
+											<th>id</th>   <th>Nombre</th> <th>Imagen</th>  <th> </th> <th> </th>
+										</tr>
+									</thead>
+									<tbody>
+										
+										   <tr *ngFor = "let q of fotos2">
+												<td>{{q.id}}</td>
+												<td>{{q.nombre}}</td>
+												<td><img src={{q.url}}></td>
+												<td>
+													<button *ngxPermissionsOnly="['ADMIN']" type="col button"
+														class=" button btn btn-primary btn-lg btn-block"
+														[ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}"
+														(click)="mostrarEditarM(p.id)"><span class="fa fa-pencil"></span></button>
+					
+												</td>
+												<td>
+													<button *ngxPermissionsOnly="['ADMIN']" type="col button"
+														class=" button btn btn-primary btn-lg btn-block"
+														[ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}"
+														(click)="mostrarEditarM(p.id)">Crear</button>
+					
+												</td>				
+											</tr>
+									</tbody>
+								</table>
+							</div>
+							</th>
+							<th>
+								<div class="col">
+									<table class="table table-striped responsive">
+										<thead class="thead-dark">
+											<tr>
+												<th>id</th>   <th>Calificacion</th> <th>Comentario</th> <th> </th> <th> </th>
+											</tr>
+										</thead>
+										<tbody>
+											
+											   <tr *ngFor = "let q of calificacionesYComentarios">
+													<td>{{q.id}}</td>
+													<td>{{q.calificacion}}</td>
+													<td>{{q.comentario}}</td>
+													<td>
+														<button *ngxPermissionsOnly="['ADMIN']" type="col button"
+															class=" button btn btn-primary btn-lg btn-block"
+															[ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}"
+															(click)="mostrarEditarM(p.id)"><span class="fa fa-pencil"></span></button>
 						
-						   <tr *ngFor = "let q of fotos2">
-								<td>{{q.id}}</td>
-								<td>{{q.nombre}}</td>
-								<td><img src={{q.url}}></td>
-												
-		 				   </tr>
-					</tbody>
-				</table>
-			</div>
-<p class="h4 p-3">
-
-		Calificaciones y comentarios De Personas:</p>
-	  
-		<div class="container-fluid">
-			<div class="col">
-				<table class="table table-striped responsive">
-					<thead class="thead-dark">
-						<tr>
-							<th>id</th>   <th>Calificacion</th> <th>Comentario</th> 
-						</tr>
-					</thead>
-					<tbody>
+													</td>
+													<td>
+														<button *ngxPermissionsOnly="['ADMIN']" type="col button"
+															class=" button btn btn-primary btn-lg btn-block"
+															[ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}"
+															(click)="mostrarEditarM(p.id)">Crear</button>
 						
-						   <tr *ngFor = "let q of calificacionesYComentarios">
-								<td>{{q.id}}</td>
-								<td>{{q.calificacion}}</td>
-								<td>{{q.comentario}}</td>							
-		 				   </tr>
-					</tbody>
-				</table>
-			</div>
+													</td>							
+												</tr>
+										</tbody>
+									</table>
+								</div>		
+							</th>
+						</tr>
+				</table>	
+		</div>		
+		<div class="col">
+			<table class="table table-striped responsive">
 			
-<p class="h4 p-3">
-
-	QuejasYReclamos De Personas:</p>
-			<div class="col">
-				<table class="table table-striped responsive">
-					<thead class="thead-dark">
-						<tr>
-							<th>id</th>   <th>Especificacion</th> 
-						</tr>
-					</thead>
-					<tbody>
-						
-						   <tr *ngFor = "let q of quejasYReclamos">
-								<td>{{q.id}}</td>
-								<td>{{q.especificacion}}</td>															
-		 				   </tr>
-					</tbody>
-				</table>
-			</div>
-			<p class="h4 p-3">
-
-				Pagos De Personas:</p>			
-			<div class="col">
-				<table class="table table-striped responsive">
-					<thead class="thead-dark">
-						<tr>
-							<th>id</th>   <th>ModoPago</th> 
-						</tr>
-					</thead>
-					<tbody>
-						
-						   <tr *ngFor = "let q of pagos">
-								<td>{{q.id}}</td>
-								<td>{{q.modoPago}}</td>							
-		 				   </tr>
-					</tbody>
-				</table>
-			</div>
+					<tr><th>
+						<div class="col">
+							<table class="table table-striped responsive">
+								<thead class="thead-dark">
+									<tr>
+										<th>id</th>   <th>Especificacion</th> <th> </th> 
+									</tr>
+								</thead>
+								<tbody>
+									
+									   <tr *ngFor = "let q of quejasYReclamos">
+											<td>{{q.id}}</td>
+											<td>{{q.especificacion}}</td>
+											<td>
+												<button *ngxPermissionsOnly="['ADMIN']" type="col button"
+													class=" button btn btn-primary btn-lg btn-block"
+													[ngClass]="{'btn-primary' : !mostrarEditarQueja, 'btn-danger':mostrarEditarQueja}"
+													(click)="mostrarEditarQ(q.id)"><span class="fa fa-pencil"></span></button>
+				
+											</td>
+																								
+										</tr>
+								</tbody>
+							</table>
+						</div>
+						</th>
+						<th>
+							<div class="col">
+								<table class="table table-striped responsive">
+									<thead class="thead-dark">
+										<tr>
+											<th>id</th>   <th>ModoPago</th> <th > </th> <th> </th>
+										</tr>
+									</thead>
+									<tbody>
+										
+										   <tr *ngFor = "let q of pagos">
+												<td>{{q.id}}</td>
+												<td>{{q.modoPago}}</td>
+												<td>
+													<button *ngxPermissionsOnly="['ADMIN']" type="col button"
+														class=" button btn btn-primary btn-lg btn-block"
+														[ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}"
+														(click)="mostrarEditarM(p.id)"><span class="fa fa-pencil"></span></button>
+					
+												</td>
+												<td>
+													<button *ngxPermissionsOnly="['ADMIN']" type="col button"
+														class=" button btn btn-primary btn-lg btn-block"
+														[ngClass]="{'btn-primary' : !mostrarEditar, 'btn-danger':mostrarEditar}"
+														(click)="mostrarEditarM(p.id)">Crear</button>
+					
+												</td>							
+											</tr>
+									</tbody>
+								</table>
+							</div>
+						</th>
+					</tr>
+			</table>	
+		</div>
 			<p class="h4 p-3">
 
 				Dietas De Personas:</p>			
@@ -104,6 +157,12 @@
 					</tbody>
 				</table>
 			</div>
-		
+			<div class="col col-sm-5 margins">
+				<div *ngIf="mostrarEditar">
+	
+	
+				</div>
+			</div>
 
-		</div>
+
+	

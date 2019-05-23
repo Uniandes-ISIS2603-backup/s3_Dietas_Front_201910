@@ -10,9 +10,11 @@ import { PersonaDetailComponent } from './persona-detail/persona-detail.componen
 import { PersonaCreateComponent } from './persona-create/persona-create.component';
 import { PersonaEditComponent } from './persona-edit/persona-edit.component';
 import { PersonaFormularioComponent } from './persona-formulario/persona-formulario.component';
+import {NgxPermissionsModule} from 'ngx-permissions';
+
 @NgModule({
   imports: [
-    CommonModule,AppRoutingModule,FormsModule
+    CommonModule,AppRoutingModule,FormsModule,NgxPermissionsModule
   ],
   declarations: [PersonaListComponent, PersonaDetailComponent,PersonaCreateComponent,PersonaEditComponent, PersonaFormularioComponent],
   providers: [PersonaService],
