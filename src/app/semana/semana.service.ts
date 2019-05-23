@@ -6,6 +6,7 @@ import { Semana } from './semana';
 
 const API_URL = environment.apiURL;
 const semanas ="/semanas";
+const dietas = '/dietas';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +24,11 @@ export class SemanaService {
   }
   updateSemana(semana:Semana):Observable<Semana>{
     return this.http.put<Semana>(API_URL + semanas + '/' + semana.id, semana);
+  }
+
+  getSemanasDeDieta(dietaId:number):Observable<Semana[]>{
+
+    return this.http.get<Semana[]>(`${API_URL}${dietas}/${dietaId}${semanas}`);
+    
   }
 }

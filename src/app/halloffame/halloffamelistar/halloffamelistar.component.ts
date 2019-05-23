@@ -43,8 +43,6 @@ export class HalloffamelistarComponent implements OnInit{
     mostrarEditarM(id:number): void{
       this.mostrarEditar = !this.mostrarEditar;
       this.onSelected(id);
-      console.log("id: "+id);
-      console.log("halls_id: "+this.halls_id);
     }
    /**
      * The list of halls which belong to the Dietas

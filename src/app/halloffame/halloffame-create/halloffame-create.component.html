@@ -1,30 +1,21 @@
-    
-<div >
-
-    <div >
-
-        <h2 class="text-center">Create a Hall</h2>
-
-        <form name="halloffame" (ngSubmit)="f.form.valid && createHalloffame()" #f="ngForm" novalidate>
-
-            <div class="input-group mb-3">
-                <label for="hallMensaje"><b>Mensaje</b></label>
-                <input type="text" placeholder="Mensaje" name="usuarioLogin" class="form-control" id="usuarioLogin"
-                  [(ngModel)]="halloffame.mensaje" #usuarioLogin="ngModel"
-                  [ngClass]="{ 'is-invalid': f.submitted && usuarioLogin.invalid }" required>
-                <div class="invalid-feedback">
-                  <div>Debes ingresar un mensaje</div>
-                </div>
-              </div>
-
-     
-            <div class="row form-inline justify-content-center align-self-center">
-                <button type="submit" class="btn btn-primary" (click)="createHalloffame()">Crear</button>
-                <div class="divider"></div>
-                <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
-              </div>
-
-        </form>
+<div>
+  <h2 class="text-center">Create a Hall</h2>
+  <form name="halloffame" (ngSubmit)="f.form.valid && createHalloffame()" #f="ngForm" novalidate>
+    <div class="input-group mb-3">
+      <label for="hallMensaje"><b>Mensaje</b></label>
+      <input type="text" placeholder="Mensaje" name="hallMensaje" class="form-control" id="hallMensaje"
+        [(ngModel)]="halloffame.mensaje" #comidaTipo="ngModel"
+        [ngClass]="{ 'is-invalid': f.submitted && hallMensaje.invalid }" required>
+      <div class="invalid-feedback">
+        <div>Debes ingresar un mensaje</div>
+      </div>
     </div>
 
+    <div class="row form-inline justify-content-center align-self-center">
+      <button type="submit" class="btn btn-primary" (click)="createHalloffame()">Crear</button>
+      <div class="divider"></div>
+      <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
+    </div>
+
+  </form>
 </div>

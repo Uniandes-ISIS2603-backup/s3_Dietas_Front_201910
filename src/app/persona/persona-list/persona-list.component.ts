@@ -78,11 +78,7 @@ export class PersonaListComponent implements OnInit{
           this.selectedPersona = o;
           console.log("Persona listar id .ts"+this.selectedPersona.id);         
         });
-      this.getCalificacionesDePersona(this.personas_id);
-      this.getFotoDePersona(this.personas_id);
-      this.getQuejaYReclamoDePersona(this.personas_id);
-      this.getPagosDePersona(this.personas_id);  
-      this.getDietasDePersona(this.personas_id); 
+    
        
     }
 

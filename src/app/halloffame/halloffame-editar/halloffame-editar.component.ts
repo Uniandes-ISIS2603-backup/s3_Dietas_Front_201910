@@ -49,7 +49,6 @@ export class HalloffameEditarComponent implements OnInit, OnChanges {
     * Retrieves the information of the halloffame
     */
    getHalloffame(): void {
-       console.log("este es el id del hall of fame en editar:"+ this.halloffame_id );
     this.halloffameService.getHalloffame(this.halloffame_id)
         .subscribe(fo => {
             this.halloffame = fo;
@@ -60,8 +59,6 @@ export class HalloffameEditarComponent implements OnInit, OnChanges {
     * Updates the information of the halloffame
     */
    editHalloffame(): void {
-   
-    console.log("este es el id del hall of fame en editar2:"+ this.halloffame_id );
     this.halloffameService.updateHalloffame(this.halloffame)
             .subscribe(() => {
                 this.update.emit();
@@ -82,7 +79,6 @@ cancelEdition(): void {
 * This function will initialize the component
 */
 ngOnInit() {
-    console.log(this.halloffame_id);
     this.halloffame = new Halloffame();
     this.getHalloffame();
 }
@@ -91,7 +87,7 @@ ngOnInit() {
 * This function will be called when the user chooses another halloffame to edit
 */
 ngOnChanges() {
-    console.log(this.halloffame_id);
+
     this.ngOnInit();
 }
 
