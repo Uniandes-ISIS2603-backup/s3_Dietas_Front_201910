@@ -11,7 +11,7 @@ import { environment } from '../../environments/environment';
 const API_URL = environment.apiURL;
 
 const quejas = '/quejasYReclamos';
-
+const personas='/personas';
 @Injectable()
 export class QuejaYReclamoService {
 
@@ -24,6 +24,11 @@ export class QuejaYReclamoService {
        getQuejas() : Observable<QuejaYReclamo[]> {
         return this.http.get<QuejaYReclamo[]>(API_URL + quejas);
     }
+
+   getQuejasDePersonas(personaId:number):Observable<QuejaYReclamo[]>{
+        console.log(`${API_URL}${personas}/${personaId}${quejas}`);
+       return (Observable<QuejaYReclamo[]>)this.http.get<QuejaYReclamo[]>(`${API_URL}${personas}/${personaId}${quejas}`);
+   }
     /**
     * Creates an queja
     * @param queja The halloffame which will be created

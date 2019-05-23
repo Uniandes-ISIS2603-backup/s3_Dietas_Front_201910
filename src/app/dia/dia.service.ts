@@ -3,6 +3,7 @@ import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import {Dia} from './dia';
 import { Observable } from 'rxjs';
+import { DiaDetail } from './dia-detail';
 
 const API_URL = environment.apiURL;
 const dias = '/dias';
@@ -26,6 +27,11 @@ export class DiaService {
   getDia(diaId:number):Observable<Dia>{
     return this.http.get<Dia>(API_URL+ dias + '/' + diaId);
   }
+  getDiaDetail(diaId:number):Observable<DiaDetail>{
+    return this.http.get<DiaDetail>(API_URL + dias + '/' + diaId);
+  }
+
+  
 
   /**
    * Método que actualiza un dia

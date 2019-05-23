@@ -1,35 +1,109 @@
 
-	<div id="main-container">
-		<table class="table table-striped">
-			<thead class="thead-dark">
-				<tr>
-					<th>{{personaDetail.name}}</th>
-        
-				</tr>
-			</thead>
-			<tr>
-				<td>Tipo</td>
-				<td>{{personaDetail.tipo}}</td>
-			</tr>
-			<tr>
-				<td>FechaIngreso</td>
-				<td>{{personaDetail.fechaingreso}}</td>
-			</tr>
-			<tr>
-				<td>Objetivos</td>
-				<td>{{personaDetail.objetivos}}</td>
-			</tr>
-			<tr>
-				<td>TiempoEsperadoMejora</td>
-				<td>{{personaDetail.tiempoEsperadoMejora}} dias</td>
-			</tr>
-			<tr>
-				<td>SolicitudEspecial</td>
-				<td>{{personaDetail.solicitudEspecial}}</td>
-			</tr>
-			<tr>
-				<td>TarjetaFidelidad</td>
-				<td>{{personaDetail.tarjetaFidelidad}}</td>
-			</tr>
-		</table>
-	</div>
+			<p class="h4 p-3">
+
+				Fotos De Personas:</p>			
+			<div class="col">
+				<table class="table table-striped responsive">
+					<thead class="thead-dark">
+						<tr>
+							<th>id</th>   <th>Nombre</th> <th>Imagen</th>  
+						</tr>
+					</thead>
+					<tbody>
+						
+						   <tr *ngFor = "let q of fotos2">
+								<td>{{q.id}}</td>
+								<td>{{q.nombre}}</td>
+								<td><img src={{q.url}}></td>
+												
+		 				   </tr>
+					</tbody>
+				</table>
+			</div>
+<p class="h4 p-3">
+
+		Calificaciones y comentarios De Personas:</p>
+	  
+		<div class="container-fluid">
+			<div class="col">
+				<table class="table table-striped responsive">
+					<thead class="thead-dark">
+						<tr>
+							<th>id</th>   <th>Calificacion</th> <th>Comentario</th> 
+						</tr>
+					</thead>
+					<tbody>
+						
+						   <tr *ngFor = "let q of calificacionesYComentarios">
+								<td>{{q.id}}</td>
+								<td>{{q.calificacion}}</td>
+								<td>{{q.comentario}}</td>							
+		 				   </tr>
+					</tbody>
+				</table>
+			</div>
+			
+<p class="h4 p-3">
+
+	QuejasYReclamos De Personas:</p>
+			<div class="col">
+				<table class="table table-striped responsive">
+					<thead class="thead-dark">
+						<tr>
+							<th>id</th>   <th>Especificacion</th> 
+						</tr>
+					</thead>
+					<tbody>
+						
+						   <tr *ngFor = "let q of quejasYReclamos">
+								<td>{{q.id}}</td>
+								<td>{{q.especificacion}}</td>															
+		 				   </tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="h4 p-3">
+
+				Pagos De Personas:</p>			
+			<div class="col">
+				<table class="table table-striped responsive">
+					<thead class="thead-dark">
+						<tr>
+							<th>id</th>   <th>ModoPago</th> 
+						</tr>
+					</thead>
+					<tbody>
+						
+						   <tr *ngFor = "let q of pagos">
+								<td>{{q.id}}</td>
+								<td>{{q.modoPago}}</td>							
+		 				   </tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="h4 p-3">
+
+				Dietas De Personas:</p>			
+			<div class="col">
+				<table class="table table-striped responsive">
+					<thead class="thead-dark">
+						<tr>
+							<th>id</th>   <th>Nombre</th> <th>Tipo</th> 
+							<th>Objetivo</th> <th>diasSuspendida</th> 
+						</tr>
+					</thead>
+					<tbody>
+						
+						   <tr *ngFor = "let q of dietas">
+								<td>{{q.id}}</td>
+								<td>{{q.nombre}}</td>
+								<td>{{q.tipo}}</td>
+								<td>{{q.objetivo}}</td>
+								<td>{{q.diasSuspendida}}</td>							
+		 				   </tr>
+					</tbody>
+				</table>
+			</div>
+		
+
+		</div>

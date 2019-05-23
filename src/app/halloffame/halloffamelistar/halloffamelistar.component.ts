@@ -43,8 +43,6 @@ export class HalloffamelistarComponent implements OnInit{
     mostrarEditarM(id:number): void{
       this.mostrarEditar = !this.mostrarEditar;
       this.onSelected(id);
-      console.log("id: "+id);
-      console.log("halls_id: "+this.halls_id);
     }
    /**
      * The list of halls which belong to the Dietas
@@ -92,23 +90,16 @@ export class HalloffamelistarComponent implements OnInit{
     /**
      *  selecciona el hall que fue cliqueado
      */
-    onSelected2(phalls_id: number): void{   
-    this.halls_id = phalls_id;
-    this.halloffameService.getHalloffameDetail(phalls_id).subscribe(o =>
-      { 
-        this.selectedHall = o;
-        console.log("hall listar id .ts"+this.selectedHall.id);
-      });
-      this.mostrarEditar =true;
-    }
+    
     onSelected(phalls_id: number): void {
-    this.halls_id = phalls_id;
-    this.halloffameService.getHalloffameDetail(phalls_id).subscribe(o =>
-      { 
-        this.selectedHall = o;
-        console.log("hall listar id .ts"+this.selectedHall.id);
-      });
-  }
+      this.halls_id = phalls_id;
+      this.halloffameService.getHalloffameDetail(phalls_id).subscribe(o =>
+        { 
+          this.selectedHall = o;
+          console.log("hall listar id .ts"+this.selectedHall.id);
+        });
+    }
+  
 
     /**
      * This will initialize the component by retrieving the list of halls from the service
@@ -117,10 +108,8 @@ export class HalloffamelistarComponent implements OnInit{
     ngOnInit() {
       this.mostrarCrear=false;
       this.mostrarEditar=false;
-     
       this.selectedHall = new HalloffameDetail();
       this.getHalls();
-        
     }
 
 

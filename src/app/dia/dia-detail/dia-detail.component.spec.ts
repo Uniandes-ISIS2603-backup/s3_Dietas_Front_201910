@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DietaEditComponent } from './dieta-edit.component';
+import { DiaDetailComponent } from './dia-detail.component';
 
-describe('DietaEditComponent', () => {
-  let component: DietaEditComponent;
-  let fixture: ComponentFixture<DietaEditComponent>;
+describe('DiaDetailComponent', () => {
+  let component: DiaDetailComponent;
+  let fixture: ComponentFixture<DiaDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DietaEditComponent ]
+      declarations: [ DiaDetailComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DietaEditComponent);
+    fixture = TestBed.createComponent(DiaDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
