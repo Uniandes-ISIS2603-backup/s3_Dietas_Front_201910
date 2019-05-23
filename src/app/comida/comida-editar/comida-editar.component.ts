@@ -81,6 +81,7 @@ cancelEdition(): void {
 */
 ngOnInit() {
     this.comida = new Comida();
+    this.getComida();
 }
 
 /**

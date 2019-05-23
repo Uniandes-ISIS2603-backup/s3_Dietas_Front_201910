@@ -22,8 +22,8 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark nomargin">
                 <div class="container-fluid">
 
-                    <div class="navbar-header textoHead-nav">
-                        <a class="navbar-brand" routerLink="home">EasyProDiet</a>
+                    <div class="navbar-header textoHead-nav iconFront">
+                        <a class="navbar-brand img1" routerLink="home" style='font-size:46px'><span class="fa fa-home fa-fw"></span></a>
                     </div>
 
                     <ul class="nav navbar-nav">
@@ -60,12 +60,6 @@
 
                             <a class="nav-link active" routerLink="quejasYReclamos/list" routerLinkActive="active">
                                 Quejas y reclamos </a>
-                        </li>
-
-                        <li class="nav-item" style="margin: auto 10px auto 10px">
-
-                            <a class="nav-link active" routerLink="suspensiones/list" routerLinkActive="active">
-                                Suspensiones </a>
                         </li>
 
                         <li class="nav-item" style="margin: auto 10px auto 10px">
@@ -126,6 +120,7 @@
             <div class="col col-sm-12 nomargin mainBackground" id="lg">
                 <div>
                     <router-outlet></router-outlet>
+                    
                 </div>
             </div>
         </div>

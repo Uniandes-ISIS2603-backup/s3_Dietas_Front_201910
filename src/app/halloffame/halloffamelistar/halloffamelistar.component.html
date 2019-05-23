@@ -1,5 +1,5 @@
 <div>
-    <div class="container-fluid listar-component mainBackground">
+    <div class="container-fluid listar-component">
         <div class="row">
             <div class="col col-sm-2">
             </div>
@@ -13,7 +13,6 @@
                         </tr>
                     </thead>
                     <tbody>
-
                         <tr *ngFor="let h of halls">
                             <td style="cursor: pointer;">
                                 <a class="figure-caption" (click)="onSelected(h.id)">{{h.id}}</a>
@@ -37,7 +36,7 @@
             </div>
         </div>
     </div>
-    <!--<a class="btn btn-default" routerLink="halls/add" routerLinkActive="active" >Añadir Hall</a>-->
+
     <div class="row">
         <div class="col col-sm-3">
         </div>
@@ -48,7 +47,6 @@
                 Hall
             </button>
         </div>
-
         <div class="col col-sm-5">
         </div>
     </div>
@@ -64,7 +62,7 @@
         <div class="col col-sm-5 margins">
             <div *ngIf="mostrarEditar">
 
-                <app-halloffame-editar [halloffame_id]="halls_id" (cancel)="mostrarEditarM()" (editar)="ngOnInit()">
+                <app-halloffame-editar [halloffame_id]="halls_id" (cancel)="mostrarEditarM()" (update)="ngOnInit()">
                 </app-halloffame-editar>
 
             </div>

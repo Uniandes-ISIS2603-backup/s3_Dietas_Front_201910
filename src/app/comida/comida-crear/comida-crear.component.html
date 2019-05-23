@@ -1,40 +1,30 @@
-<div class="row">
-    <div class="col-3"></div>
-    <div class="col-6">
-        <br>
-        <h2 class="text-center">Create a comida</h2>
-        <br>
-        <form name="comida" (ngSubmit)="f.form.valid && createComida()" #f="ngForm" novalidate>
-
-            <div class="input-group mb-3">
-                
-                <input type="text" placeholder="Tipo" name="comidaTipo" class="form-control" id="comidaTipo"
-                  [(ngModel)]="comida.tipo" #comidaTipo="ngModel"
-                  [ngClass]="{ 'is-invalid': f.submitted && comidaTipo.invalid }" required>
-                <div class="invalid-feedback">
-                  <div>Debes ingresar un tipo de comida.</div>
-                </div>
-              </div>
-
-              <div class="input-group mb-3">
-                
-                  <input type="text" placeholder="Alimentos y sus respectivas cantidades (formato: alimento1: cantitad gr; alimento2: cantidad2;) " name="comidaAlimentosYCantidades" class="form-control" id="comidaAlimentosYCantidades"
-                    [(ngModel)]="comida.alimentosYCantidades" #comidaAlimentosYCantidades="ngModel"
-                    [ngClass]="{ 'is-invalid': f.submitted && comidaAlimentosYCantidades.invalid }" required>
-                  <div class="invalid-feedback">
-                    <div>Debes ingresar Alimentos con sus respectivas cantidades.</div>
-                  </div>
-                </div>
-
-     
-            <div class="row form-inline justify-content-center align-self-center">
-       
-                <button type="submit" class="btn btn-primary" (click)="createComida()">Crear</button>
-                <div class="divider"></div>
-                <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
-              </div>
-
-        </form>
+<div>
+  <h2 class="text-center">Create a comida</h2>
+  <form name="comida" (ngSubmit)="f.form.valid && createComida()" #f="ngForm" novalidate>
+    <div class="input-group mb-3">
+      <label for="comidaTipo"><b>Tipo</b></label>
+      <input type="text" placeholder="Tipo" name="comidaTipo" class="form-control" id="comidaTipo"
+        [(ngModel)]="comida.tipo" #comidaTipo="ngModel" [ngClass]="{ 'is-invalid': f.submitted && comidaTipo.invalid }"
+        required>
+      <div class="invalid-feedback">
+        <div>Debes ingresar un tipo de comida.</div>
+      </div>
     </div>
-    <div class="col-3"></div>
+    <div class="input-group mb-3">
+      <label for="comidaAlimentosYCantidades"><b>Alimentos y cantidades</b></label>
+      <input type="text"
+        placeholder="Alimentos y sus respectivas cantidades (formato: alimento1: cantitad gr; alimento2: cantidad2;) "
+        name="comidaAlimentosYCantidades" class="form-control" id="comidaAlimentosYCantidades"
+        [(ngModel)]="comida.alimentosYCantidades" #comidaAlimentosYCantidades="ngModel"
+        [ngClass]="{ 'is-invalid': f.submitted && comidaAlimentosYCantidades.invalid }" required>
+      <div class="invalid-feedback">
+        <div>Debes ingresar Alimentos con sus respectivas cantidades.</div>
+      </div>
+    </div>
+    <div class="row form-inline justify-content-center align-self-center">
+      <button type="submit" class="btn btn-primary" (click)="createComida()">Crear</button>
+      <div class="divider"></div>
+      <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
+    </div>
+  </form>
 </div>

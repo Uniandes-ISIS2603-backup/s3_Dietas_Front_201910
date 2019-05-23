@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { FotoService } from '../foto.service';
 
@@ -19,9 +19,11 @@ export class FotolistarComponent implements OnInit {
 
     mostrarCrear : boolean;
 
+
     mostrarCrearM(): void{
         this.mostrarCrear = !this.mostrarCrear;
       }
+
 
     /**
      * The list of fotos which belong to Dietas
