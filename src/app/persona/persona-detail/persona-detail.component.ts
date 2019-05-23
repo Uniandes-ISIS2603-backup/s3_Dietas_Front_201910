@@ -33,7 +33,7 @@ export class PersonaDetailComponent implements OnInit {
   personaDetail: PersonaDetail;
 
   @Input() fotos2: Foto[];
-  @Input() calificaciones: Calificacionycomentario[];
+  @Input() calificacionesYComentarios: Calificacionycomentario[];
   @Input() quejasYReclamos: QuejaYReclamo[];
   @Input() pagos: Pago[];
   @Input() dietas: Dieta[];

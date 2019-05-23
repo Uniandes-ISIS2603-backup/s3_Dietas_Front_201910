@@ -25,8 +25,8 @@ export class PersonaListComponent implements OnInit{
 
   personas: Persona[];
 
-  calificaciones: Calificacionycomentario[];
-  quejas:QuejaYReclamo[];
+  calificacionesYComentarios: Calificacionycomentario[];
+  quejasYReclamos:QuejaYReclamo[];
   pagos:Pago[];
   fotos:Foto[];
   dietas:Dieta[];
@@ -47,18 +47,18 @@ export class PersonaListComponent implements OnInit{
        /**
      *  vuelve las personas a personas del hall
      */
-    getCalificacionesDePersona(personaId: number):void{
-      console.log("obteniendo calificaciones ");
-      this.calificacionService.getCalificacionYComentarioDePersona(personaId).subscribe(clienteAux=> this.calificaciones=clienteAux);
-    }
+//    getCalificacionesDePersona(personaId: number):void{
+//      console.log("obteniendo calificaciones ");
+//      this.calificacionService.getCalificacionYComentarioDePersona(personaId).subscribe(clienteAux=> this.calificaciones=clienteAux);
+//    }
     getFotoDePersona(personaId: number):void{
       console.log("obteniendo fotos ");
       this.fotoService.getFotosDePersona(personaId).subscribe(clienteAux=> this.fotos=clienteAux);
     }  
-    getQuejaYReclamoDePersona(personaId: number):void{
-      console.log("obteniendo quejas ");
-      this.quejaYReclamoService.getQuejasDePersonas(personaId).subscribe(clienteAux=> this.quejas=clienteAux);
-    } 
+//    getQuejaYReclamoDePersona(personaId: number):void{
+//      console.log("obteniendo quejas ");
+//      this.quejaYReclamoService.getQuejasDePersonas(personaId).subscribe(clienteAux=> this.quejas=clienteAux);
+//    } 
     getPagosDePersona(personaId: number):void{
       console.log("obteniendo pagos ");
       this.pagoService.getPagosDePersonas(personaId).subscribe(clienteAux=> this.pagos=clienteAux);
@@ -78,20 +78,19 @@ export class PersonaListComponent implements OnInit{
           this.selectedPersona = o;
           console.log("Persona listar id .ts"+this.selectedPersona.id);         
         });
-      this.getCalificacionesDePersona(this.personas_id);
-      this.getFotoDePersona(this.personas_id);
-      this.getQuejaYReclamoDePersona(this.personas_id);
-      this.getPagosDePersona(this.personas_id);  
-      this.getDietasDePersona(this.personas_id); 
+        
+//      this.getCalificacionesDePersona(this.personas_id);
+//      this.getFotoDePersona(this.personas_id);
+//      this.getQuejaYReclamoDePersona(this.personas_id);
+//      this.getPagosDePersona(this.personas_id);  
+//      this.getDietasDePersona(this.personas_id); 
        
     }
 
   ngOnInit() {
     
     this.selectedPersona = new PersonaDetail();
-
-    this.getPersonas();
-    
+    this.getPersonas(); 
    
   }
 

@@ -38,10 +38,11 @@
 
 
     <div *ngIf="selectedPersona.id">
-            <app-persona-detail [fotos2]="selectedPersona.fotos" [calificaciones]="selectedPersona.calificaciones" [quejasYReclamos]="selectedPersona.quejas" 
-             [pagos]="selectedPersona.pagos" [dietas]="selectedPersona.dietas" [persona_id]= "personas_id" > </app-persona-detail>
-           
- <!--   <app-persona-create></app-persona-create>
+            <app-persona-detail [calificacionesYComentarios]="selectedPersona.calificacionesYComentarios"
+            [quejasYReclamos]="selectedPersona.quejasYReclamos" [dietas]="selectedPersona.dietas" [pagos]="selectedPersona.pagos"
+            [fotos2]="selectedPersona.fotos" > </app-persona-detail>
+    </div>        
+ <app-persona-create></app-persona-create>
     <app-persona-edit></app-persona-edit>-->
 
 
