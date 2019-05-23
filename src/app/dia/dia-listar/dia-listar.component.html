@@ -1,47 +1,64 @@
-<div class="container-fluid">
-  <div class="col-md-2">
-    <table class="table table striped">
-      <thead class="thead dark">
-        <tr>
-          <th> Dias </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Detalle</th>
-          <th>Especial</th>
-          <th>Editar</th>
-        </tr>
-        <tr *ngFor="let d of dias">
+<div>
+  <div class="container-fluid listar-component">
+    <div class="col col-sm-2">
+    </div>
+    <div class="col col-sm-6 col-centered">
+      <table class="table table-striped responsive">
+        <thead class="thead-dark">
+          <tr>
+            <th> Dias </th>
+            <th>
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>   Id del dia</th>
+            <th>   Especial</th>
+            <th></th>
+          </tr>
+          <tr *ngFor="let d of dias">
             <td style="cursor: pointer;">
-                <a class="figure-caption" (click)="onSelected(d.id)">{{d.id}}</a>
+              <a class="figure-caption" (click)="onSelected(d.id)">{{d.id}}</a>
             </td>
-          <td>{{d.diaEspecial}}</td>
-          <td>
-            <button *ngxPermissionsOnly="['ADMIN']" type="col button"
-            class=" button btn btn-primary"
-            (click)="showHideEdit(d.id)"><span class="fa fa-pencil"></span></button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="col col-sm-4 ">
+            <td>{{d.diaEspecial}}</td>
+            <td>
+              <button *ngxPermissionsOnly="['ADMIN']" type="col button" class=" button btn btn-primary"
+                (click)="showHideEdit(d.id)"><span class="fa fa-pencil"></span></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col col-sm-4 ">
       <div *ngIf="selectedDia.id">
-          <dia-detail [comidas]="selectedDia.comidas"> </dia-detail>
+        <dia-detail [comidas]="selectedDia.comidas"> </dia-detail>
       </div>
-
+    </div>
+  </div>
 </div>
 <div class="row">
-  <div *ngxPermissionsOnly="['ADMIN']" class="col-sm-8 col-centered">
-    <button type= "col button" class="btn btn-primary"
-    [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir dia</button>
-        <div *ngIf="mostrarCrear">
-            <dia-create (cancel)="mostrarCrearM()" (create)="ngOnInit()"></dia-create>
-        </div>
-        <div *ngIf="showEdit">
-            <dia-edit [dia_id]="idDia" (cancel)="showHideEdit()" (update)="ngOnInit()"></dia-edit>
-        </div>
+  <div class="col col-sm-3">
   </div>
-  
+  <div class="col-sm-4 col-centered">
+    <div *ngxPermissionsOnly="['ADMIN']">
+      <button type="col button" class="btn btn-primary"
+        [ngClass]="{'btn-primary' : !mostrarCrear, 'btn-danger':mostrarCrear}" (click)="mostrarCrearM()">Añadir
+        dia</button>
+    </div>
+    <div class="col col-sm-5">
+    </div>
+  </div>
+<div class="row">
+  <div class="col col-sm-5 margins">
+  <div *ngIf="mostrarCrear">
+    <dia-create (cancel)="mostrarCrearM()" (create)="ngOnInit()"></dia-create>
+  </div>
+</div>
+<div class="col col-sm-5 margins" *ngIf="showEdit">
+<dia-edit [dia_id]="idDia" (cancel)="showHideEdit()" (update)="ngOnInit()"></dia-edit>
+</div>
+</div>
+
 </div>
