@@ -47,27 +47,6 @@ export class PersonaFormularioComponent implements OnInit {
         });
   }
 
-  getCalificacionesDePersona(personaId: number):void{
-    console.log("obteniendo calificaciones ");
-    this.calificacionService.getCalificacionYComentarioDePersona(personaId).subscribe(clienteAux=> this.calificaciones=clienteAux);
-  }
-  getFotoDePersona(personaId: number):void{
-    console.log("obteniendo fotos ");
-    this.fotoService.getFotosDePersona(personaId).subscribe(clienteAux=> this.fotos=clienteAux);
-  }  
-  getQuejaYReclamoDePersona(personaId: number):void{
-    console.log("obteniendo quejas ");
-    this.quejaYReclamoService.getQuejasDePersonas(personaId).subscribe(clienteAux=> this.quejas=clienteAux);
-  } 
-  getPagosDePersona(personaId: number):void{
-    console.log("obteniendo pagos ");
-    this.pagoService.getPagosDePersonas(personaId).subscribe(clienteAux=> this.pagos=clienteAux);
-  } 
-  getDietasDePersona(personaId: number):void{
-    console.log("obteniendo dietas ");
-    this.dietaService.getDietasDePersonas(personaId).subscribe(clienteAux=> this.dietas=clienteAux);
-  } 
-
   ngOnInit() {
     this.selectedPersona = new PersonaDetail();
   }
