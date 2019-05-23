@@ -10,7 +10,8 @@
   }
   .col-centered{
     float: none;
-    margin: 0 auto;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -32,3 +33,27 @@
 {
     width: 60%
 }
+
+.container
+{
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button2{
+  -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: firebrick;
+}
+
+#caja
+{
+    width: 60%
+}
+
+.margins{
+  margin: 15px;
+}
+
+

@@ -1,51 +1,31 @@
-<div class="row">
-    <div class="col-12">
-        <br>
-        <h2 class="text-center">Edit a Comida</h2>
-        <br>
-        <form name="comida" (ngSubmit)="f.form.valid && editComida()" #f="ngForm" novalidate>
-              <div class="form-group">
-                <label for="comidaTipo"><b>Nombre</b></label>
-                <input type="text" name="comidaTipo" class="form-control" id="comidaTipo" [(ngModel)]="comida.tipo"
-                       #comidaTipo="ngModel" [ngClass]="{ 'is-invalid': f.submitted && comidaTipo.invalid }" required>
-                       <div class="invalid-feedback">
-                    <div>The comida's tipo is missing</div>
-                </div>
+<div>
+    <h2 class="text-center">Edit a Comida</h2>
+    <form name="comida" (ngSubmit)="f.form.valid && editComida()" #f="ngForm" novalidate>
+        <div class="form-group">
+            <label for="comidaTipo"><b>Tipo</b></label>
+            <input type="text" name="comidaTipo" class="form-control" id="comidaTipo" [(ngModel)]="comida.tipo"
+                #comidaTipo="ngModel" [ngClass]="{ 'is-invalid': f.submitted && comidaTipo.invalid }" required>
+            <div class="invalid-feedback">
+                <div>The comida's tipo is missing</div>
             </div>
-            <div class="form-group">
-                <label for="comidaAlimentosyCantidades"><b>Url</b></label>
-                <div [ngClass]="{ 'is-invalid': f.submitted && comidaAlimentosyCantidades.invalid }">
-                    <input type="text" class="form-control" id="comidaAlimentosyCantidades" name="comidaAlimentosyCantidades" 
-                       [(ngModel)]="comida.alimentosYCantidades" 
-                       #comidaAlimentosyCantidades="ngModel" [ngClass]="{'is-invalid': f.submitted && comidaAlimentosyCantidades.invalid }"
-                       required>
-                       <div class="invalid-feedback">
-                        <div>The comida's alimentos y cantidades is missing</div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="comidaId"><b>Id</b></label>
-                <input type="text" name="comidaId" class="form-control" id="comidaId" [(ngModel)]="comida.id"
-                       #hallId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && comidaId.invalid }" required>
-                       <div class="invalid-feedback">
-                    <div>The comida's id is missing</div>
-                </div>
-            </div>
-            </form>
-    </div>
-</div>
-<div class="row">
-    <div class="col-12">
-        <div class="row form-inline justify-content-center align-self-center">
-            
-          
-                <button type="submit" class="btn btn-primary" (click)="editComida()">Guardar</button>
-                <div class="divider"></div>
-                <button type="button" class="btn btn-danger" (click)="cancelEdition()">Cancel</button>
-           
         </div>
-    </div>
+        <div class="form-group">
+            <label for="comidaAlimentosyCantidades"><b>Alimentos y cantidades</b></label>
+            <div [ngClass]="{ 'is-invalid': f.submitted && comidaAlimentosyCantidades.invalid }">
+                <input type="text" class="form-control" id="comidaAlimentosyCantidades"
+                    name="comidaAlimentosyCantidades" [(ngModel)]="comida.alimentosYCantidades"
+                    #comidaAlimentosyCantidades="ngModel"
+                    [ngClass]="{'is-invalid': f.submitted && comidaAlimentosyCantidades.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>The comida's alimentos y cantidades is missing</div>
+                </div>
+            </div>
+        </div>
+        <div class="row form-inline justify-content-center align-self-center">
+            <button type="submit" class="btn btn-primary" (click)="editComida()">Guardar</button>
+            <div class="divider"></div>
+            <button type="button" class="btn btn-danger" (click)="cancelEdition()">Cancel</button>
+
+        </div>
+    </form>
 </div>
-<br>
-<br>
