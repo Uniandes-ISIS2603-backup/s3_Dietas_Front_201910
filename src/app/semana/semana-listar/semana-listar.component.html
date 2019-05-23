@@ -1,27 +1,42 @@
-<div class="container-fluid">
-    <div class="col-md-2">
-    <table class="table table striped">
-    <thead class="thead dark">
-      <tr>
-      <th> Semanas  </th>
-      </tr>
-      </thead>
-      <tbody>
-       <tr>
-       <th>Id</th>
-       <th>Hora entrega</th>
-       <th>Lugar entrega</th>
-       <th>costo</th>
-       </tr>
-      <tr *ngFor="let s of semanas">
-      <td> {{s.id}} </td>
-      <td> {{s.horaEntrega}} </td>
-      <td> {{s.lugarEntrega}} </td>
-      <td> {{s.costo}} </td>
-      </tr>  
-      </tbody>
-      </table>
+
+<div>
+  <div class="container-fluid listar-component">
+    <div class="row">
+      <div class="col col-sm-3">
+
       </div>
+      <div class="col col-sm-6 col-centered">
+        <table class="table table-striped responsive">
+          <thead class="thead-dark">
+            <tr>
+              <th> Semanas </th>
+              <th>  </th>
+              <th>  </th>
+              <th>  </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Id</th>
+              <th>Hora entrega</th>
+              <th>Lugar entrega</th>
+              <th>costo</th>
+            </tr>
+            <tr *ngFor="let s of semanas">
+              <td> {{s.id}} </td>
+              <td> {{s.horaEntrega}} </td>
+              <td> {{s.lugarEntrega}} </td>
+              <td> {{s.costo}} </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+  </div>
+
+
 </div>
 
 <semana-create></semana-create>
