@@ -1,47 +1,60 @@
+<div class="container-fluid listar-component">
+    <div class="row">
+        <div class="col col-sm-2">
+        </div>
+        <div class="col col-sm-6 col-centered">
+            <table class="table table-striped responsive">
+                <thead class="thead-dark">
+                    <tr>
 
-<div class="container-fluid">
-    <div class="col">
-        <table class="table table-striped responsive">
-            <thead class="thead-dark">
-                <tr>
+                        <th>Persona id</th>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>FechaIngreso</th>
+                        <th>Objetivos</th>
+                        <th>SolicitudEspecial</th>
+                        <th>TarjetaFidelidad</th>
+                        <th>TiempoEsperadoMejora</th>
 
-                    <th>Persona id</th>  
-                    <th>Nombre</th>   
-                    <th>Tipo</th>   
-                    <th>FechaIngreso</th>   
-                    <th>Objetivos</th>   
-                    <th>SolicitudEspecial</th>   
-                    <th>TarjetaFidelidad</th>   
-                    <th>TiempoEsperadoMejora</th>   
-                    
-                </tr>
-            </thead>
-            <tbody>
-                
-                   <tr *ngFor = "let p of personas">
+                    </tr>
+                </thead>
+                <tbody>
 
-                    <td style="cursor: pointer;">
-						        	<a class="figure-caption" (click)="onSelected(p.id)">{{p.id}}</a>
-                                </td>
-                                <td>{{p.nombre}}</td>
-                                <td>{{p.tipo}}</td>
-                                <td>{{p.fechaIngreso}}</td>                               
-                                <td>{{p.objetivos}}</td>
-                                <td>{{p.solicitudEspecial}}</td>
-                                <td>{{p.tarjetaFidelidad}}</td>
-                                <td>{{p.tiempoEsperadoMejora}}</td> 
+                    <tr *ngFor="let p of personas">
 
-                </tr>
-            </tbody>
-        </table>
+                        <td style="cursor: pointer;">
+                            <a class="figure-caption" (click)="onSelected(p.id)">{{p.id}}</a>
+                        </td>
+                        <td>{{p.nombre}}</td>
+                        <td>{{p.tipo}}</td>
+                        <td>{{p.fechaIngreso}}</td>
+                        <td>{{p.objetivos}}</td>
+                        <td>{{p.solicitudEspecial}}</td>
+                        <td>{{p.tarjetaFidelidad}}</td>
+                        <td>{{p.tiempoEsperadoMejora}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col col-sm-4">
+        </div>
+
+    </div>
+    <div class="row">
+        <div  class="col col-centered">
+            <div *ngIf="selectedPersona.id">
+                <app-persona-detail [calificacionesYComentarios]="selectedPersona.calificacionesYComentarios"
+                    [quejasYReclamos]="selectedPersona.quejasYReclamos" [dietas]="selectedPersona.dietas"
+                    [pagos]="selectedPersona.pagos" [fotos2]="selectedPersona.fotos"> </app-persona-detail>
+            </div>
+        </div>
+
+
     </div>
 
+</div>
 
-    <div *ngIf="selectedPersona.id">
-            <app-persona-detail [fotos2]="selectedPersona.fotos" [calificaciones]="selectedPersona.calificaciones" [quejasYReclamos]="selectedPersona.quejas" 
-             [pagos]="selectedPersona.pagos" [dietas]="selectedPersona.dietas" [persona_id]= "personas_id" > </app-persona-detail></div>
-           
- <!--   <app-persona-create></app-persona-create>
+
+<!-- <app-persona-create></app-persona-create>
     <app-persona-edit></app-persona-edit>-->
-
-

@@ -22,8 +22,8 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark nomargin">
                 <div class="container-fluid">
 
-                    <div class="navbar-header textoHead-nav">
-                        <a class="navbar-brand" routerLink="home">EasyProDiet</a>
+                    <div class="navbar-header textoHead-nav iconFront">
+                        <a class="navbar-brand img1" routerLink="home" style='font-size:46px'><span class="fa fa-home fa-fw"></span></a>
                     </div>
 
                     <ul class="nav navbar-nav">
@@ -41,59 +41,38 @@
                             <a class="nav-link active" routerLink="dias/list" routerLinkActive="active"> Día </a>
                         </li>
 
-                        <li class="nav-item" style="margin: auto 10px auto 10px">
-
-                            <a class="nav-link active" routerLink="semanas/list" routerLinkActive="active"> Semana </a>
-                        </li>
-
-                        <li class="nav-item" style="margin: auto 10px auto 10px">
-
-                            <a class="nav-link active" routerLink="tipoDietas/listar" routerLinkActive="active"> Tipos
-                                Dieta </a>
-                        </li>
-                        <li class="nav-item" style="margin: auto 10px auto 10px">
+                        <li class="nav-item active" style="margin: auto 10px auto 10px">
 
                             <a class="nav-link active" routerLink="personas/list" routerLinkActive="active"> Personas
                             </a>
                         </li>
-                        <li class="nav-item" style="margin: auto 10px auto 10px">
-
-                            <a class="nav-link active" routerLink="quejasYReclamos/list" routerLinkActive="active">
-                                Quejas y reclamos </a>
-                        </li>
-
-                        <li class="nav-item" style="margin: auto 10px auto 10px">
-
-                            <a class="nav-link active" routerLink="suspensiones/list" routerLinkActive="active">
-                                Suspensiones </a>
-                        </li>
-
-                        <li class="nav-item" style="margin: auto 10px auto 10px">
+                        <li class="nav-item active" style="margin: auto 10px auto 10px">
 
 
                             <a class="nav-link active" routerLink="cocinas/list" routerLinkActive="active"> Cocinas </a>
                         </li>
 
-                        <li class="nav-item" style="margin: auto 10px auto 10px">
+                        <li class="nav-item active" style="margin: auto 10px auto 10px">
 
                             <a class="nav-link active" routerLink="calificacionesycomentarios/list"
                                 routerLinkActive="active"> Calificaciones Y Comentarios </a>
                         </li>
 
-                        <li class="nav-item" style="margin: auto 10px auto 10px">
+                        <li class="nav-item active" style="margin: auto 10px auto 10px">
 
                             <a class="nav-link active" routerLink="dietas/list" routerLinkActive="active"> Dietas </a>
                         </li>
-                        <li class="nav-item" style="margin: auto 10px auto 10px">
-
-                            <a class="nav-link active" routerLink="pagos/list" routerLinkActive="active"> Pagos </a>
-                        </li>
-                        <li class="nav-item" style="margin: auto 10px auto 10px">
+                       
+                        <div  *ngxPermissionsOnly="['CLIENT']">
+                            
+                        <li class="nav-item active" style="margin: auto 10px auto 10px">
 
                                 <a class="nav-link active" routerLink="personas/formulario" routerLinkActive="active"> Persona </a>
                         </li>
+                    </div>
 
                     </ul>
+                    
 
                 </div>
                 <div class="navbar-nav ml-auto flex-column ">
@@ -126,6 +105,7 @@
             <div class="col col-sm-12 nomargin mainBackground" id="lg">
                 <div>
                     <router-outlet></router-outlet>
+                    
                 </div>
             </div>
         </div>
