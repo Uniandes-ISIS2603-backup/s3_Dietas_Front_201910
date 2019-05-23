@@ -1,0 +1,43 @@
+<p class="h4 p-3">
+
+        Suspensiones De Dietas:</p>			
+    <div class="col">
+        <table class="table table-striped responsive">
+            <thead class="thead-dark">
+                <tr>
+                    <th>id</th>   <th>vigente</th> <th>comentarios</th>  <th>numeroDias</th>  
+                </tr>
+            </thead>
+            <tbody>
+                
+                   <tr *ngFor = "let q of suspensiones">
+                        <td>{{q.id}}</td>
+                        <td>{{q.vigente}}</td>
+                        <td>{{q.comentarios}}</td>
+                        <td>{{q.numeroDias}}</td>                                        
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="h4 p-3">
+
+            Semanas De Dietas:</p>			
+        <div class="col">
+            <table class="table table-striped responsive">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id</th>   <th>Hora de entrega</th> <th>Lugar de entrega</th> <th>Costo</th>  
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                       <tr *ngFor = "let a of semanas">
+                            <td>{{a.id}}</td>
+                            <td>{{a.horaEntrega}}</td>
+                            <td>{{a.lugarEntrega}}</td>
+                            <td>{{a.costo}}</td>             
+                        </tr>
+                </tbody>
+            </table>
+        </div>

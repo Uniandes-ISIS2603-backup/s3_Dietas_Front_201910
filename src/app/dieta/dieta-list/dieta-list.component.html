@@ -33,6 +33,9 @@
             </tbody>
         </table>
     </div>
+
+    <div *ngIf="selectedDieta.id">
+            <app-dieta-detail [suspensiones]="selectedDieta.suspensiones" [semanas]="selectedDieta.semanas"> </app-dieta-detail>
     
     <div class="row">
             <div class="col-sm-4 col-centered">
